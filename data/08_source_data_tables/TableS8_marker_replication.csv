@@ -1,0 +1,6 @@
+measure,core_d,core_d_lo,core_d_hi,core_p_fdr14,core_adj_d,core_adj_lo,core_adj_hi,ext_d,ext_d_lo,ext_d_hi,ext_p_fdr5,ext_adj_d,ext_adj_lo,ext_adj_hi
+Resting ln RMSSD,-0.35,-0.63,-0.07,0.048,,,,-0.17,-0.45,0.11,0.24,,,
+Resting ln HF-HRV,-0.34,-0.62,-0.06,0.048,,,,-0.22,-0.5,0.06,0.217,,,
+HR reactivity,-0.34,-0.61,-0.06,0.048,-0.33,-0.61,-0.06,-0.19,-0.47,0.09,0.219,-0.21,-0.5,0.07
+ln RMSSD reactivity,0.59,0.31,0.87,0.001,0.51,0.24,0.77,0.47,0.19,0.76,0.005,0.44,0.16,0.71
+Aperiodic exponent (channel mean),-0.42,-0.7,-0.14,0.025,,,,-0.26,-0.55,0.03,0.185,,,

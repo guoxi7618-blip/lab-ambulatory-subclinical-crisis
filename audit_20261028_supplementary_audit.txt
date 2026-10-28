@@ -1,0 +1,520 @@
+补充数值审计
+Verification Status: ANALYZED
+
+{
+  "material_passport": {
+    "mode": "statistical_validation",
+    "verification_status": "ANALYZED",
+    "inputs": "local data CSV only",
+    "provenance": "Recalculated values; missing operational records explicitly marked"
+  },
+  "reference_agreement": {
+    "n": 92,
+    "kappa": 0.8260047281323877,
+    "kappa_bootstrap_95ci": [
+      0.6952164585394885,
+      0.9344106463878327
+    ],
+    "severity_icc21": 0.8874031302233703,
+    "icc_bootstrap_95ci": [
+      0.8380727995539415,
+      0.9214385078774718
+    ],
+    "observed_agreement": 0.9130434782608695,
+    "by_sample": {
+      "core": 69,
+      "extension": 23
+    },
+    "limitations": "ICC(2,1) computed on rater-slot columns. Four actual counselors rotate across rows, rather than the same two counselors rating every participant; a fully crossed two-rater model is an approximation to this sparse assignment. Original ICC specification needed.",
+    "rater_pair_counts": [
+      {
+        "rater1": "CNS01",
+        "rater2": "CNS02",
+        "n": 11
+      },
+      {
+        "rater1": "CNS01",
+        "rater2": "CNS03",
+        "n": 4
+      },
+      {
+        "rater1": "CNS01",
+        "rater2": "CNS04",
+        "n": 12
+      },
+      {
+        "rater1": "CNS02",
+        "rater2": "CNS01",
+        "n": 9
+      },
+      {
+        "rater1": "CNS02",
+        "rater2": "CNS03",
+        "n": 11
+      },
+      {
+        "rater1": "CNS02",
+        "rater2": "CNS04",
+        "n": 5
+      },
+      {
+        "rater1": "CNS03",
+        "rater2": "CNS01",
+        "n": 5
+      },
+      {
+        "rater1": "CNS03",
+        "rater2": "CNS02",
+        "n": 5
+      },
+      {
+        "rater1": "CNS03",
+        "rater2": "CNS04",
+        "n": 6
+      },
+      {
+        "rater1": "CNS04",
+        "rater2": "CNS01",
+        "n": 5
+      },
+      {
+        "rater1": "CNS04",
+        "rater2": "CNS02",
+        "n": 8
+      },
+      {
+        "rater1": "CNS04",
+        "rater2": "CNS03",
+        "n": 11
+      }
+    ]
+  },
+  "crisis_signal_counts": [
+    {
+      "scope": "all_enrolled",
+      "signal": "crisis_acute_stress",
+      "n_positive": 129,
+      "denominator": 230,
+      "pct": 56.086956521739125
+    },
+    {
+      "scope": "all_enrolled",
+      "signal": "crisis_functional_impairment",
+      "n_positive": 117,
+      "denominator": 230,
+      "pct": 50.8695652173913
+    },
+    {
+      "scope": "all_enrolled",
+      "signal": "crisis_anhedonia_withdrawal",
+      "n_positive": 95,
+      "denominator": 230,
+      "pct": 41.30434782608695
+    },
+    {
+      "scope": "all_enrolled",
+      "signal": "crisis_passive_si",
+      "n_positive": 68,
+      "denominator": 230,
+      "pct": 29.565217391304348
+    },
+    {
+      "scope": "all_enrolled",
+      "signal": "crisis_self_harm",
+      "n_positive": 32,
+      "denominator": 230,
+      "pct": 13.91304347826087
+    },
+    {
+      "scope": "all_enrolled",
+      "signal": "exactly_one_signal",
+      "n_positive": 118,
+      "denominator": 230,
+      "pct": 51.30434782608696
+    },
+    {
+      "scope": "analyzable",
+      "signal": "crisis_acute_stress",
+      "n_positive": 109,
+      "denominator": 197,
+      "pct": 55.32994923857868
+    },
+    {
+      "scope": "analyzable",
+      "signal": "crisis_functional_impairment",
+      "n_positive": 99,
+      "denominator": 197,
+      "pct": 50.25380710659898
+    },
+    {
+      "scope": "analyzable",
+      "signal": "crisis_anhedonia_withdrawal",
+      "n_positive": 79,
+      "denominator": 197,
+      "pct": 40.10152284263959
+    },
+    {
+      "scope": "analyzable",
+      "signal": "crisis_passive_si",
+      "n_positive": 60,
+      "denominator": 197,
+      "pct": 30.456852791878177
+    },
+    {
+      "scope": "analyzable",
+      "signal": "crisis_self_harm",
+      "n_positive": 29,
+      "denominator": 197,
+      "pct": 14.720812182741117
+    },
+    {
+      "scope": "analyzable",
+      "signal": "exactly_one_signal",
+      "n_positive": 103,
+      "denominator": 197,
+      "pct": 52.28426395939086
+    }
+  ],
+  "severity_summary": [
+    {
+      "scope": "all_enrolled",
+      "category": "no_notable_distress",
+      "n": 230,
+      "mean": 1.0782608695652174,
+      "sd": 0.8162950285107051,
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "scope": "all_enrolled",
+      "category": "subclinical_psychological_crisis",
+      "n": 230,
+      "mean": 3.9869565217391303,
+      "sd": 0.9131759195851145,
+      "min": 3.0,
+      "max": 7.0
+    },
+    {
+      "scope": "analyzable",
+      "category": "no_notable_distress",
+      "n": 204,
+      "mean": 1.0931372549019607,
+      "sd": 0.8040243365580726,
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "scope": "analyzable",
+      "category": "subclinical_psychological_crisis",
+      "n": 197,
+      "mean": 3.979695431472081,
+      "sd": 0.9145055029511859,
+      "min": 3.0,
+      "max": 7.0
+    }
+  ],
+  "simpson_scan": [
+    {
+      "feature": "lab_hr_base",
+      "grouping": "sample",
+      "pooled_d": 0.1632041215370734,
+      "subgroup_d": {
+        "core": 0.11896285506502856,
+        "extension": 0.20726185021028465
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "lab_hr_base",
+      "grouping": "sex",
+      "pooled_d": 0.1632041215370734,
+      "subgroup_d": {
+        "sex_female": 0.2302068649643621,
+        "sex_male": 0.07166218231732359
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "lab_lnrmssd_base",
+      "grouping": "sample",
+      "pooled_d": -0.255860275159374,
+      "subgroup_d": {
+        "core": -0.34837390760634496,
+        "extension": -0.16771285765773464
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "lab_lnrmssd_base",
+      "grouping": "sex",
+      "pooled_d": -0.255860275159374,
+      "subgroup_d": {
+        "sex_female": -0.2859322397917608,
+        "sex_male": -0.20777208933929323
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "lab_hr_react",
+      "grouping": "sample",
+      "pooled_d": -0.2629337856011393,
+      "subgroup_d": {
+        "core": -0.3378699503654206,
+        "extension": -0.1936909236161901
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "lab_hr_react",
+      "grouping": "sex",
+      "pooled_d": -0.2629337856011393,
+      "subgroup_d": {
+        "sex_female": -0.40711567907443413,
+        "sex_male": -0.022012655123202596
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "lab_lnrmssd_react",
+      "grouping": "sample",
+      "pooled_d": 0.5337617441724223,
+      "subgroup_d": {
+        "core": 0.5876826308233221,
+        "extension": 0.47375583601971283
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "lab_lnrmssd_react",
+      "grouping": "sex",
+      "pooled_d": 0.5337617441724223,
+      "subgroup_d": {
+        "sex_female": 0.7675596652720844,
+        "sex_male": 0.17041101786466464
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "eeg_aper_mean",
+      "grouping": "sample",
+      "pooled_d": -0.344734225875636,
+      "subgroup_d": {
+        "core": -0.41949751763233845,
+        "extension": -0.2613823710071789
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "eeg_aper_mean",
+      "grouping": "sex",
+      "pooled_d": -0.344734225875636,
+      "subgroup_d": {
+        "sex_female": -0.3249242422615051,
+        "sex_male": -0.3686382830240394
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "ema_compliance",
+      "grouping": "sample",
+      "pooled_d": -0.541976477320356,
+      "subgroup_d": {
+        "core": -0.48762566020838316,
+        "extension": -0.605854400305814
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "ema_compliance",
+      "grouping": "sex",
+      "pooled_d": -0.541976477320356,
+      "subgroup_d": {
+        "sex_female": -0.5294921601950708,
+        "sex_male": -0.5592340913767049
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "sds_standard",
+      "grouping": "sample",
+      "pooled_d": 0.869905881664867,
+      "subgroup_d": {
+        "core": 0.8311958902214068,
+        "extension": 0.9038281267262893
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "sds_standard",
+      "grouping": "sex",
+      "pooled_d": 0.869905881664867,
+      "subgroup_d": {
+        "sex_female": 0.8406952017370108,
+        "sex_male": 0.9092955515772482
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "sas_standard",
+      "grouping": "sample",
+      "pooled_d": 0.6680701492935041,
+      "subgroup_d": {
+        "core": 0.6574090921215859,
+        "extension": 0.6748680797639326
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    },
+    {
+      "feature": "sas_standard",
+      "grouping": "sex",
+      "pooled_d": 0.6680701492935041,
+      "subgroup_d": {
+        "sex_female": 0.6955261244488217,
+        "sex_male": 0.6240903323098853
+      },
+      "classic_complete_reversal": false,
+      "any_subgroup_opposite": false,
+      "caution": "An opposite nonsignificant subgroup estimate is heterogeneity, not proof of Simpson paradox."
+    }
+  ],
+  "planning_power": {
+    "h1": {
+      "n_per_group": 100,
+      "effect_d_assumed": 0.46,
+      "two_sided_alpha": 0.05,
+      "power": 0.8991831480410092,
+      "n_per_group_for_90pct": 100.28413888793104,
+      "note": "Treats meta-analytic Hedges g=.46 as planning d=.46. No correction for multiple comparisons, attrition, or smaller subclinical effects."
+    },
+    "h2": {
+      "n_core": 203,
+      "r": 0.2,
+      "power_fisher_z_approx": 0.8178256612732727,
+      "n_200_power": 0.8120634642151835,
+      "n_required_for_80pct_fisher_z": 193.9680401839892,
+      "note": "Fisher-z approximation for independent participant-level Pearson correlation. Does not establish power of the clustered cross-level interaction model."
+    }
+  },
+  "baseline_deviation_reconstruction": {
+    "formula": "0.5 * (z(cal_resthr_minus_lab) - z(cal_noct_minus_lab)); pooled n=401 sample-standardization; reconstructed equal weights, exact preregistered weights unavailable",
+    "n_subclinical": 197,
+    "n_control": 204,
+    "d": 0.17013934962247074,
+    "d_lo": -0.026001502711505947,
+    "d_hi": 0.3662802019564474,
+    "d_90lo": 0.00553578209446326,
+    "d_90hi": 0.3347429171504782,
+    "p_two_sided": 0.08929824896317681,
+    "p_one_sided": 0.044649124481588406,
+    "sub_mean": 0.062057372263129774,
+    "control_mean": -0.059927952626650065,
+    "severity_pearson_r": 0.11799658299615197,
+    "severity_pearson_p": 0.01809019839792643,
+    "group_correlations": [
+      {
+        "y": 0,
+        "n": 204,
+        "r": 0.18734836770364127,
+        "p": 0.007291534104563996
+      },
+      {
+        "y": 1,
+        "n": 197,
+        "r": -0.00620237488147761,
+        "p": 0.9310679105506748
+      }
+    ]
+  },
+  "risk_protocol_claims": [
+    {
+      "claim": "519 total protocol triggers",
+      "reported": 519,
+      "status": "PARTIALLY CHECKABLE / not independently verified",
+      "observed": "288 + 81 + 150 = 519 arithmetically; the 288 screening triggers lack participant-level data and all triggers lack event logs",
+      "missing": "screening and risk-event audit logs"
+    },
+    {
+      "claim": "288 screening triggers",
+      "reported": 288,
+      "status": "UNVERIFIABLE",
+      "observed": "Only PHQ-9 total for 460 enrolled participants, no PHQ-9 item 9 or full 2330 screening records",
+      "missing": "screening item-level records and trigger definition"
+    },
+    {
+      "claim": "81 evaluation triggers",
+      "reported": 81,
+      "status": "RECOMPUTED_PROXY",
+      "observed": 81,
+      "missing": "risk-event logs confirming actual protocol activation; records cover 460 enrolled, not all 1370 evaluations"
+    },
+    {
+      "claim": "150 diary-item triggers",
+      "reported": 150,
+      "status": "RECOMPUTED_PROXY",
+      "observed": 150,
+      "positive_unique_participants": 93,
+      "prompt_type_counts": {
+        "diary": 150
+      },
+      "missing": "event logs to distinguish all positive responses from unique episodes/contact events"
+    },
+    {
+      "claim": "10.3 h median contact delay",
+      "reported": 10.3,
+      "status": "UNVERIFIABLE",
+      "observed": null,
+      "missing": "trigger timestamps and first-contact timestamps"
+    },
+    {
+      "claim": "45 same-day referrals",
+      "reported": 45,
+      "status": "UNVERIFIABLE",
+      "observed": null,
+      "missing": "risk referral dates and trigger/contact links"
+    }
+  ],
+  "ancillary_risk_counts": {
+    "probable_disorder_referrals_from_flow": 80,
+    "day31_referred_n": 0,
+    "warning": "The 80 probable-disorder screening referrals and Day31 referrals are not evidence for 45 same-day risk-protocol referrals.",
+    "positive_diary_rows": 150,
+    "unique_positive_diary_participants": 93,
+    "prompt_types": {
+      "random1": 13065,
+      "random2": 13065,
+      "random3": 13065,
+      "random4": 13065,
+      "diary": 13065
+    }
+  }
+}

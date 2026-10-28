@@ -1,0 +1,121 @@
+{
+  "material_passport": {
+    "mode": "H4 statistical_revision",
+    "status": "RECOMPUTED_FROM_SUPPLIED_PREDICTIONS",
+    "inputs": "source daily predictions and previously reconstructed within-person predictions",
+    "scope": "H4 estimand audit; not a claim of rerunning missing original estimator"
+  },
+  "checks": {
+    "n_person_days": 4947,
+    "n_persons": 198,
+    "other_days": 428,
+    "unclassified_days": 18,
+    "weekend_date_mismatches": 0,
+    "study_week_mismatches": 0,
+    "correct_label_mismatches": 0,
+    "date_validation": "Calendar date extracted from EMA prompt_id; all records for the same pid and study_day must agree.",
+    "exam_week_limitation": "Exam-week labels are supplied; no institutional examination calendar is provided for independent validation.",
+    "constant_correct_participants": 119
+  },
+  "model_specifications": [
+    {
+      "scope": "all_rows",
+      "adjustment": "unadjusted",
+      "correlation": "independence",
+      "formula": "correct ~ exam_week"
+    },
+    {
+      "scope": "all_rows",
+      "adjustment": "unadjusted",
+      "correlation": "exchangeable",
+      "formula": "correct ~ exam_week"
+    },
+    {
+      "scope": "six_known_scenarios",
+      "adjustment": "unadjusted",
+      "correlation": "independence",
+      "formula": "correct ~ exam_week"
+    },
+    {
+      "scope": "six_known_scenarios",
+      "adjustment": "adjusted",
+      "correlation": "independence",
+      "formula": "correct ~ exam_week + C(scenario) + weekend_actual + week"
+    },
+    {
+      "scope": "six_known_scenarios",
+      "adjustment": "unadjusted",
+      "correlation": "exchangeable",
+      "formula": "correct ~ exam_week"
+    },
+    {
+      "scope": "six_known_scenarios",
+      "adjustment": "adjusted",
+      "correlation": "exchangeable",
+      "formula": "correct ~ exam_week + C(scenario) + weekend_actual + week"
+    },
+    {
+      "scope": "five_scenarios_excluding_other",
+      "adjustment": "unadjusted",
+      "correlation": "independence",
+      "formula": "correct ~ exam_week"
+    },
+    {
+      "scope": "five_scenarios_excluding_other",
+      "adjustment": "adjusted",
+      "correlation": "independence",
+      "formula": "correct ~ exam_week + C(scenario) + weekend_actual + week"
+    },
+    {
+      "scope": "five_scenarios_excluding_other",
+      "adjustment": "unadjusted",
+      "correlation": "exchangeable",
+      "formula": "correct ~ exam_week"
+    },
+    {
+      "scope": "five_scenarios_excluding_other",
+      "adjustment": "adjusted",
+      "correlation": "exchangeable",
+      "formula": "correct ~ exam_week + C(scenario) + weekend_actual + week"
+    },
+    {
+      "scope": "all_rows",
+      "adjustment": "adjusted_missing_as_category",
+      "correlation": "independence",
+      "formula": "correct ~ exam_week + C(scenario_complete) + weekend_actual + week"
+    },
+    {
+      "scope": "all_rows",
+      "adjustment": "adjusted_missing_as_category",
+      "correlation": "exchangeable",
+      "formula": "correct ~ exam_week + C(scenario_complete) + weekend_actual + week"
+    }
+  ],
+  "primary_reporting_recommendation": "Report descriptive examination-week contrasts and the complete GEE specification sensitivity together. Retain all six known scenarios. Do not claim uniform examination-week deterioration or equivalence.",
+  "table5_rows": 72,
+  "bootstrap_seed": 20261028,
+  "bootstrap_n": 2000,
+  "methods_english": "Day-level correctness was analyzed using binomial generalized estimating equations clustered by participant. Prespecified sensitivity analyses crossed independence and exchangeable working correlations with unadjusted and scenario-, weekend-, and study-week-adjusted specifications. All six observed scenarios, including other, were retained; 18 days without a scenario label were excluded from scenario-adjusted analyses and retained in unadjusted summaries. A separate sensitivity model treated missing scenario labels as a category. Weekend status was verified against the calendar dates encoded in EMA prompt identifiers. Participant-cluster bootstrap confidence intervals used 2,000 resamples. Conditional logistic regression with participant fixed effects was used to assess within-participant associations among participants with variation in correctness.",
+  "results_english": "Across 4,947 extension-sample person-days, unadjusted accuracy was 0.622 during examination weeks (1,287 days) and 0.619 otherwise (3,660 days); balanced accuracy was 0.634 and 0.621, respectively. The difference in balanced accuracy was 0.013 (participant-cluster bootstrap 95% CI [-0.042, 0.068]). The adjusted examination-week odds ratio for correctness was 0.805 (95% CI [0.666, 0.974], p=0.0254) with an exchangeable working correlation and 0.999 (95% CI [0.743, 1.344], p=0.9947) with independence. These population-averaged GEE coefficients are specification-dependent and do not establish a uniform decline in marginal performance during examinations. Participant fixed-effects analysis estimated a conditional odds ratio of 0.397 (95% CI [0.277, 0.568]) among 78 informative participants. Failure to reject a difference was not interpreted as evidence of equivalence.",
+  "figure6b_english": "Using the documented reconstruction, pooled AUCs for raw, laboratory-anchored, and first-week-z-standardized inputs were 0.519, 0.520, and 0.544, whereas the corresponding equally weighted mean within-participant AUCs were 0.560, 0.561, and 0.553. The pooled improvement with first-week standardization therefore did not reflect improved average within-participant discrimination. These are reconstructed analyses; the original values 0.552, 0.551, and 0.547 cannot be combined with the reconstructed pooled estimates. First-week centering alone is a separate sensitivity specification (pooled AUC 0.552; mean within-participant AUC 0.559).",
+  "notes": [
+    "Time-of-day rows are omitted because the supplied table contains daily predictions, not morning/afternoon/evening/night predictions. The four original rows with n=24552 are not supported by these 4947 daily records.",
+    "The other category has 428 days and must be included in descriptive Table5. Its exclusion from any inferential scope must be named explicitly. The 18 unclassified days are displayed separately.",
+    "Exchangeable GEE is population-averaged, not subject-specific. Differences from independence GEE may reflect cluster weighting, working-correlation assumptions and mean-model misspecification; a directional discrepancy must be reported rather than choosing the significant specification.",
+    "Scenario-adjusted models compare a conditional regression association, whereas pooled accuracy and balanced accuracy are descriptive marginal averages. They need not move in the same direction.",
+    "No equivalence margin was specified and no equivalence test was run. Non-significance is not evidence of stability/equivalence.",
+    "The first-week-reference label must specify centering versus within-person z standardization; they produce materially different pooled AUCs.",
+    "The stress median is defined using each participant's entire eligible monitoring period; this is a retrospective discrimination task and not prospective forecasting."
+  ],
+  "software": {
+    "python": "3.11.0",
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "statsmodels": "0.14.5"
+  },
+  "source_hashes": {
+    "data\\06_analysis_ready\\day_level_extension.csv": "eb7a7de271ef0d854c17f23207b8e2d1cfe6f0c10b49b860a375f73b2094db9a",
+    "data\\05_ambulatory\\ema_prompts.csv": "e4854e4464370820e15a4886ba7e7d89092da51c57601f92d65d2d25affb6878",
+    "audit_20261028_daily_refined_within_person_predictions.csv": "2267820d831701ee8ba65f4afab5b6f2b113de2fb69c2d538fc905cc0a1548f2"
+  }
+}

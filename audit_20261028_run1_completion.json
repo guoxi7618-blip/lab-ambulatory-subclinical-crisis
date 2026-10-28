@@ -1,0 +1,11 @@
+{
+  "status": "completed_available_H2_H3_H4",
+  "limitations": [
+    "No original MSAF weights/code/5-minute windows; no MSAF retraining",
+    "No core original OOF predictions; original CV performance cannot be independently recomputed",
+    "No hourly predictions; time-of-day H4 cannot be recomputed",
+    "Exact original hyperparameter grid, day model, mediation and within-person choices absent; reconstructions explicitly labeled",
+    "Existing analysis-ready features require data-integrity audit; inputs not assumed correct"
+  ],
+  "finished": "2026-10-28 10:04:49"
+}

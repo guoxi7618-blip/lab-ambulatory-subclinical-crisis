@@ -1,0 +1,37 @@
+﻿项目,稿件或核查目标,状态,重算与判断,证据文件
+样本,core 203，extension 198；病例102/95,精确复现,401人纳入规则与参与者表一致,audit_20261028_integrity_v2.json
+EMA总合规,40053/52260=76.6%,精确复现,分析样本37077/48056=77.15%；不能混用分母,audit_20261028_integrity_v2.json
+量表计分,SDS/SAS条目和标准分,精确复现,690/690次按各自反向条目处理后一致,audit_20261028_integrity_v2.json
+参考标准,"κ .83；ICC2,1 .89",复现到报告精度,κ=.826005；ICC=.887403；n=92,audit_20261028_supplementary_audit.json
+危机信号,55.3/50.3/40.1/30.5/14.7%；单信号52.3%,复现到报告精度,分母197，非460；单信号103人,audit_20261028_supplementary_audit.json
+H1主表,14个指标,13/14检验p精确复现,IAF原p=.409857，当前特征Student p=.402135，仍不显著,audit_20261028_h1_student_markers.csv
+H1交互,HR42.27；lnRMSSD82.06；SCL32.71,精确复现,ML随机截距；df=6；三个LR统计量42.273545/82.062240/32.712100,audit_20261028_h1_run1_results.json
+H1复制,lnRMSSD反应d .47，pFDR .005,复现到报告精度,d=.473756；Student BH5=.005180；其余四项未过BH5,audit_20261028_h1_student_markers.csv
+H1复合指标,"d .36，[.17,.56]",复现近似值,"d=.365130，CI[.167712,.562547]；单侧Welch p=.000148",audit_20261028_h1_run1_results.json
+H1调整效应,lnRMSSD调整效应 .51/.44,定义澄清后复现,为回归系数除结局总体SD，不宜不加说明地称常规Cohen d,audit_20261028_h1_definition_audit.json
+重测ICC,后部alpha .60,小幅不一致,重建mean-log alpha ICC=.588551，n196；原特征定义/筛选需核查,audit_20261028_h1_conclusions.txt
+EEG簇检验,cluster p .003,不能精确复现,原邻接、阈值、种子缺失；已做5000次max-T替代敏感性，不等同原cluster检验,audit_20261028_h1_run1_eeg_maxT.csv
+VAS,27.6/59.0/33.7,分母澄清后复现,使用全部458个D0实验室人次；分析401人均值27.20/58.54/33.38,audit_20261028_h1_definition_audit.json
+H2人级相关,HR r .16；EDA r .22,复现,HR r=.161590；EDA r=.221004，n401,audit_20261028_run1_h2.json
+H2跨层作用,"b .16，[.07,.25]",重建支持方向与数量级,有效随机截距+斜率：最简b=.15428，p=.000948；调整b=.16615，p=.000248,audit_20261028_refined_h2.json
+H2核心样本,core-only敏感性,合并结果不等于各样本均支持,"最简b=.06878,p=.321；调整b=.09122,p=.170",audit_20261028_refined_h2.json
+基线偏离,d .17，单侧p .047,近似复现,"重建d=.17014,p=.04465，95%CI跨0；病例内严重程度相关r=-.0062",audit_20261028_supplementary_audit.json
+考试周情绪分解,总效应-.84，间接-.47,未精确复现,按提供日数据重建随机截距总效应-1.0612、间接-.4901；FE间接-.4948；原公式和估计集未给,audit_20261028_daily_refined_mediation.json
+H3预测表,19个模型的AUC/分类指标,精确复算,MSAF AUC=.726316，73TP/53TN/50FP/22FN；仅复算预测，未重训MSAF,audit_20261028_run1_provided_prediction_metrics.csv
+H3优于问卷,MSAF vs SDS/SAS,不支持,ΔAUC=-.016403，DeLong p=.720442,audit_20261028_run1_provided_prediction_comparisons.csv
+H3增量,联合 vs SDS/SAS，p .031,复现,ΔAUC=.044711，p=.030703；未经探索性全家族校正，不是外文献头对头突破,audit_20261028_run1_provided_prediction_comparisons.csv
+校准增益,ΔAUC .017,复现且不显著,Δ=.016556，DeLong p=.272788；参与者bootstrap CI跨0,audit_20261028_run1_provided_prediction_comparisons.csv
+MSAF校准截距,.08,定义澄清后精确复现,source为固定logit斜率1的calibration-in-the-large=.075363；联合拟合截距=.048047是另一参数,audit_20261028_metric_definitions.csv
+AUC区间方法,声称2000次bootstrap,需核对方法表述,19模型区间与DeLong正态区间一致到约1.5e-6；实际bootstrap已另算,audit_20261028_metric_definitions.json
+18%场景PPV,.26,报告精度一致,源表实际隐含患病率18.111587%；当前代码按严格18%计算；患病率来源未给,audit_20261028_metric_definitions.json
+Table5工作日/周末,10行原始pipeline,明确不一致,10行人日数不匹配；当前weekend与EMA实际日期完全一致；更正表已输出,audit_20261028_table5_corrections.csv
+H4总体,BA .62，92%跨人方差，60%恒定类别,复现,BA=.623809；跨人logit方差=.917453；恒定类别=.601010,audit_20261028_run1_h4.json
+H4考试周,OR .80，p .027,依赖估计设定,"交换型相关OR约.79-.81,p约.024-.025；独立型稳健GEE p约.89-.99，不能称稳健",audit_20261028_refined_h4.json
+H4时段,早午晚夜BA .55-.56,不可复算,4行各24552窗口数没有对应窗口预测；不能用日级数据替代,audit_20261028_run1_h4_strata.csv
+日级EMA口径,每日情绪与应激均值,已定位隐含定义,是有效生理prompt子集均值，非全部已完成EMA；4947行d_stress/d_pa/d_na/d_any精确对应,audit_20261028_daily_refined_definitions.json
+个体内比较,3787/3691人日,精确复现观测数,按正确prompt子集；原始AUC约.519，lab约.520，首周z基准约.544，平均个体内约.55-.56,audit_20261028_daily_refined_within_person.csv
+EDA校准极端,-1809.25至405.16,明确映射稳定性问题,7人斜率非正，8人逆映射原始等效电导为负；不是把有符号标准分误当电导,audit_20261028_eda_mapping.csv
+退出/随访,D31问卷230；复测217,需补充流程解释,13人仅有问卷；4中途退出者按数据量规则纳入，需保留数据授权说明,audit_20261028_integrity_addendum.json
+风险处置,519/288/81/150/10.3h/45,部分代理可核对,81阳性评估者、150阳性日记可数；其余及实际联系/转介缺少日志,audit_20261028_supplementary_audit.json
+预注册/冻结,OSF与2026-02-26时间戳,未独立核实,freeze表registry为link to be added；真实OSF链接/历史版本/权重缺失,audit_20261028_integrity_v2.json
+敏感性/归因,温度/season MSAF、IG归因,未重训/重算,缺窗级输入、外界温度序列、原权重；只可核对已给汇总，不宣称验证,audit_20261028_run1_completion.json

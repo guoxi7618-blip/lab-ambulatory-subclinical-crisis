@@ -1,0 +1,100 @@
+{
+  "primary_test": "Student equal-variance t reconstructs 13/14 Table3 p-values to machine precision. Welch remains a sensitivity analysis; does not change primary significance pattern.",
+  "adjusted_reactivity_definition": [
+    {
+      "sample": "core",
+      "feature": "hr",
+      "standardized_b": -0.33188370957951424,
+      "lo": -0.6062322247137378,
+      "hi": -0.05753519444529055,
+      "p": 0.017992567744427906,
+      "definition": "outcome SD includes both groups: standardized ANCOVA coefficient, not conventional pooled-within-group Cohen d"
+    },
+    {
+      "sample": "core",
+      "feature": "lnrmssd",
+      "standardized_b": 0.5071779286556057,
+      "lo": 0.2435113879701754,
+      "hi": 0.7708444693410361,
+      "p": 0.00019706545122375588,
+      "definition": "outcome SD includes both groups: standardized ANCOVA coefficient, not conventional pooled-within-group Cohen d"
+    },
+    {
+      "sample": "extension",
+      "feature": "hr",
+      "standardized_b": -0.21499529528938513,
+      "lo": -0.4958343612034472,
+      "hi": 0.06584377062467694,
+      "p": 0.13270968690047386,
+      "definition": "outcome SD includes both groups: standardized ANCOVA coefficient, not conventional pooled-within-group Cohen d"
+    },
+    {
+      "sample": "extension",
+      "feature": "lnrmssd",
+      "standardized_b": 0.4369336404212037,
+      "lo": 0.16297783608326877,
+      "hi": 0.7108894447591386,
+      "p": 0.0019177913911901442,
+      "definition": "outcome SD includes both groups: standardized ANCOVA coefficient, not conventional pooled-within-group Cohen d"
+    }
+  ],
+  "manipulation_check": [
+    {
+      "scope": "all_enrolled_D0_sessions",
+      "n": 458,
+      "means": {
+        "T1": 27.551528384279475,
+        "T2": 58.95436681222708,
+        "T3": 33.7467248908297
+      },
+      "t": 48.01155804155523,
+      "p": 1.1971050540750814e-180
+    },
+    {
+      "scope": "all_analyzable_D0_sessions",
+      "n": 401,
+      "means": {
+        "T1": 27.200000000000003,
+        "T2": 58.54389027431421,
+        "T3": 33.37581047381546
+      },
+      "t": 44.21897405979494,
+      "p": 4.394751472262947e-156
+    },
+    {
+      "scope": "core_analyzable_D0_sessions",
+      "n": 203,
+      "means": {
+        "T1": 26.19310344827586,
+        "T2": 58.51083743842365,
+        "T3": 32.258128078817734
+      },
+      "t": 34.56006130610961,
+      "p": 9.481128747635523e-87
+    }
+  ],
+  "alpha_reliability_sensitivity": [
+    {
+      "alpha_summary": "mean_log",
+      "n": 196,
+      "icc31": 0.5885506009732887
+    },
+    {
+      "alpha_summary": "log_mean",
+      "n": 196,
+      "icc31": 0.5848020842280041
+    },
+    {
+      "alpha_summary": "mean_power",
+      "n": 196,
+      "icc31": 0.5653896570083127
+    }
+  ],
+  "missing": "Exact cluster p cannot be reconstructed because adjacency and original script absent. No raw signals provided; only feature-level re-analysis.",
+  "notes": [
+    "IAF Table3 values do not match present source/analysis-ready CSV. Core control mean 10.029926 vs Table3 10.028; SD .707761 vs .715; Student p .402135 vs .409857. Non-significance unchanged.",
+    "Manuscript VAS means 27.6/59.0/33.7 refer to all 458 enrolled D0 sessions, not the 401 analyzable or 203 core sample. Report denominator explicitly.",
+    "Reported adjusted effects .51/.44 are consistent with outcome-SD standardized ANCOVA coefficients; calling them Cohen d needs a precise definition.",
+    "Global EEG max-T FWER across 32 channels was run with 5000 permutations per measure. Correction across the five EEG feature families is not applied; this is exploratory sensitivity analysis."
+  ]
+}

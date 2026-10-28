@@ -1,0 +1,13 @@
+{
+  "n_rows": 9971,
+  "n_persons": 401,
+  "a": -0.5291692499168755,
+  "b": 0.9350016478553203,
+  "direct": -0.565663358460667,
+  "indirect": -0.4947741206666424,
+  "indirect_ci": [
+    -0.5365127617021566,
+    -0.45423291264123206
+  ],
+  "bootstrap": "2000 participant clusters, within-person demeaned linear coefficients; not causal mediation"
+}

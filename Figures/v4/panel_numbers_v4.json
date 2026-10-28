@@ -1,0 +1,76 @@
+{
+  "vas": {
+    "n": 458,
+    "means": [
+      27.55,
+      58.95,
+      33.75
+    ]
+  },
+  "phase_n": {
+    "control": 101,
+    "subclinical": 102
+  },
+  "aperiodic_t_core": [
+    -3.198,
+    -2.559
+  ],
+  "aperiodic_t_extension": [
+    -2.233,
+    -1.188
+  ],
+  "delta_maxT_sig": 0,
+  "theta_maxT_sig": 0,
+  "alpha_maxT_sig": 0,
+  "beta_maxT_sig": 0,
+  "aper_d_core": -0.419,
+  "eeg_n_core": {
+    "control": 97,
+    "subclinical": 100
+  },
+  "aper_d_extension": -0.261,
+  "eeg_n_extension": {
+    "control": 97,
+    "subclinical": 92
+  },
+  "lab_field_r": [
+    0.1616,
+    0.0011658533641487456
+  ],
+  "subgroup_auc": [
+    {
+      "group": "Passive SI",
+      "n_cases": 26,
+      "auc": 0.8584764749813294,
+      "lo": 0.7796769977595219,
+      "hi": 0.9241971620612397
+    },
+    {
+      "group": "No passive SI",
+      "n_cases": 69,
+      "auc": 0.6765161108766005,
+      "lo": 0.5917862670606444,
+      "hi": 0.7550337695230054
+    },
+    {
+      "group": "Multiple signals",
+      "n_cases": 45,
+      "auc": 0.7941747572815534,
+      "lo": 0.7132632146709816,
+      "hi": 0.8673247033441207
+    },
+    {
+      "group": "Single signal",
+      "n_cases": 50,
+      "auc": 0.6652427184466019,
+      "lo": 0.573004854368932,
+      "hi": 0.7536019417475728
+    }
+  ],
+  "within_auc_means": {
+    "n": 198,
+    "raw": 0.5595330198588157,
+    "lab": 0.5606791114286522,
+    "fwz": 0.5528246398620594
+  }
+}

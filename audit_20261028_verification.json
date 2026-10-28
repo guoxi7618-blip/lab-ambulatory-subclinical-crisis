@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "input_csv_count": 39,
+  "input_hashes_unchanged": true,
+  "source_prediction_metric_max_absolute_difference_excluding_defined_differences": 3.312239371666692e-12,
+  "all_8_selected_models_converged": true,
+  "selected_refit_max_probability_difference": 1.1102230246251563e-16,
+  "tied_auc_matches_sklearn": true,
+  "delong_swap_symmetry": true,
+  "authoritative_scripts_ast_valid": [
+    "audit_20261028_integrity_v2.py",
+    "audit_20261028_integrity_addendum.py",
+    "audit_20261028_h1.py",
+    "audit_20261028_h1_followup.py",
+    "audit_20261028_models.py",
+    "audit_20261028_refinement.py",
+    "audit_20261028_daily_refinement.py",
+    "audit_20261028_metric_definitions.py",
+    "audit_20261028_supplementary_audit_v2.py",
+    "audit_20261028_calibration_sensitivity.py",
+    "audit_20261028_rerun_all_v2.py",
+    "audit_20261028_build_report.py"
+  ],
+  "launcher_integrity_stage_executed_successfully": true,
+  "launcher_whole_pipeline_repeated": false,
+  "original_missing_dependencies": [
+    "MSAF weights and original source code",
+    "5-minute window tensors and raw physiological streams",
+    "core original OOF predictions",
+    "hour-level predictions",
+    "OSF record and risk contact/referral logs"
+  ],
+  "retained_failed_or_superseded_outputs": [
+    "initial supplementary audit script failed before successful v2",
+    "run1 centered-HR random-intercept mixed models singular; superseded by refined_h2",
+    "initial EEG EO-vs-EC comparison resolved in integrity_v2/addendum",
+    "initial daily EMA aggregation superseded by physiology-valid-prompt daily_refined"
+  ],
+  "authoritative_result_notes": "See README; do not use earlier diagnostics as final estimates."
+}

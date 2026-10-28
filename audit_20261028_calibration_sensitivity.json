@@ -1,0 +1,355 @@
+{
+  "status": "NEW_EXPLORATORY_SENSITIVITY_NOT_ORIGINAL_REPRODUCTION",
+  "seed": 20261028,
+  "core_n": 203,
+  "extension_n": 198,
+  "protocol": "5 participant-stratified core-only folds; medians, standardization and optional 1/99 percentiles estimated separately in each training fold. C grid 10^-3 to 10^3, 13 values; l1_ratio=.5; no extension tuning. Final refit on all core. Bootstrap uses paired stratified extension participant resamples; not a refit uncertainty estimate.",
+  "results": [
+    {
+      "block": "physiology",
+      "scheme": "original",
+      "n_features": 32,
+      "features": [
+        "lab_hr_base",
+        "lab_lnrmssd_base",
+        "lab_lnhf_base",
+        "lab_hr_react",
+        "lab_lnrmssd_react",
+        "lab_hr_recovery",
+        "lab_scl_base",
+        "lab_scl_react",
+        "lab_nsscr_stress",
+        "w_noct_lnrmssd_mean",
+        "w_resthr_mean",
+        "w_steps_mean",
+        "w_sleep_mean",
+        "w_scr_rest_mean",
+        "w_temp_mean",
+        "w_noct_lnrmssd_sd",
+        "w_resthr_sd",
+        "w_sleep_sd",
+        "w_midpoint_sd",
+        "w_steps_max",
+        "w_resthr_slope",
+        "w_scl_awake",
+        "w_hr_evening_minus_morning",
+        "w_hr_rest_sd",
+        "w_sleep_storm_frac",
+        "cal_noct_minus_lab",
+        "cal_resthr_minus_lab",
+        "cal_event_resp_over_react",
+        "cal_event_resp",
+        "cal_scl_palm_equiv_rel",
+        "cal_temp_minus_lab",
+        "cal_scr_rel"
+      ],
+      "C": 0.31622776601683794,
+      "core_cv_auc": 0.6731666666666667,
+      "extension_auc": 0.7398058252427185,
+      "final_n_iter": [
+        185
+      ],
+      "final_converged": true,
+      "grid_convergence_warning_count": 0,
+      "seconds": 2.0480966567993164,
+      "extension_auc_bootstrap_ci": [
+        0.6683622892181911,
+        0.8017450178845171
+      ]
+    },
+    {
+      "block": "physiology",
+      "scheme": "without_calibration",
+      "n_features": 25,
+      "features": [
+        "lab_hr_base",
+        "lab_lnrmssd_base",
+        "lab_lnhf_base",
+        "lab_hr_react",
+        "lab_lnrmssd_react",
+        "lab_hr_recovery",
+        "lab_scl_base",
+        "lab_scl_react",
+        "lab_nsscr_stress",
+        "w_noct_lnrmssd_mean",
+        "w_resthr_mean",
+        "w_steps_mean",
+        "w_sleep_mean",
+        "w_scr_rest_mean",
+        "w_temp_mean",
+        "w_noct_lnrmssd_sd",
+        "w_resthr_sd",
+        "w_sleep_sd",
+        "w_midpoint_sd",
+        "w_steps_max",
+        "w_resthr_slope",
+        "w_scl_awake",
+        "w_hr_evening_minus_morning",
+        "w_hr_rest_sd",
+        "w_sleep_storm_frac"
+      ],
+      "C": 0.1,
+      "core_cv_auc": 0.6677380952380954,
+      "extension_auc": 0.7370464997445069,
+      "final_n_iter": [
+        41
+      ],
+      "final_converged": true,
+      "grid_convergence_warning_count": 0,
+      "seconds": 0.589529275894165,
+      "extension_auc_bootstrap_ci": [
+        0.6664256515074093,
+        0.8039933571793562
+      ]
+    },
+    {
+      "block": "physiology",
+      "scheme": "winsorized_calibration",
+      "n_features": 32,
+      "features": [
+        "lab_hr_base",
+        "lab_lnrmssd_base",
+        "lab_lnhf_base",
+        "lab_hr_react",
+        "lab_lnrmssd_react",
+        "lab_hr_recovery",
+        "lab_scl_base",
+        "lab_scl_react",
+        "lab_nsscr_stress",
+        "w_noct_lnrmssd_mean",
+        "w_resthr_mean",
+        "w_steps_mean",
+        "w_sleep_mean",
+        "w_scr_rest_mean",
+        "w_temp_mean",
+        "w_noct_lnrmssd_sd",
+        "w_resthr_sd",
+        "w_sleep_sd",
+        "w_midpoint_sd",
+        "w_steps_max",
+        "w_resthr_slope",
+        "w_scl_awake",
+        "w_hr_evening_minus_morning",
+        "w_hr_rest_sd",
+        "w_sleep_storm_frac",
+        "cal_noct_minus_lab",
+        "cal_resthr_minus_lab",
+        "cal_event_resp_over_react",
+        "cal_event_resp",
+        "cal_scl_palm_equiv_rel",
+        "cal_temp_minus_lab",
+        "cal_scr_rel"
+      ],
+      "C": 0.1,
+      "core_cv_auc": 0.6648571428571428,
+      "extension_auc": 0.7447112927950946,
+      "final_n_iter": [
+        54
+      ],
+      "final_converged": true,
+      "grid_convergence_warning_count": 0,
+      "seconds": 14.21083688735962,
+      "extension_auc_bootstrap_ci": [
+        0.6768446601941748,
+        0.8097112927950946
+      ]
+    },
+    {
+      "block": "SDS_SAS_physiology",
+      "scheme": "original",
+      "n_features": 34,
+      "features": [
+        "lab_hr_base",
+        "lab_lnrmssd_base",
+        "lab_lnhf_base",
+        "lab_hr_react",
+        "lab_lnrmssd_react",
+        "lab_hr_recovery",
+        "lab_scl_base",
+        "lab_scl_react",
+        "lab_nsscr_stress",
+        "w_noct_lnrmssd_mean",
+        "w_resthr_mean",
+        "w_steps_mean",
+        "w_sleep_mean",
+        "w_scr_rest_mean",
+        "w_temp_mean",
+        "w_noct_lnrmssd_sd",
+        "w_resthr_sd",
+        "w_sleep_sd",
+        "w_midpoint_sd",
+        "w_steps_max",
+        "w_resthr_slope",
+        "w_scl_awake",
+        "w_hr_evening_minus_morning",
+        "w_hr_rest_sd",
+        "w_sleep_storm_frac",
+        "cal_noct_minus_lab",
+        "cal_resthr_minus_lab",
+        "cal_event_resp_over_react",
+        "cal_event_resp",
+        "cal_scl_palm_equiv_rel",
+        "cal_temp_minus_lab",
+        "cal_scr_rel",
+        "sds_standard",
+        "sas_standard"
+      ],
+      "C": 0.1,
+      "core_cv_auc": 0.751,
+      "extension_auc": 0.7942769545222279,
+      "final_n_iter": [
+        75
+      ],
+      "final_converged": true,
+      "grid_convergence_warning_count": 0,
+      "seconds": 2.463491201400757,
+      "extension_auc_bootstrap_ci": [
+        0.7255901890648953,
+        0.8562135922330097
+      ]
+    },
+    {
+      "block": "SDS_SAS_physiology",
+      "scheme": "without_calibration",
+      "n_features": 27,
+      "features": [
+        "lab_hr_base",
+        "lab_lnrmssd_base",
+        "lab_lnhf_base",
+        "lab_hr_react",
+        "lab_lnrmssd_react",
+        "lab_hr_recovery",
+        "lab_scl_base",
+        "lab_scl_react",
+        "lab_nsscr_stress",
+        "w_noct_lnrmssd_mean",
+        "w_resthr_mean",
+        "w_steps_mean",
+        "w_sleep_mean",
+        "w_scr_rest_mean",
+        "w_temp_mean",
+        "w_noct_lnrmssd_sd",
+        "w_resthr_sd",
+        "w_sleep_sd",
+        "w_midpoint_sd",
+        "w_steps_max",
+        "w_resthr_slope",
+        "w_scl_awake",
+        "w_hr_evening_minus_morning",
+        "w_hr_rest_sd",
+        "w_sleep_storm_frac",
+        "sds_standard",
+        "sas_standard"
+      ],
+      "C": 0.31622776601683794,
+      "core_cv_auc": 0.7538095238095239,
+      "extension_auc": 0.7878385283597342,
+      "final_n_iter": [
+        49
+      ],
+      "final_converged": true,
+      "grid_convergence_warning_count": 0,
+      "seconds": 0.7472000122070312,
+      "extension_auc_bootstrap_ci": [
+        0.7191492079713848,
+        0.8504879918242206
+      ]
+    },
+    {
+      "block": "SDS_SAS_physiology",
+      "scheme": "winsorized_calibration",
+      "n_features": 34,
+      "features": [
+        "lab_hr_base",
+        "lab_lnrmssd_base",
+        "lab_lnhf_base",
+        "lab_hr_react",
+        "lab_lnrmssd_react",
+        "lab_hr_recovery",
+        "lab_scl_base",
+        "lab_scl_react",
+        "lab_nsscr_stress",
+        "w_noct_lnrmssd_mean",
+        "w_resthr_mean",
+        "w_steps_mean",
+        "w_sleep_mean",
+        "w_scr_rest_mean",
+        "w_temp_mean",
+        "w_noct_lnrmssd_sd",
+        "w_resthr_sd",
+        "w_sleep_sd",
+        "w_midpoint_sd",
+        "w_steps_max",
+        "w_resthr_slope",
+        "w_scl_awake",
+        "w_hr_evening_minus_morning",
+        "w_hr_rest_sd",
+        "w_sleep_storm_frac",
+        "cal_noct_minus_lab",
+        "cal_resthr_minus_lab",
+        "cal_event_resp_over_react",
+        "cal_event_resp",
+        "cal_scl_palm_equiv_rel",
+        "cal_temp_minus_lab",
+        "cal_scr_rel",
+        "sds_standard",
+        "sas_standard"
+      ],
+      "C": 0.1,
+      "core_cv_auc": 0.7486190476190476,
+      "extension_auc": 0.7982626469085335,
+      "final_n_iter": [
+        43
+      ],
+      "final_converged": true,
+      "grid_convergence_warning_count": 0,
+      "seconds": 17.923601388931274,
+      "extension_auc_bootstrap_ci": [
+        0.7291645375574859,
+        0.8595809913132346
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "block": "physiology",
+      "contrast": "without_calibration minus original",
+      "delta_auc": -0.0027593254982116733,
+      "paired_stratified_bootstrap_ci": [
+        -0.036688809402146035,
+        0.03240163515585079
+      ],
+      "bootstrap_n": 2000
+    },
+    {
+      "block": "physiology",
+      "contrast": "winsorized_calibration minus original",
+      "delta_auc": 0.004905467552376086,
+      "paired_stratified_bootstrap_ci": [
+        -0.02197240674501799,
+        0.0326111394992336
+      ],
+      "bootstrap_n": 2000
+    },
+    {
+      "block": "SDS_SAS_physiology",
+      "contrast": "without_calibration minus original",
+      "delta_auc": -0.006438426162493682,
+      "paired_stratified_bootstrap_ci": [
+        -0.024747061829330508,
+        0.012570260602963738
+      ],
+      "bootstrap_n": 2000
+    },
+    {
+      "block": "SDS_SAS_physiology",
+      "contrast": "winsorized_calibration minus original",
+      "delta_auc": 0.003985692386305639,
+      "paired_stratified_bootstrap_ci": [
+        -0.0008175779253960513,
+        0.009404701073071101
+      ],
+      "bootstrap_n": 2000
+    }
+  ]
+}

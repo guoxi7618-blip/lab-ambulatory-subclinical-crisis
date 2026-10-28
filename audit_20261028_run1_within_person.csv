@@ -1,0 +1,4 @@
+method,n_core,n_extension,auc,mean_within_person_auc,status,lo,hi,delta_vs_raw,delta_lo,delta_hi
+raw,3797,3705,0.5201905372171153,0.5626559108792564,reconstructed: median defined on valid EMA days; first week on valid days; original choices unspecified,0.5088006100660398,0.531808129786513,0.0,0.0,0.0
+lab_anchored,3797,3705,0.5242336006455608,0.5610470536078892,reconstructed: median defined on valid EMA days; first week on valid days; original choices unspecified,0.5129105683295093,0.5363939543825545,0.004043063428445515,-0.00630100344317529,0.014514726069397247
+first_week,3797,3705,0.5550953939658259,0.5601350188436145,reconstructed: median defined on valid EMA days; first week on valid days; original choices unspecified,0.5372249378020665,0.5727155329768862,0.03490485674871058,0.0192807846085571,0.050746488871830336

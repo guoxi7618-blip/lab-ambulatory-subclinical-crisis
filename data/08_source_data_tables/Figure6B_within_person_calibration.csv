@@ -1,0 +1,4 @@
+reference,pooled_auc,ci_lo,ci_hi,mean_within_person_auc
+raw,0.515,0.504,0.528,0.552
+lab_anchored,0.517,0.505,0.529,0.551
+self_week1,0.543,0.526,0.559,0.547

@@ -1,0 +1,20 @@
+index,value
+eeg_packet_loss_median,0.413
+eeg_packet_loss_range,"[0.016, 4.396]"
+eeg_bad_channels_median,1.0
+eeg_bad_channels_iqr,"[1.0, 2.0]"
+eeg_ics_removed_median,6.0
+eeg_excluded,15
+eeg_excluded_pct,3.3
+alpha_reactivity_gt1_pct,98.7
+ecg_windows_lt5pct_corrected_pct,99.9
+eda_nonresponders_pct,12.0
+lsl_offset_median_ms,4.2
+lsl_offset_max_ms,19.0
+valid_days_median,25.0
+valid_days_iqr,"[23.0, 27.0]"
+ema_compliance_mean,76.6
+ema_compliance_sd,10.6
+ema_compliance_by_group,"{""0"": 78.9, ""1"": 74.4}"
+ema_compliance_group_p,0.0
+level2_kappa,0.735

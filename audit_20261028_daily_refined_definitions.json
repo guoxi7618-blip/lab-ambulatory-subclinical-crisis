@@ -1,0 +1,22 @@
+{
+  "scope": "daily EMA averages use only prompt_level_h2 (physiology-valid) rows, not all completed EMA",
+  "n_extension_rows": 4947,
+  "comparisons": {
+    "d_stress": {
+      "max_difference": 1.4210854715202004e-14,
+      "missing_mismatch": 0
+    },
+    "d_pa": {
+      "max_difference": 4.440892098500626e-16,
+      "missing_mismatch": 0
+    },
+    "d_na": {
+      "max_difference": 4.440892098500626e-16,
+      "missing_mismatch": 0
+    },
+    "d_any": {
+      "max_difference": 0.0,
+      "missing_mismatch": 0
+    }
+  }
+}

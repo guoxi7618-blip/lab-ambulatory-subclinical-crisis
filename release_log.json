@@ -1,0 +1,59 @@
+{
+  "01_participants/participant_characteristics.csv": {
+    "removed": [
+      "discipline",
+      "year_of_study"
+    ],
+    "date_shifted": false
+  },
+  "02_reference_standard/reevaluation_day31.csv": {
+    "removed": [
+      "referred"
+    ],
+    "date_shifted": false
+  },
+  "02_reference_standard/reference_standard.csv": {
+    "removed": [
+      "crisis_passive_si",
+      "crisis_self_harm",
+      "crisis_acute_stress",
+      "crisis_functional_impairment",
+      "crisis_anhedonia_withdrawal",
+      "cssrs_wish_dead",
+      "cssrs_active_thoughts",
+      "cssrs_method",
+      "cssrs_intent",
+      "cssrs_plan",
+      "cssrs_behavior_3m",
+      "cssrs_screen_positive"
+    ],
+    "date_shifted": false
+  },
+  "03_questionnaires/covariates.csv": {
+    "removed": [
+      "height_cm",
+      "weight_kg",
+      "cycle_length_days",
+      "cycle_day_at_lab"
+    ],
+    "date_shifted": false
+  },
+  "05_ambulatory/ema_prompts.csv": {
+    "removed": [
+      "passive_si"
+    ],
+    "date_shifted": true
+  },
+  "06_analysis_ready/person_level_features.csv": {
+    "removed": [
+      "ema_passive_si_any"
+    ],
+    "date_shifted": false
+  },
+  "06_analysis_ready/prompt_level_h2.csv": {
+    "removed": [
+      "passive_si"
+    ],
+    "date_shifted": true
+  }
+}

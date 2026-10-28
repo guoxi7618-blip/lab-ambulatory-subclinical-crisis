@@ -1,0 +1,523 @@
+file,variable,type,description,example,public_release
+01_participants/participant_characteristics.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+01_participants/participant_characteristics.csv,sample,object,core = development; extension = temporal validation,core,released
+01_participants/participant_characteristics.csv,status,object,Participation status,completed,released
+01_participants/participant_characteristics.csv,withdrawal_study_day,float64,Study day of withdrawal (-1 = before laboratory session; empty = completed),0.0,released
+01_participants/participant_characteristics.csv,age,int64,Age (years),21,released
+01_participants/participant_characteristics.csv,sex,object,Sex,female,released
+01_participants/participant_characteristics.csv,year_of_study,object,"Year of study (Y1-Y4 undergraduate, PG1-PG3 postgraduate)",Y3,restricted (available on request)
+01_participants/participant_characteristics.csv,graduating,int64,Graduating year (1/0),0,released
+01_participants/participant_characteristics.csv,discipline,object,Academic discipline,humanities,restricted (available on request)
+01_participants/participant_characteristics.csv,phq9_total,int64,PHQ-9 total at screening,8,released
+01_participants/participant_characteristics.csv,gad7_total,int64,GAD-7 total at screening,3,released
+01_participants/participant_characteristics.csv,group,object,Reference-standard group,subclinical,released
+01_participants/participant_characteristics.csv,bmi,float64,Body mass index (kg/m2),18.7,released
+01_participants/participant_characteristics.csv,smoker,int64,Current smoker (1/0),0,released
+01_participants/participant_characteristics.csv,exercise_hours_per_week,float64,Self-reported exercise (h/week),3.2,released
+01_participants/participant_characteristics.csv,sds_standard,int64,SDS item/score,43,released
+01_participants/participant_characteristics.csv,sas_standard,int64,SAS item/score,47,released
+01_participants/participant_characteristics.csv,severity,int64,Counselor severity rating (0-10),3,released
+01_participants/participant_characteristics.csv,analyzable,int64,Included in the primary analyses (1/0),1,released
+01_participants/participant_flow.csv,batch,object,"Recruitment batch (A = autumn, B = spring)",A,released
+01_participants/participant_flow.csv,stage,object,Flow stage,screened,released
+01_participants/participant_flow.csv,n,int64,Number of participants,1180,released
+02_reference_standard/double_rating.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C132,released
+02_reference_standard/double_rating.csv,sample,object,core = development; extension = temporal validation,core,released
+02_reference_standard/double_rating.csv,rater1,object,First rater ID,CNS02,released
+02_reference_standard/double_rating.csv,rater2,object,Second rater ID,CNS04,released
+02_reference_standard/double_rating.csv,category_rater1,object,Category by first rater,no_notable_distress,released
+02_reference_standard/double_rating.csv,category_rater2,object,Category by second rater,no_notable_distress,released
+02_reference_standard/double_rating.csv,severity_rater1,int64,Severity by first rater (0-10),2,released
+02_reference_standard/double_rating.csv,severity_rater2,int64,Severity by second rater (0-10),2,released
+02_reference_standard/double_rating.csv,disagreement,int64,Raters disagreed on category (1/0),0,released
+02_reference_standard/double_rating.csv,consensus_category,object,Category after adjudication,no_notable_distress,released
+02_reference_standard/double_rating.csv,adjudicated_by,object,Adjudicating psychologist ID,PSY01,released
+02_reference_standard/reevaluation_day31.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+02_reference_standard/reevaluation_day31.csv,counselor_id,object,Pseudonymous counselor ID,CNS04,released
+02_reference_standard/reevaluation_day31.csv,interview_minutes,int64,Duration of the clinical interview (min),30,released
+02_reference_standard/reevaluation_day31.csv,severity,int64,Counselor severity rating (0-10),3,released
+02_reference_standard/reevaluation_day31.csv,category,object,Counselor category,subclinical_psychological_crisis,released
+02_reference_standard/reevaluation_day31.csv,referred,int64,Referred for care at Day 31 (1/0),0,restricted (available on request)
+02_reference_standard/reference_standard.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+02_reference_standard/reference_standard.csv,sample,object,core = development; extension = temporal validation,core,released
+02_reference_standard/reference_standard.csv,category,object,Counselor category,subclinical_psychological_crisis,released
+02_reference_standard/reference_standard.csv,severity,int64,Counselor severity rating (0-10),3,released
+02_reference_standard/reference_standard.csv,crisis_passive_si,int64,Crisis signal recorded by the counselor,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,crisis_self_harm,int64,Crisis signal recorded by the counselor,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,crisis_acute_stress,int64,Crisis signal recorded by the counselor,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,crisis_functional_impairment,int64,Crisis signal recorded by the counselor,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,crisis_anhedonia_withdrawal,int64,Crisis signal recorded by the counselor,1,restricted (available on request)
+02_reference_standard/reference_standard.csv,counselor_id,object,Pseudonymous counselor ID,CNS03,released
+02_reference_standard/reference_standard.csv,interview_minutes,int64,Duration of the clinical interview (min),46,released
+02_reference_standard/reference_standard.csv,cssrs_wish_dead,int64,C-SSRS screen item,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,cssrs_active_thoughts,int64,C-SSRS screen item,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,cssrs_method,int64,C-SSRS screen item,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,cssrs_intent,int64,C-SSRS screen item,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,cssrs_plan,int64,C-SSRS screen item,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,cssrs_behavior_3m,int64,C-SSRS screen item,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,cssrs_screen_positive,int64,C-SSRS screen item,0,restricted (available on request)
+02_reference_standard/reference_standard.csv,days_to_lab,int64,Days from evaluation to laboratory session,3,released
+03_questionnaires/covariates.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+03_questionnaires/covariates.csv,edinburgh_li,int64,Edinburgh handedness laterality index,89,released
+03_questionnaires/covariates.csv,height_cm,float64,Height (cm),155.6,restricted (available on request)
+03_questionnaires/covariates.csv,weight_kg,float64,Weight (kg),45.3,restricted (available on request)
+03_questionnaires/covariates.csv,smoker,int64,Current smoker (1/0),0,released
+03_questionnaires/covariates.csv,caffeine_cups_per_day,int64,Caffeinated drinks per day,0,released
+03_questionnaires/covariates.csv,exercise_hours_per_week,float64,Self-reported exercise (h/week),3.2,released
+03_questionnaires/covariates.csv,cycle_length_days,float64,Self-reported menstrual cycle length (days),33.0,restricted (available on request)
+03_questionnaires/covariates.csv,pretest_alcohol_24h,int64,Alcohol in the 24 h before testing (1/0),0,released
+03_questionnaires/covariates.csv,pretest_vigorous_exercise_24h,int64,Vigorous exercise in the 24 h before testing (1/0),0,released
+03_questionnaires/covariates.csv,pretest_caffeine_3h,int64,Caffeine in the 3 h before testing (1/0),0,released
+03_questionnaires/covariates.csv,pretest_nicotine_3h,int64,Nicotine in the 3 h before testing (1/0),0,released
+03_questionnaires/covariates.csv,pretest_food_1h,int64,Food in the 1 h before testing (1/0),1,released
+03_questionnaires/covariates.csv,bmi,float64,Body mass index (kg/m2),18.7,released
+03_questionnaires/covariates.csv,cycle_day_at_lab,float64,Menstrual cycle day at the Day-0 laboratory session,13.0,restricted (available on request)
+03_questionnaires/sds_sas_items.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+03_questionnaires/sds_sas_items.csv,session,object,D0 = Day 0; D31 = Day-31 retest,D0,released
+03_questionnaires/sds_sas_items.csv,sds1,int64,SDS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sds2,int64,SDS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sds3,int64,SDS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sds4,int64,SDS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sds5,int64,SDS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sds6,int64,SDS item/score,4,released
+03_questionnaires/sds_sas_items.csv,sds7,int64,SDS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sds8,int64,SDS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sds9,int64,SDS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sds10,int64,SDS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sds11,int64,SDS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sds12,int64,SDS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sds13,int64,SDS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sds14,int64,SDS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sds15,int64,SDS item/score,4,released
+03_questionnaires/sds_sas_items.csv,sds16,int64,SDS item/score,4,released
+03_questionnaires/sds_sas_items.csv,sds17,int64,SDS item/score,4,released
+03_questionnaires/sds_sas_items.csv,sds18,int64,SDS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sds19,int64,SDS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sds20,int64,SDS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sas1,int64,SAS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sas2,int64,SAS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sas3,int64,SAS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sas4,int64,SAS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sas5,int64,SAS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sas6,int64,SAS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sas7,int64,SAS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sas8,int64,SAS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sas9,int64,SAS item/score,4,released
+03_questionnaires/sds_sas_items.csv,sas10,int64,SAS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sas11,int64,SAS item/score,4,released
+03_questionnaires/sds_sas_items.csv,sas12,int64,SAS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sas13,int64,SAS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sas14,int64,SAS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sas15,int64,SAS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sas16,int64,SAS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sas17,int64,SAS item/score,3,released
+03_questionnaires/sds_sas_items.csv,sas18,int64,SAS item/score,1,released
+03_questionnaires/sds_sas_items.csv,sas19,int64,SAS item/score,4,released
+03_questionnaires/sds_sas_items.csv,sas20,int64,SAS item/score,2,released
+03_questionnaires/sds_sas_items.csv,sds_raw,int64,SDS item/score,35,released
+03_questionnaires/sds_sas_items.csv,sds_standard,int64,SDS item/score,43,released
+03_questionnaires/sds_sas_items.csv,sas_raw,int64,SAS item/score,38,released
+03_questionnaires/sds_sas_items.csv,sas_standard,int64,SAS item/score,47,released
+04_laboratory/lab_eeg_features.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+04_laboratory/lab_eeg_features.csv,session,object,D0 = Day 0; D31 = Day-31 retest,D0,released
+04_laboratory/lab_eeg_features.csv,condition,object,EEG recording condition,rest_ec,released
+04_laboratory/lab_eeg_features.csv,channel,object,EEG channel (10-20 extended),Fp1,released
+04_laboratory/lab_eeg_features.csv,delta_abs,float64,"Absolute delta power (1-4 Hz, uV2)",13.617,released
+04_laboratory/lab_eeg_features.csv,theta_abs,float64,"Absolute theta power (4-8 Hz, uV2)",7.43,released
+04_laboratory/lab_eeg_features.csv,alpha_abs,float64,"Absolute alpha power (8-13 Hz, uV2)",12.3,released
+04_laboratory/lab_eeg_features.csv,beta_abs,float64,"Absolute beta power (13-30 Hz, uV2)",2.597,released
+04_laboratory/lab_eeg_features.csv,delta_rel,float64,Relative delta power,0.3789,released
+04_laboratory/lab_eeg_features.csv,theta_rel,float64,Relative theta power,0.2067,released
+04_laboratory/lab_eeg_features.csv,alpha_rel,float64,Relative alpha power,0.3422,released
+04_laboratory/lab_eeg_features.csv,beta_rel,float64,Relative beta power,0.0722,released
+04_laboratory/lab_eeg_features.csv,aperiodic_exponent,float64,"Aperiodic exponent (specparam, 2-40 Hz)",1.3814,released
+04_laboratory/lab_eeg_features.csv,aperiodic_offset,float64,Aperiodic offset (specparam),1.6812,released
+04_laboratory/lab_eeg_features.csv,iaf_hz,float64,Individual alpha frequency (Hz),12.66,released
+04_laboratory/lab_eeg_quality.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+04_laboratory/lab_eeg_quality.csv,session,object,D0 = Day 0; D31 = Day-31 retest,D0,released
+04_laboratory/lab_eeg_quality.csv,n_bad_channels,int64,Interpolated EEG channels (n),3,released
+04_laboratory/lab_eeg_quality.csv,bad_channels,object,Interpolated channel labels,F4;F7;C3,released
+04_laboratory/lab_eeg_quality.csv,asr_repaired_pct,float64,Data repaired by ASR (%),4.31,released
+04_laboratory/lab_eeg_quality.csv,n_ics_removed,int64,Independent components removed (n),6,released
+04_laboratory/lab_eeg_quality.csv,clean_s_rest_ec,int64,Clean eyes-closed rest (s),223,released
+04_laboratory/lab_eeg_quality.csv,clean_s_rest_eo,int64,Clean eyes-open rest (s),189,released
+04_laboratory/lab_eeg_quality.csv,packet_loss_pct,float64,Wi-Fi packet loss (%),1.235,released
+04_laboratory/lab_eeg_quality.csv,alpha_reactivity_ec_eo,float64,Alpha reactivity (EC/EO power ratio),2.719,released
+04_laboratory/lab_eeg_quality.csv,lsl_offset_ms,float64,LSL clock offset (ms),3.5,released
+04_laboratory/lab_eeg_quality.csv,excluded_gt20pct_bad,int64,Session excluded for > 20% bad channels (1/0),0,released
+04_laboratory/lab_mist_trials.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+04_laboratory/lab_mist_trials.csv,session,object,D0 = Day 0; D31 = Day-31 retest,D0,released
+04_laboratory/lab_mist_trials.csv,block,object,MIST block,control,released
+04_laboratory/lab_mist_trials.csv,trial,int64,Trial number,1,released
+04_laboratory/lab_mist_trials.csv,onset_s,float64,Trial onset from recording start (s),780.0,released
+04_laboratory/lab_mist_trials.csv,difficulty,int64,Arithmetic difficulty (1-5),4,released
+04_laboratory/lab_mist_trials.csv,time_limit_ms,float64,Adaptive time limit (ms),3505.0,released
+04_laboratory/lab_mist_trials.csv,rt_ms,int64,Response time (ms),5170,released
+04_laboratory/lab_mist_trials.csv,correct,int64,Correct response (1/0),1,released
+04_laboratory/lab_mist_trials.csv,timeout,int64,Response exceeded the time limit (1/0),0,released
+04_laboratory/lab_phase_features_ecg_eda.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+04_laboratory/lab_phase_features_ecg_eda.csv,session,object,D0 = Day 0; D31 = Day-31 retest,D0,released
+04_laboratory/lab_phase_features_ecg_eda.csv,phase,object,Laboratory task phase,baseline,released
+04_laboratory/lab_phase_features_ecg_eda.csv,hr_bpm,float64,Heart rate (bpm),82.83,released
+04_laboratory/lab_phase_features_ecg_eda.csv,rmssd_ms,float64,RMSSD (ms),28.97,released
+04_laboratory/lab_phase_features_ecg_eda.csv,ln_rmssd,float64,Natural log of RMSSD,3.366,released
+04_laboratory/lab_phase_features_ecg_eda.csv,ln_hf_ms2,float64,Natural log of HF-HRV power (ms2),6.857,released
+04_laboratory/lab_phase_features_ecg_eda.csv,resp_rate_bpm,float64,ECG-derived respiration rate (breaths/min),13.88,released
+04_laboratory/lab_phase_features_ecg_eda.csv,pct_corrected_beats,float64,Interbeat intervals corrected (%),0.23,released
+04_laboratory/lab_phase_features_ecg_eda.csv,scl_us,float64,Skin conductance level (uS),7.912,released
+04_laboratory/lab_phase_features_ecg_eda.csv,ns_scr_per_min,float64,Non-specific SCRs per minute,0.15,released
+04_laboratory/lab_phase_features_ecg_eda.csv,scr_amp_us,float64,Mean SCR amplitude (uS),0.0,released
+04_laboratory/lab_phase_features_ecg_eda.csv,eda_nonresponder,int64,Electrodermal non-responder (1/0),1,released
+04_laboratory/lab_subjective_ratings.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+04_laboratory/lab_subjective_ratings.csv,session,object,D0 = Day 0; D31 = Day-31 retest,D0,released
+04_laboratory/lab_subjective_ratings.csv,timepoint,object,Rating time point (T1-T3),T1,released
+04_laboratory/lab_subjective_ratings.csv,vas_stress,float64,Visual analogue stress rating (0-100),41.6,released
+04_laboratory/lab_subjective_ratings.csv,stai6_1,int64,STAI-6 item,2,released
+04_laboratory/lab_subjective_ratings.csv,stai6_2,int64,STAI-6 item,2,released
+04_laboratory/lab_subjective_ratings.csv,stai6_3,int64,STAI-6 item,3,released
+04_laboratory/lab_subjective_ratings.csv,stai6_4,int64,STAI-6 item,2,released
+04_laboratory/lab_subjective_ratings.csv,stai6_5,int64,STAI-6 item,1,released
+04_laboratory/lab_subjective_ratings.csv,stai6_6,int64,STAI-6 item,3,released
+04_laboratory/lab_subjective_ratings.csv,panas_pa1,float64,PANAS item,4.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_pa2,float64,PANAS item,3.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_pa3,float64,PANAS item,3.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_pa4,float64,PANAS item,3.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_pa5,float64,PANAS item,2.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_na1,float64,PANAS item,3.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_na2,float64,PANAS item,2.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_na3,float64,PANAS item,3.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_na4,float64,PANAS item,3.0,released
+04_laboratory/lab_subjective_ratings.csv,panas_na5,float64,PANAS item,1.0,released
+04_laboratory/lab_wrist_concurrent_features.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+04_laboratory/lab_wrist_concurrent_features.csv,session,object,D0 = Day 0; D31 = Day-31 retest,D0,released
+04_laboratory/lab_wrist_concurrent_features.csv,phase,object,Laboratory task phase,baseline,released
+04_laboratory/lab_wrist_concurrent_features.csv,wrist_hr_bpm,float64,Wristband heart rate (bpm),82.96,released
+04_laboratory/lab_wrist_concurrent_features.csv,wrist_scl_us,float64,Wristband SCL (uS),1.374,released
+04_laboratory/lab_wrist_concurrent_features.csv,wrist_temp_c,float64,Wristband skin temperature (C),32.55,released
+04_laboratory/lab_wrist_concurrent_features.csv,wrist_ppg_sqi,float64,Wristband PPG signal quality index (0-1),0.884,released
+05_ambulatory/ema_prompts.csv,prompt_id,object,EMA prompt ID,C001-YYYYMMDD-1,released; embedded date shifted per participant (weekday preserved)
+05_ambulatory/ema_prompts.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+05_ambulatory/ema_prompts.csv,study_day,int64,Day of ambulatory monitoring (1-30),1,released
+05_ambulatory/ema_prompts.csv,prompt_type,object,Prompt type (semi-random or evening diary),random1,released
+05_ambulatory/ema_prompts.csv,scheduled_time,object,Scheduled time,09:26:05,released
+05_ambulatory/ema_prompts.csv,push_time,object,Notification time,09:26:29,released
+05_ambulatory/ema_prompts.csv,reminder_time,object,Reminder time,21:07:49,released
+05_ambulatory/ema_prompts.csv,open_time,object,Time opened,09:33:14,released
+05_ambulatory/ema_prompts.csv,submit_time,object,Time submitted,09:35:00,released
+05_ambulatory/ema_prompts.csv,status,object,Participation status,completed,released
+05_ambulatory/ema_prompts.csv,postponed,int64,Prompt postponed by participant (1/0),0,released
+05_ambulatory/ema_prompts.csv,stress,float64,Momentary stress (0-100),14.0,released
+05_ambulatory/ema_prompts.csv,pa_happy,float64,EMA positive affect item (1-7),3.0,released
+05_ambulatory/ema_prompts.csv,pa_relaxed,float64,EMA positive affect item (1-7),4.0,released
+05_ambulatory/ema_prompts.csv,pa_energetic,float64,EMA positive affect item (1-7),5.0,released
+05_ambulatory/ema_prompts.csv,na_down,float64,EMA negative affect item (1-7),3.0,released
+05_ambulatory/ema_prompts.csv,na_tense,float64,EMA negative affect item (1-7),2.0,released
+05_ambulatory/ema_prompts.csv,na_irritated,float64,EMA negative affect item (1-7),2.0,released
+05_ambulatory/ema_prompts.csv,stressor_since_last,float64,Stressor reported since last prompt (1/0),0.0,released
+05_ambulatory/ema_prompts.csv,activity,object,Current activity,resting,released
+05_ambulatory/ema_prompts.csv,location,object,Location category,dormitory,released
+05_ambulatory/ema_prompts.csv,sleep_quality_last_night,float64,Sleep quality last night (1-7),3.0,released
+05_ambulatory/ema_prompts.csv,most_stressful_type,object,Most stressful event of the day (diary),none,released
+05_ambulatory/ema_prompts.csv,coping,object,Main coping strategy (diary),emotion_regulation,released
+05_ambulatory/ema_prompts.csv,rumination1,float64,Rumination item 1 (1-7),4.0,released
+05_ambulatory/ema_prompts.csv,rumination2,float64,Rumination item 2 (1-7),2.0,released
+05_ambulatory/ema_prompts.csv,passive_si,float64,Passive suicidal ideation endorsed (1/0),0.0,restricted (available on request)
+05_ambulatory/ema_prompts.csv,stressor_type,object,Type of most recent stressor,financial,released
+05_ambulatory/ema_prompts.csv,stressor_severity,float64,Stressor severity (1-7),6.0,released
+05_ambulatory/wrist_daily_features.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+05_ambulatory/wrist_daily_features.csv,study_day,int64,Day of ambulatory monitoring (1-30),1,released
+05_ambulatory/wrist_daily_features.csv,wear_hours,float64,Hours worn,23.42,released
+05_ambulatory/wrist_daily_features.csv,valid_day,int64,Valid wear day (>= 16 h and sleep worn),1,released
+05_ambulatory/wrist_daily_features.csv,sleep_onset,object,Sleep onset (clock time),23:58:00,released
+05_ambulatory/wrist_daily_features.csv,sleep_offset,object,Sleep offset (clock time),05:55:00,released
+05_ambulatory/wrist_daily_features.csv,sleep_duration_h,float64,Sleep duration (h),5.95,released
+05_ambulatory/wrist_daily_features.csv,sleep_midpoint_min,float64,Sleep midpoint (min after midnight),176.7,released
+05_ambulatory/wrist_daily_features.csv,nocturnal_rmssd_ms,float64,"Nocturnal RMSSD, main sleep period (ms)",54.95,released
+05_ambulatory/wrist_daily_features.csv,resting_hr_bpm,float64,"Awake resting heart rate, 10th percentile of rest windows (bpm)",67.43,released
+05_ambulatory/wrist_daily_features.csv,steps,int64,Steps,7717,released
+05_ambulatory/wrist_daily_features.csv,scr_rate_rest_per_5min,float64,SCRs per 5 min in awake rest windows,0.42,released
+05_ambulatory/wrist_daily_features.csv,mean_skin_temp_c,float64,Mean skin temperature while worn (C),32.48,released
+06_analysis_ready/day_level_extension.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",E001,released
+06_analysis_ready/day_level_extension.csv,study_day,int64,Day of ambulatory monitoring (1-30),2,released
+06_analysis_ready/day_level_extension.csv,wear_hours,float64,Hours worn,21.5,released
+06_analysis_ready/day_level_extension.csv,valid_day,int64,Valid wear day (>= 16 h and sleep worn),1,released
+06_analysis_ready/day_level_extension.csv,sleep_onset,object,Sleep onset (clock time),01:17:00,released
+06_analysis_ready/day_level_extension.csv,sleep_offset,object,Sleep offset (clock time),09:05:00,released
+06_analysis_ready/day_level_extension.csv,sleep_duration_h,float64,Sleep duration (h),7.79,released
+06_analysis_ready/day_level_extension.csv,sleep_midpoint_min,float64,Sleep midpoint (min after midnight),311.2,released
+06_analysis_ready/day_level_extension.csv,nocturnal_rmssd_ms,float64,"Nocturnal RMSSD, main sleep period (ms)",78.48,released
+06_analysis_ready/day_level_extension.csv,resting_hr_bpm,float64,"Awake resting heart rate, 10th percentile of rest windows (bpm)",63.2,released
+06_analysis_ready/day_level_extension.csv,steps,int64,Steps,10325,released
+06_analysis_ready/day_level_extension.csv,scr_rate_rest_per_5min,float64,SCRs per 5 min in awake rest windows,0.595,released
+06_analysis_ready/day_level_extension.csv,mean_skin_temp_c,float64,Mean skin temperature while worn (C),33.2,released
+06_analysis_ready/day_level_extension.csv,y,int64,"1 = subclinical psychological crisis, 0 = control",1,released
+06_analysis_ready/day_level_extension.csv,sample,object,core = development; extension = temporal validation,extension,released
+06_analysis_ready/day_level_extension.csv,d_stress,float64,Daily mean EMA stress,32.25,released
+06_analysis_ready/day_level_extension.csv,d_pa,float64,Daily mean positive affect,5.0,released
+06_analysis_ready/day_level_extension.csv,d_na,float64,Daily mean negative affect,2.083333333333333,released
+06_analysis_ready/day_level_extension.csv,d_any,float64,Proportion of prompts reporting a stressor,0.0,released
+06_analysis_ready/day_level_extension.csv,scenario,object,Campus scenario,no_stressor,released
+06_analysis_ready/day_level_extension.csv,exam_week,int64,Examination week (1/0),0,released
+06_analysis_ready/day_level_extension.csv,weekend,int64,Weekend day (1/0),0,released
+06_analysis_ready/day_level_extension.csv,week,int64,Study week (1-4),1,released
+06_analysis_ready/day_level_extension.csv,ln_noct,float64,Natural log of nocturnal RMSSD,4.362843815257108,released
+06_analysis_ready/day_level_extension.csv,lab_lnrmssd_base,float64,Laboratory feature,3.951,released
+06_analysis_ready/day_level_extension.csv,lab_hr_base,float64,Laboratory feature,78.34,released
+06_analysis_ready/day_level_extension.csv,lab_hr_react,float64,Laboratory feature,9.743333333333323,released
+06_analysis_ready/day_level_extension.csv,lab_scl_react,float64,Laboratory feature,0.6113333333333326,released
+06_analysis_ready/day_level_extension.csv,eeg_aper_mean,float64,Laboratory EEG feature,1.509640625,released
+06_analysis_ready/day_level_extension.csv,cal_noct,float64,Ambulatory feature relative to the laboratory baseline,0.4118438152571078,released
+06_analysis_ready/day_level_extension.csv,cal_hr,float64,Ambulatory feature relative to the laboratory baseline,-15.14,released
+06_analysis_ready/day_level_extension.csv,p,float64,Predicted probability,0.2451415482211987,released
+06_analysis_ready/day_level_extension.csv,pred,int64,Predicted class at the fixed threshold,0,released
+06_analysis_ready/day_level_extension.csv,correct,int64,Correct response (1/0),0,released
+06_analysis_ready/person_level_features.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+06_analysis_ready/person_level_features.csv,lab_hr_base,float64,Laboratory feature,82.83,released
+06_analysis_ready/person_level_features.csv,lab_lnrmssd_base,float64,Laboratory feature,3.366,released
+06_analysis_ready/person_level_features.csv,lab_lnhf_base,float64,Laboratory feature,6.857,released
+06_analysis_ready/person_level_features.csv,lab_hr_react,float64,Laboratory feature,0.9599999999999936,released
+06_analysis_ready/person_level_features.csv,lab_lnrmssd_react,float64,Laboratory feature,0.08,released
+06_analysis_ready/person_level_features.csv,lab_hr_recovery,float64,Laboratory feature,0.7355555555555561,released
+06_analysis_ready/person_level_features.csv,lab_scl_base,float64,Laboratory feature,2.068380594320411,released
+06_analysis_ready/person_level_features.csv,lab_scl_react,float64,Laboratory feature,-0.1903333333333332,released
+06_analysis_ready/person_level_features.csv,lab_nsscr_stress,float64,Laboratory feature,0.15,released
+06_analysis_ready/person_level_features.csv,eeg_aper_mean,float64,Laboratory EEG feature,1.352875,released
+06_analysis_ready/person_level_features.csv,eeg_aper_post,float64,Laboratory EEG feature,1.38964,released
+06_analysis_ready/person_level_features.csv,eeg_aper_front,float64,Laboratory EEG feature,1.321,released
+06_analysis_ready/person_level_features.csv,eeg_alpha_post,float64,Laboratory EEG feature,3.496753474628592,released
+06_analysis_ready/person_level_features.csv,eeg_iaf,float64,Laboratory EEG feature,12.415625,released
+06_analysis_ready/person_level_features.csv,eeg_faa,float64,Laboratory EEG feature,0.0096848741315485,released
+06_analysis_ready/person_level_features.csv,eeg_theta_change,float64,Laboratory EEG feature,0.0670341823431581,released
+06_analysis_ready/person_level_features.csv,eeg_alpha_react,float64,Laboratory EEG feature,2.719,released
+06_analysis_ready/person_level_features.csv,w_noct_lnrmssd_mean,float64,Wristband feature (30-day summary),4.0448435852567775,released
+06_analysis_ready/person_level_features.csv,w_resthr_mean,float64,Wristband feature (30-day summary),67.66423076923077,released
+06_analysis_ready/person_level_features.csv,w_steps_mean,float64,Wristband feature (30-day summary),12199.115384615385,released
+06_analysis_ready/person_level_features.csv,w_sleep_mean,float64,Wristband feature (30-day summary),6.788076923076924,released
+06_analysis_ready/person_level_features.csv,w_scr_rest_mean,float64,Wristband feature (30-day summary),0.3958846153846153,released
+06_analysis_ready/person_level_features.csv,w_temp_mean,float64,Wristband feature (30-day summary),32.43076923076923,released
+06_analysis_ready/person_level_features.csv,w_noct_lnrmssd_sd,float64,Wristband feature (30-day summary),0.1174269723384656,released
+06_analysis_ready/person_level_features.csv,w_resthr_sd,float64,Wristband feature (30-day summary),1.606990163198078,released
+06_analysis_ready/person_level_features.csv,w_sleep_sd,float64,Wristband feature (30-day summary),1.497325667263523,released
+06_analysis_ready/person_level_features.csv,w_midpoint_sd,float64,Wristband feature (30-day summary),103.81597535284028,released
+06_analysis_ready/person_level_features.csv,w_steps_max,int64,Wristband feature (30-day summary),20192,released
+06_analysis_ready/person_level_features.csv,w_resthr_slope,float64,Wristband feature (30-day summary),0.0141905268557739,released
+06_analysis_ready/person_level_features.csv,w_scl_awake,float64,Wristband feature (30-day summary),0.78262484,released
+06_analysis_ready/person_level_features.csv,w_hr_evening_minus_morning,float64,Wristband feature (30-day summary),0.013832092,released
+06_analysis_ready/person_level_features.csv,w_hr_rest_sd,float64,Wristband feature (30-day summary),2.61983,released
+06_analysis_ready/person_level_features.csv,w_sleep_storm_frac,float64,Wristband feature (30-day summary),0.1236878137836604,released
+06_analysis_ready/person_level_features.csv,ema_stress_mean,float64,EMA feature (30-day summary),34.608695652173914,released
+06_analysis_ready/person_level_features.csv,ema_stress_sd,float64,EMA feature (30-day summary),14.210317039668505,released
+06_analysis_ready/person_level_features.csv,ema_pa_mean,float64,EMA feature (30-day summary),4.072463768115942,released
+06_analysis_ready/person_level_features.csv,ema_na_mean,float64,EMA feature (30-day summary),2.463768115942029,released
+06_analysis_ready/person_level_features.csv,ema_inertia,float64,EMA feature (30-day summary),0.0229543669903882,released
+06_analysis_ready/person_level_features.csv,ema_interpersonal,float64,EMA feature (30-day summary),0.0434782608695652,released
+06_analysis_ready/person_level_features.csv,ema_any_stressor,float64,EMA feature (30-day summary),0.1847826086956521,released
+06_analysis_ready/person_level_features.csv,ema_rumination,float64,EMA feature (30-day summary),2.9000000000000004,released
+06_analysis_ready/person_level_features.csv,ema_passive_si_any,float64,EMA feature (30-day summary),0.0,restricted (available on request)
+06_analysis_ready/person_level_features.csv,ema_compliance,float64,EMA feature (30-day summary),0.7666666666666667,released
+06_analysis_ready/person_level_features.csv,cal_noct_minus_lab,float64,Ambulatory feature relative to the laboratory baseline,0.6788435852567773,released
+06_analysis_ready/person_level_features.csv,cal_resthr_minus_lab,float64,Ambulatory feature relative to the laboratory baseline,-15.165769230769229,released
+06_analysis_ready/person_level_features.csv,cal_event_resp_over_react,float64,Ambulatory feature relative to the laboratory baseline,0.9670704371893636,released
+06_analysis_ready/person_level_features.csv,cal_event_resp,float64,Ambulatory feature relative to the laboratory baseline,0.9670704371893636,released
+06_analysis_ready/person_level_features.csv,cal_scl_palm_equiv_rel,float64,Ambulatory feature relative to the laboratory baseline,-31.41582732209461,released
+06_analysis_ready/person_level_features.csv,cal_temp_minus_lab,float64,Ambulatory feature relative to the laboratory baseline,-0.1192307692307679,released
+06_analysis_ready/person_level_features.csv,cal_scr_rel,float64,Ambulatory feature relative to the laboratory baseline,1.9794230769230765,released
+06_analysis_ready/person_level_features.csv,y,int64,"1 = subclinical psychological crisis, 0 = control",1,released
+06_analysis_ready/person_level_features.csv,sample,object,core = development; extension = temporal validation,core,released
+06_analysis_ready/person_level_features.csv,sds_standard,int64,SDS item/score,43,released
+06_analysis_ready/person_level_features.csv,sas_standard,int64,SAS item/score,47,released
+06_analysis_ready/person_level_features.csv,compl,float64,EMA compliance (proportion),0.7666666666666667,released
+06_analysis_ready/prompt_level_h2.csv,prompt_id,object,EMA prompt ID,C001-YYYYMMDD-1,released; embedded date shifted per participant (weekday preserved)
+06_analysis_ready/prompt_level_h2.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+06_analysis_ready/prompt_level_h2.csv,study_day,int64,Day of ambulatory monitoring (1-30),1,released
+06_analysis_ready/prompt_level_h2.csv,prompt_type,object,Prompt type (semi-random or evening diary),random1,released
+06_analysis_ready/prompt_level_h2.csv,scheduled_time,object,Scheduled time,09:26:05,released
+06_analysis_ready/prompt_level_h2.csv,push_time,object,Notification time,09:26:29,released
+06_analysis_ready/prompt_level_h2.csv,reminder_time,object,Reminder time,15:25:37,released
+06_analysis_ready/prompt_level_h2.csv,open_time,object,Time opened,09:33:14,released
+06_analysis_ready/prompt_level_h2.csv,submit_time,object,Time submitted,09:35:00,released
+06_analysis_ready/prompt_level_h2.csv,status,object,Participation status,completed,released
+06_analysis_ready/prompt_level_h2.csv,postponed,int64,Prompt postponed by participant (1/0),0,released
+06_analysis_ready/prompt_level_h2.csv,stress,float64,Momentary stress (0-100),14.0,released
+06_analysis_ready/prompt_level_h2.csv,pa_happy,float64,EMA positive affect item (1-7),3.0,released
+06_analysis_ready/prompt_level_h2.csv,pa_relaxed,float64,EMA positive affect item (1-7),4.0,released
+06_analysis_ready/prompt_level_h2.csv,pa_energetic,float64,EMA positive affect item (1-7),5.0,released
+06_analysis_ready/prompt_level_h2.csv,na_down,float64,EMA negative affect item (1-7),3.0,released
+06_analysis_ready/prompt_level_h2.csv,na_tense,float64,EMA negative affect item (1-7),2.0,released
+06_analysis_ready/prompt_level_h2.csv,na_irritated,float64,EMA negative affect item (1-7),2.0,released
+06_analysis_ready/prompt_level_h2.csv,stressor_since_last,float64,Stressor reported since last prompt (1/0),0.0,released
+06_analysis_ready/prompt_level_h2.csv,activity,object,Current activity,resting,released
+06_analysis_ready/prompt_level_h2.csv,location,object,Location category,dormitory,released
+06_analysis_ready/prompt_level_h2.csv,sleep_quality_last_night,float64,Sleep quality last night (1-7),3.0,released
+06_analysis_ready/prompt_level_h2.csv,most_stressful_type,float64,Most stressful event of the day (diary),,released
+06_analysis_ready/prompt_level_h2.csv,coping,float64,Main coping strategy (diary),,released
+06_analysis_ready/prompt_level_h2.csv,rumination1,float64,Rumination item 1 (1-7),,released
+06_analysis_ready/prompt_level_h2.csv,rumination2,float64,Rumination item 2 (1-7),,released
+06_analysis_ready/prompt_level_h2.csv,passive_si,float64,Passive suicidal ideation endorsed (1/0),,restricted (available on request)
+06_analysis_ready/prompt_level_h2.csv,stressor_type,object,Type of most recent stressor,financial,released
+06_analysis_ready/prompt_level_h2.csv,stressor_severity,float64,Stressor severity (1-7),6.0,released
+06_analysis_ready/prompt_level_h2.csv,hr_pre,float64,Heart rate in the 30 min before the prompt (bpm),69.92626190185547,released
+06_analysis_ready/prompt_level_h2.csv,scr_pre,float64,SCRs in the 30 min before the prompt,0.3333333333333333,released
+06_analysis_ready/prompt_level_h2.csv,time_of_day,object,Time-of-day stratum,morning,released
+06_analysis_ready/prompt_level_h2.csv,exam_week,int64,Examination week (1/0),0,released
+06_analysis_ready/prompt_level_h2.csv,scenario,object,Campus scenario,no_stressor,released
+06_analysis_ready/prompt_level_h2.csv,lab_react,float64,Laboratory HR reactivity (bpm),0.9599999999999936,released
+06_analysis_ready/prompt_level_h2.csv,lab_react_z,float64,Laboratory HR reactivity (z),-2.202898198939045,released
+06_analysis_ready/prompt_level_h2.csv,stressor,int64,Stressor reported (1/0),0,released
+06_analysis_ready/prompt_level_h2.csv,hr_c,float64,"Pre-prompt HR, person-mean centred (bpm)",-1.076371250382394,released
+07_model/decision_thresholds.csv,model,object,Model,MSAF (full),released
+07_model/decision_thresholds.csv,decision_threshold,float64,Decision threshold,0.3420685231685638,released
+07_model/extension_predicted_probabilities.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",E001,released
+07_model/extension_predicted_probabilities.csv,y,int64,"1 = subclinical psychological crisis, 0 = control",1,released
+07_model/extension_predicted_probabilities.csv,MSAF (full),float64,Predicted probability,0.1940932720899582,released
+07_model/extension_predicted_probabilities.csv,MSAF without calibration,float64,Predicted probability,0.2829135060310364,released
+07_model/extension_predicted_probabilities.csv,MSAF without EEG,float64,Predicted probability,0.2134864777326584,released
+07_model/extension_predicted_probabilities.csv,MSAF without EMA,float64,Predicted probability,0.283884584903717,released
+07_model/extension_predicted_probabilities.csv,MSAF with 30-day means,float64,Predicted probability,0.1575232148170471,released
+07_model/extension_predicted_probabilities.csv,Wrist + EMA (no laboratory),float64,Predicted probability,0.2961363792419433,released
+07_model/extension_predicted_probabilities.csv,Laboratory EEG only,float64,Predicted probability,0.4797739830083479,released
+07_model/extension_predicted_probabilities.csv,Laboratory autonomic only,float64,Predicted probability,0.4643689288053529,released
+07_model/extension_predicted_probabilities.csv,Wrist physiology only,float64,Predicted probability,0.46239365845867,released
+07_model/extension_predicted_probabilities.csv,EMA only,float64,Predicted probability,0.4337402090574882,released
+07_model/extension_predicted_probabilities.csv,SDS + SAS,float64,Predicted probability,0.5111412339252372,released
+07_model/extension_predicted_probabilities.csv,SDS,float64,Predicted probability,0.5623979293852088,released
+07_model/extension_predicted_probabilities.csv,SAS,float64,Predicted probability,0.4356224410142752,released
+07_model/extension_predicted_probabilities.csv,Elastic-net baseline,float64,Predicted probability,0.3350751099490874,released
+07_model/extension_predicted_probabilities.csv,SDS + SAS + MSAF blocks (incremental),float64,Predicted probability,0.3094454673692532,released
+07_model/extension_predicted_probabilities.csv,MSAF without passive SI item,float64,Predicted probability,0.2705790400505066,released
+07_model/extension_predicted_probabilities.csv,EMA only without passive SI item,float64,Predicted probability,0.4649201205989864,released
+07_model/extension_predicted_probabilities.csv,MSAF without anchored normalization,float64,Predicted probability,0.2445172518491745,released
+07_model/extension_predicted_probabilities.csv,MSAF without FiLM,float64,Predicted probability,0.2307908982038498,released
+07_model/model_freeze_record.csv,record,object,Record type,core_model_frozen,released
+07_model/model_freeze_record.csv,timestamp,object,Time stamp,2026-02-26 10:12:00,released
+07_model/model_freeze_record.csv,registry,object,Registry,OSF component (link to be added),released
+07_model/model_freeze_record.csv,includes,object,Frozen contents,model weights; preprocessing code; analysis scripts; decision threshold,released
+07_model/model_freeze_record.csv,recorded_by,object,Recorded by,AN01,released
+08_source_data_tables/Figure6B_within_person_calibration.csv,reference,object,Reference point for anchoring,raw,released
+08_source_data_tables/Figure6B_within_person_calibration.csv,pooled_auc,float64,Pooled AUC across person-days,0.515,released
+08_source_data_tables/Figure6B_within_person_calibration.csv,ci_lo,float64,95% CI lower,0.504,released
+08_source_data_tables/Figure6B_within_person_calibration.csv,ci_hi,float64,95% CI upper,0.528,released
+08_source_data_tables/Figure6B_within_person_calibration.csv,mean_within_person_auc,float64,Mean within-person AUC,0.552,released
+08_source_data_tables/Table1_sample.csv,group,object,Reference-standard group,core_control,released
+08_source_data_tables/Table1_sample.csv,n,int64,Number of participants,101,released
+08_source_data_tables/Table1_sample.csv,age,object,Age (years),20.8 (1.8),released
+08_source_data_tables/Table1_sample.csv,female_n_pct,object,"Female, n (%)",59 (58%),released
+08_source_data_tables/Table1_sample.csv,graduating_pct,object,Graduating (%),24%,released
+08_source_data_tables/Table1_sample.csv,bmi,object,Body mass index (kg/m2),21.3 (3.5),released
+08_source_data_tables/Table1_sample.csv,smoker_pct,object,Smokers (%),8%,released
+08_source_data_tables/Table1_sample.csv,exercise_h,object,Exercise (h/week),2.9 (2.5),released
+08_source_data_tables/Table1_sample.csv,phq9,object,PHQ-9 total,4.4 (3.4),released
+08_source_data_tables/Table1_sample.csv,gad7,object,GAD-7 total,4.7 (3.6),released
+08_source_data_tables/Table1_sample.csv,sds,object,SDS standard score,42.7 (11.0),released
+08_source_data_tables/Table1_sample.csv,sas,object,SAS standard score,42.0 (9.7),released
+08_source_data_tables/Table1_sample.csv,severity,object,Counselor severity rating (0-10),1.1 (0.8),released
+08_source_data_tables/Table2_data_quality.csv,index,object,Data-quality index,eeg_packet_loss_median,released
+08_source_data_tables/Table2_data_quality.csv,value,object,Value,0.413,released
+08_source_data_tables/Table3_lab_markers.csv,measure,object,Measure,HR baseline,released
+08_source_data_tables/Table3_lab_markers.csv,control_m,float64,Control mean,74.77,released
+08_source_data_tables/Table3_lab_markers.csv,control_sd,float64,Control SD,7.751,released
+08_source_data_tables/Table3_lab_markers.csv,sub_m,float64,Subclinical mean,75.7,released
+08_source_data_tables/Table3_lab_markers.csv,sub_sd,float64,Subclinical SD,7.883,released
+08_source_data_tables/Table3_lab_markers.csv,t,float64,t statistic,0.847,released
+08_source_data_tables/Table3_lab_markers.csv,p,float64,Predicted probability,0.3977413948511843,released
+08_source_data_tables/Table3_lab_markers.csv,d,float64,Cohen's d (subclinical - control),0.119,released
+08_source_data_tables/Table3_lab_markers.csv,d_lo,float64,d 95% CI lower,-0.156,released
+08_source_data_tables/Table3_lab_markers.csv,d_hi,float64,d 95% CI upper,0.394,released
+08_source_data_tables/Table3_lab_markers.csv,p_fdr,float64,FDR-corrected p,0.4781667170983775,released
+08_source_data_tables/Table4_identification.csv,model,object,Model,MSAF (full),released
+08_source_data_tables/Table4_identification.csv,sample,object,core = development; extension = temporal validation,core_nested_cv,released
+08_source_data_tables/Table4_identification.csv,threshold,float64,Decision threshold,0.3420685231685638,released
+08_source_data_tables/Table4_identification.csv,n,int64,Number of participants,203,released
+08_source_data_tables/Table4_identification.csv,auc,float64,Area under the ROC curve,0.6964667054940789,released
+08_source_data_tables/Table4_identification.csv,auc_lo,float64,AUC 95% CI lower,0.6243178285290697,released
+08_source_data_tables/Table4_identification.csv,auc_hi,float64,AUC 95% CI upper,0.768615582459088,released
+08_source_data_tables/Table4_identification.csv,accuracy,float64,Accuracy,0.6206896551724138,released
+08_source_data_tables/Table4_identification.csv,recall,float64,Recall (sensitivity),0.8137254901960784,released
+08_source_data_tables/Table4_identification.csv,specificity,float64,Specificity,0.4257425742574257,released
+08_source_data_tables/Table4_identification.csv,f1,float64,F1 score,0.6831275720164609,released
+08_source_data_tables/Table4_identification.csv,balanced_accuracy,float64,Balanced accuracy,0.619734032226752,released
+08_source_data_tables/Table4_identification.csv,ppv,float64,Positive predictive value,0.5886524822695035,released
+08_source_data_tables/Table4_identification.csv,npv,float64,Negative predictive value,0.6935483870967742,released
+08_source_data_tables/Table4_identification.csv,brier,float64,Brier score,0.2261243661805566,released
+08_source_data_tables/Table4_identification.csv,calibration_slope,float64,Calibration slope,0.6352101390625607,released
+08_source_data_tables/Table4_identification.csv,calibration_intercept,float64,,-0.0038351538096909,released
+08_source_data_tables/Table4_identification.csv,ppv_at_prev,float64,PPV at the estimated screening prevalence,0.2593178513588839,released
+08_source_data_tables/Table4_identification.csv,npv_at_prev,float64,NPV at the estimated screening prevalence,0.9094718295025404,released
+08_source_data_tables/Table4_identification.csv,delong_z_vs_full,float64,DeLong z versus the full model,1.0966638347758333,released
+08_source_data_tables/Table4_identification.csv,delong_p_vs_full,float64,DeLong p versus the full model,0.2727883713324465,released
+08_source_data_tables/Table4_identification.csv,delta_auc_full_minus_model,float64,,0.0165559529892693,released
+08_source_data_tables/Table4_identification.csv,delta_lo,float64,,-0.0118388409400256,released
+08_source_data_tables/Table4_identification.csv,delta_hi,float64,,0.0447979716276754,released
+08_source_data_tables/Table5_stability.csv,scenario,object,Campus scenario,exam,released
+08_source_data_tables/Table5_stability.csv,stratum,object,Stratum,weekday,released
+08_source_data_tables/Table5_stability.csv,balanced_accuracy,float64,Balanced accuracy,0.629,released
+08_source_data_tables/Table5_stability.csv,lo,float64,95% CI lower,0.545,released
+08_source_data_tables/Table5_stability.csv,hi,float64,95% CI upper,0.723,released
+08_source_data_tables/Table5_stability.csv,n_person_days,int64,Person-days in stratum,515,released
+08_source_data_tables/TableS6_feature_contributions.csv,modality,object,Modality block,EMA,released
+08_source_data_tables/TableS6_feature_contributions.csv,feature,object,Feature,day:interpersonal,released
+08_source_data_tables/TableS6_feature_contributions.csv,attribution_pct,float64,Share of total mean absolute attribution (%),7.82,released
+08_source_data_tables/TableS6b_eeg_channel_attributions.csv,channel,object,EEG channel (10-20 extended),Fp1,released
+08_source_data_tables/TableS6b_eeg_channel_attributions.csv,attribution,float64,Mean absolute integrated-gradients attribution,0.19913943,released
+09_source_data_figures/Figure4A_lab_vs_ambulatory.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+09_source_data_figures/Figure4A_lab_vs_ambulatory.csv,lab_hr_reactivity_bpm,float64,Laboratory HR reactivity (bpm),0.9599999999999936,released
+09_source_data_figures/Figure4A_lab_vs_ambulatory.csv,ambulatory_response_bpm,float64,Ambulatory HR response to reported stressors (bpm),0.9670704371893636,released
+09_source_data_figures/Figure4B_scenario_means.csv,y,int64,"1 = subclinical psychological crisis, 0 = control",0,released
+09_source_data_figures/Figure4B_scenario_means.csv,scenario,object,Campus scenario,academic_routine,released
+09_source_data_figures/Figure4B_scenario_means.csv,mean,float64,Mean,-4.715782889219431,released
+09_source_data_figures/Figure4B_scenario_means.csv,std,float64,SD,5.814330870460762,released
+09_source_data_figures/Figure4B_scenario_means.csv,count,int64,n,1248,released
+09_source_data_figures/Figure3ABC_phase_means.csv,group,object,Reference-standard group,control,released
+09_source_data_figures/Figure3ABC_phase_means.csv,phase,object,Laboratory task phase,baseline,released
+09_source_data_figures/Figure3ABC_phase_means.csv,hr_bpm_mean,float64,"Heart rate (bpm), group mean",74.76950495049505,released
+09_source_data_figures/Figure3ABC_phase_means.csv,hr_bpm_std,float64,"Heart rate (bpm), group SD",7.750607121540564,released
+09_source_data_figures/Figure3ABC_phase_means.csv,hr_bpm_count,int64,"Heart rate (bpm), group n",101,released
+09_source_data_figures/Figure3ABC_phase_means.csv,ln_rmssd_mean,float64,"Natural log of RMSSD, group mean",3.6796930693069303,released
+09_source_data_figures/Figure3ABC_phase_means.csv,ln_rmssd_std,float64,"Natural log of RMSSD, group SD",0.4006541836190971,released
+09_source_data_figures/Figure3ABC_phase_means.csv,ln_rmssd_count,int64,"Natural log of RMSSD, group n",101,released
+09_source_data_figures/Figure3ABC_phase_means.csv,scl_us_mean,float64,"Skin conductance level (uS), group mean",5.61609900990099,released
+09_source_data_figures/Figure3ABC_phase_means.csv,scl_us_std,float64,"Skin conductance level (uS), group SD",3.089807193029851,released
+09_source_data_figures/Figure3ABC_phase_means.csv,scl_us_count,int64,"Skin conductance level (uS), group n",101,released
+09_source_data_figures/Figure3D_eeg_topography.csv,measure,object,Measure,aperiodic_exponent,released
+09_source_data_figures/Figure3D_eeg_topography.csv,channel,object,EEG channel (10-20 extended),Fp1,released
+09_source_data_figures/Figure3D_eeg_topography.csv,t,float64,t statistic,-2.702,released
+09_source_data_figures/Figure3D_eeg_topography.csv,in_significant_cluster,int64,Channel in a significant cluster (1/0),1,released
+09_source_data_figures/Figure3E_aperiodic_exponent.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",C001,released
+09_source_data_figures/Figure3E_aperiodic_exponent.csv,y,int64,"1 = subclinical psychological crisis, 0 = control",1,released
+09_source_data_figures/Figure3E_aperiodic_exponent.csv,eeg_aper_mean,float64,Laboratory EEG feature,1.352875,released
+09_source_data_figures/Figure5_predictions.csv,pid,object,"Pseudonymous participant ID (C = core, E = extension)",E001,released
+09_source_data_figures/Figure5_predictions.csv,y,int64,"1 = subclinical psychological crisis, 0 = control",1,released
+09_source_data_figures/Figure5_predictions.csv,MSAF (full),float64,Predicted probability,0.1940932720899582,released
+09_source_data_figures/Figure5_predictions.csv,SDS + SAS,float64,Predicted probability,0.5111412339252372,released
+09_source_data_figures/Figure5_predictions.csv,Laboratory EEG only,float64,Predicted probability,0.4797739830083479,released
+09_source_data_figures/Figure5_predictions.csv,Laboratory autonomic only,float64,Predicted probability,0.4643689288053529,released
+09_source_data_figures/Figure5_predictions.csv,Wrist physiology only,float64,Predicted probability,0.46239365845867,released
+09_source_data_figures/Figure5_predictions.csv,EMA only,float64,Predicted probability,0.4337402090574882,released
+09_source_data_figures/Figure6A_stability.csv,scenario,object,Campus scenario,exam,released
+09_source_data_figures/Figure6A_stability.csv,stratum,object,Stratum,weekday,released
+09_source_data_figures/Figure6A_stability.csv,balanced_accuracy,float64,Balanced accuracy,0.629,released
+09_source_data_figures/Figure6A_stability.csv,lo,float64,95% CI lower,0.545,released
+09_source_data_figures/Figure6A_stability.csv,hi,float64,95% CI upper,0.723,released
+09_source_data_figures/Figure6A_stability.csv,n_person_days,int64,Person-days in stratum,515,released
+08_source_data_tables/TableS8_marker_replication.csv,measure,object,Laboratory marker,,released
+08_source_data_tables/TableS8_marker_replication.csv,core_d,float64,"Cohen's d, core sample (subclinical - control)",,released
+08_source_data_tables/TableS8_marker_replication.csv,core_d_lo,float64,Lower 95% CI,,released
+08_source_data_tables/TableS8_marker_replication.csv,core_d_hi,float64,Upper 95% CI,,released
+08_source_data_tables/TableS8_marker_replication.csv,core_p_fdr14,float64,FDR-corrected p across 14 markers (core),,released
+08_source_data_tables/TableS8_marker_replication.csv,core_adj_d,float64,Standardized group difference adjusted for control-task value (core),,released
+08_source_data_tables/TableS8_marker_replication.csv,core_adj_lo,float64,Lower 95% CI,,released
+08_source_data_tables/TableS8_marker_replication.csv,core_adj_hi,float64,Upper 95% CI,,released
+08_source_data_tables/TableS8_marker_replication.csv,ext_d,float64,"Cohen's d, extension sample",,released
+08_source_data_tables/TableS8_marker_replication.csv,ext_d_lo,float64,Lower 95% CI,,released
+08_source_data_tables/TableS8_marker_replication.csv,ext_d_hi,float64,Upper 95% CI,,released
+08_source_data_tables/TableS8_marker_replication.csv,ext_p_fdr5,float64,FDR-corrected p across 5 markers (extension),,released
+08_source_data_tables/TableS8_marker_replication.csv,ext_adj_d,float64,Adjusted standardized group difference (extension),,released
+08_source_data_tables/TableS8_marker_replication.csv,ext_adj_lo,float64,Lower 95% CI,,released
+08_source_data_tables/TableS8_marker_replication.csv,ext_adj_hi,float64,Upper 95% CI,,released
+08_source_data_tables/TableS9_simple_model_checks.csv,model,object,Feature set of the person-level elastic-net model,,released
+08_source_data_tables/TableS9_simple_model_checks.csv,n_features,float64,Number of input features,,released
+08_source_data_tables/TableS9_simple_model_checks.csv,auc,float64,AUC in the extension sample,,released
+08_source_data_tables/TableS9_simple_model_checks.csv,lo,float64,Lower bootstrap 95% CI,,released
+08_source_data_tables/TableS9_simple_model_checks.csv,hi,float64,Upper bootstrap 95% CI,,released
+08_source_data_tables/Table5_stability.csv,ci_method,object,How lo/hi were obtained (original pipeline or recomputed participant-level bootstrap),,released
+09_source_data_figures/Figure6A_stability.csv,ci_method,object,How lo/hi were obtained (original pipeline or recomputed participant-level bootstrap),,released

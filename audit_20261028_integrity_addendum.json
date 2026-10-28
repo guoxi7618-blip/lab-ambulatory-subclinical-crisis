@@ -1,0 +1,176 @@
+{
+  "priority": "This addendum supersedes interpretation of definition-sensitive mismatches in integrity v1; original audit preserved.",
+  "EEG": {
+    "definition": "eeg_aper_mean is eyes-closed rest_ec, not eyes-open rest_eo. v1 deliberately checked EO; that mismatch is a definition mismatch, NOT a data error.",
+    "nonmissing_n": 386,
+    "matching_nonmissing_n": 386,
+    "max_difference": 2.220446049250313e-16
+  },
+  "quality": {
+    "definition": "Manuscript values use D0, n=458, not pooled D0+D31 n=675.",
+    "D0_n": 458,
+    "packet_loss_median": 0.413,
+    "lsl_offset_median": 4.2,
+    "matches_manuscript": true
+  },
+  "valid_days": {
+    "monitored_less_than20": 49,
+    "enrolled_without_wrist": 5,
+    "total_under20_including_no_data": 54
+  },
+  "EMA_latency": {
+    "late_submission_total": 2922,
+    "late_submission_postponed": 2864,
+    "late_submission_not_postponed": 58,
+    "not_postponed_opened_after30min": 0,
+    "breakdown": [
+      {
+        "prompt_type": "diary",
+        "postponed": 0,
+        "sum": 15,
+        "size": 11239
+      },
+      {
+        "prompt_type": "random1",
+        "postponed": 0,
+        "sum": 9,
+        "size": 7985
+      },
+      {
+        "prompt_type": "random1",
+        "postponed": 1,
+        "sum": 1040,
+        "size": 1267
+      },
+      {
+        "prompt_type": "random2",
+        "postponed": 0,
+        "sum": 11,
+        "size": 10353
+      },
+      {
+        "prompt_type": "random2",
+        "postponed": 1,
+        "sum": 4,
+        "size": 4
+      },
+      {
+        "prompt_type": "random3",
+        "postponed": 0,
+        "sum": 14,
+        "size": 8864
+      },
+      {
+        "prompt_type": "random3",
+        "postponed": 1,
+        "sum": 1036,
+        "size": 1246
+      },
+      {
+        "prompt_type": "random4",
+        "postponed": 0,
+        "sum": 9,
+        "size": 9382
+      },
+      {
+        "prompt_type": "random4",
+        "postponed": 1,
+        "sum": 784,
+        "size": 952
+      }
+    ],
+    "interpretation": "Postponement explains most late submissions; remaining 58 were opened within 30 minutes and submitted by 32.53 minutes. Clarify whether 30-minute limit concerns opening or submitting. Do not classify 2922 as protocol errors."
+  },
+  "EDA_mapping": {
+    "inferred_formula": "Fit wrist_SCL = intercept + slope * palm_SCL across 7 D0 phases. palm_equivalent=(w_scl_awake-intercept)/slope; stored_cal=(palm_equivalent-baseline_palm)/max(lab_scl_react,0.1). Formula inferred from table relationships, not recovered original code.",
+    "all_close_n": 401,
+    "n": 401,
+    "max_abs_reconstruction_difference": 3.429478306316014e-05,
+    "negative_slope_n": 7,
+    "absolute_slope_under_0_01_n": 2,
+    "negative_palm_equivalent_n": 8,
+    "extreme_rows": [
+      {
+        "pid": "C058",
+        "slope_wrist_on_palm": 0.027890861363231715,
+        "intercept": 0.8390471725395989,
+        "palm_equivalent_us": -9.538057253774777,
+        "recomputed_cal": -104.24054969721408,
+        "stored_cal": -104.240548667623
+      },
+      {
+        "pid": "C084",
+        "slope_wrist_on_palm": 0.04882731163554621,
+        "intercept": 0.0774158570143749,
+        "palm_equivalent_us": 14.875734269524049,
+        "recomputed_cal": 128.6473426952405,
+        "stored_cal": 128.6473417868816
+      },
+      {
+        "pid": "C090",
+        "slope_wrist_on_palm": -0.01707620346429868,
+        "intercept": 0.8454262386379764,
+        "palm_equivalent_us": 17.423078804372604,
+        "recomputed_cal": 126.25078804372603,
+        "stored_cal": 126.25077635537576
+      },
+      {
+        "pid": "C093",
+        "slope_wrist_on_palm": 0.152586278071334,
+        "intercept": 0.4986202320013251,
+        "palm_equivalent_us": 2.9245366859925377,
+        "recomputed_cal": -136.62463314007462,
+        "stored_cal": -136.62463364598003
+      },
+      {
+        "pid": "C107",
+        "slope_wrist_on_palm": -0.00227053590868084,
+        "intercept": 0.7976113340176041,
+        "palm_equivalent_us": -175.84344931781393,
+        "recomputed_cal": -1809.2544931781392,
+        "stored_cal": -1809.2545274729223
+      },
+      {
+        "pid": "C171",
+        "slope_wrist_on_palm": 0.11805276137634715,
+        "intercept": 0.10169257921618136,
+        "palm_equivalent_us": 20.592443517978467,
+        "recomputed_cal": 119.17443517978465,
+        "stored_cal": 119.1744373494425
+      },
+      {
+        "pid": "C182",
+        "slope_wrist_on_palm": 0.00828934740882954,
+        "intercept": 0.6264385556621841,
+        "palm_equivalent_us": 51.273040370475776,
+        "recomputed_cal": 405.16040370475775,
+        "stored_cal": 405.1604003066851
+      },
+      {
+        "pid": "E022",
+        "slope_wrist_on_palm": 0.013707240420645486,
+        "intercept": 0.380312099601112,
+        "palm_equivalent_us": 27.302434984303325,
+        "recomputed_cal": 231.18434984303323,
+        "stored_cal": 231.1843492665156
+      },
+      {
+        "pid": "E033",
+        "slope_wrist_on_palm": -0.016031073801536094,
+        "intercept": 0.5680196449498787,
+        "palm_equivalent_us": -13.70183044314062,
+        "recomputed_cal": -194.34830443140618,
+        "stored_cal": -194.34832006086225
+      },
+      {
+        "pid": "E049",
+        "slope_wrist_on_palm": 0.01797791637183395,
+        "intercept": 0.444737135710644,
+        "palm_equivalent_us": 25.383996390389427,
+        "recomputed_cal": 197.95996390389425,
+        "stored_cal": 197.95995065487065
+      }
+    ],
+    "interpretation": "An inverse affine mapping becomes unstable near zero slope, and unconstrained mapping can produce negative physical equivalent conductance. Negative standardized/calibrated scores themselves are not impossible; negative reconstructed raw-equivalent conductance is a calibration failure flag. Inspect mapping direction, constraints, small-slope guard and fold-safe sensitivity."
+  }
+}

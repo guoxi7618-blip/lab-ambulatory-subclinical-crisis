@@ -1,0 +1,8 @@
+numpy>=2.3
+pandas>=2.2
+scipy>=1.16
+scikit-learn>=1.6
+statsmodels>=0.14.4
+matplotlib>=3.10
+mne>=1.10
+python-pptx>=1.0.2

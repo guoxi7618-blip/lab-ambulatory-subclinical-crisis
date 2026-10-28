@@ -1,0 +1,76 @@
+H1 全局特征级复算报告
+Verification Status: ANALYZED / PARTIALLY REPRODUCED
+Material Passport: source=local CSV; raw signal processing unavailable; numerical audit only; no clinical inference.
+
+主表14指标使用Welch双侧t检验；同时输出Student结果。Cohen d采用合并标准差，CI为正态近似。BH分别对core14项和extension预选5项实施。
+重建SCL baseline使用原始μS；analysis_ready中的同名字段为ln(SCL)，不可直接混用。
+ n_control  n_subclinical  control_m  control_sd     sub_m   sub_sd         d      d_lo      d_hi   t_welch  p_welch  t_student  p_student    sample                               measure           feature  p_fdr14  p_fdr5_replication  difference_from_Table3_d  difference_from_Table3_p_welch  difference_from_Table3_p_fdr14
+       101            102  74.769505    7.750607 75.699510 7.883383  0.118963 -0.156416  0.394342  0.847541 0.397702   0.847470   0.397741      core                           HR baseline       lab_hr_base 0.467858                 NaN                 -0.000037                   -3.955741e-05                       -0.010308
+       101            102   9.279505    3.296118  8.155261 3.358173 -0.337870 -0.614979 -0.060761 -2.407146 0.016982  -2.406924   0.016992      core        HR reactivity (stress-control)      lab_hr_react 0.047549                 NaN                  0.000130                   -9.969778e-06                       -0.000028
+       101            102   0.816052    0.142717  0.787118 0.163824 -0.188271 -0.464019  0.087477 -1.342118 0.181096  -1.341208   0.181366      core                     HR recovery index   lab_hr_recovery 0.281705                 NaN                 -0.000271                   -2.703284e-04                       -0.000421
+       101            102   3.679693    0.400654  3.531608 0.447945 -0.348374 -0.625607 -0.071141 -2.483117 0.013851  -2.481752   0.013894      core                     ln RMSSD baseline  lab_lnrmssd_base 0.047549                 NaN                 -0.000374                   -4.304175e-05                       -0.000028
+       101            102  -0.179822    0.114162 -0.113458 0.111687  0.587683  0.306615  0.868750  4.186089 0.000042   4.186544   0.000042      core                   ln RMSSD reactivity lab_lnrmssd_react 0.000594                 NaN                 -0.000317                    9.430706e-08                        0.000001
+       101            102   6.759792    1.001158  6.386098 1.183105 -0.340848 -0.617992 -0.063705 -2.430131 0.015993  -2.428141   0.016057      core                        ln HF baseline     lab_lnhf_base 0.047549                 NaN                  0.000152                   -6.381712e-05                       -0.000028
+       101            102   5.616099    3.089807  5.358882 3.229398 -0.081379 -0.356628  0.193869 -0.579857 0.562661  -0.579730   0.562746      core                          SCL baseline      lab_scl_base 0.562661                 NaN                 -0.000379                   -8.455704e-05                       -0.000085
+       101            102   1.355304    1.064933  1.060513 0.899019 -0.299261 -0.575945 -0.022576 -2.130109 0.034417  -2.131879   0.034231      core                        SCL reactivity     lab_scl_react 0.073307                 NaN                 -0.000261                    1.861698e-04                       -0.000039
+       101            102   5.954950    2.364982  5.249118 2.415492 -0.295266 -0.571910 -0.018623 -2.103643 0.036653  -2.103423   0.036673      core                         NS-SCR stress  lab_nsscr_stress 0.073307                 NaN                 -0.000266                   -1.928500e-05                       -0.000039
+        97            100   1.424256    0.205650  1.331558 0.234883 -0.419498 -0.701904 -0.137091 -2.949582 0.003576  -2.943623   0.003638      core         Aperiodic exponent (EC, mean)     eeg_aper_mean 0.025029                 NaN                 -0.000498                   -6.230162e-05                       -0.000436
+        97            100   3.242239    0.260310  3.265307 0.203258  0.098962 -0.180531  0.378456  0.691847 0.489918   0.694419   0.488246      core         Posterior alpha ln power (EC)    eeg_alpha_post 0.527603                 NaN                 -0.000038                    1.671613e-03                        0.001800
+        97            100  10.029926    0.707761  9.937569 0.829261 -0.119659 -0.399232  0.159915 -0.841668 0.401021  -0.839646   0.402135      core                              IAF (EC)           eeg_iaf 0.467858                 NaN                 -0.001659                   -8.835711e-03                       -0.010308
+        97            100   0.016924    0.173039 -0.023677 0.157939 -0.245254 -0.525634  0.035125 -1.718559 0.087305  -1.720956   0.086845      core               Frontal alpha asymmetry           eeg_faa 0.152784                 NaN                 -0.000254                    4.603228e-04                        0.000806
+        97            100   0.047358    0.070661  0.059773 0.072652  0.173207 -0.106642  0.453056  1.215914 0.225487   1.215397   0.225684      core Frontal theta change (stress-control)  eeg_theta_change 0.315682                 NaN                  0.000207                   -1.966047e-04                       -0.000275
+       103             95  74.399903    7.650692 76.038737 8.176178  0.207262 -0.072302  0.486826  1.453106 0.147828   1.457026   0.146710 extension                           HR baseline       lab_hr_base 0.295656                 NaN                       NaN                             NaN                             NaN
+       103             95   9.076084    3.628088  8.357368 3.798172 -0.193691 -0.473159  0.085778 -1.359094 0.175704  -1.361624   0.174880 extension        HR reactivity (stress-control)      lab_hr_react 0.307481            0.219629                       NaN                             NaN                             NaN
+       103             95   0.850939    0.155696  0.798744 0.160876 -0.329928 -0.610644 -0.049211 -2.316273 0.021591  -2.319353   0.021406 extension                     HR recovery index   lab_hr_recovery 0.100757                 NaN                       NaN                             NaN                             NaN
+       103             95   3.642874    0.401163  3.565811 0.515376 -0.167713 -0.447017  0.111591 -1.167308 0.244653  -1.179001   0.239827 extension                     ln RMSSD baseline  lab_lnrmssd_base 0.380571            0.244653                       NaN                             NaN                             NaN
+       103             95  -0.176201    0.114110 -0.123881 0.106307  0.473756  0.191029  0.756483  3.340024 0.001003   3.330446   0.001036 extension                   ln RMSSD reactivity lab_lnrmssd_react 0.014040            0.005014                       NaN                             NaN                             NaN
+       103             95   6.621068    1.222875  6.379926 0.985105 -0.216234 -0.495865  0.063396 -1.533300 0.126843  -1.520101   0.130097 extension                        ln HF baseline     lab_lnhf_base 0.295656            0.211405                       NaN                             NaN                             NaN
+       103             95   5.431330    2.941027  4.740326 2.291973 -0.260789 -0.540792  0.019213 -1.851597 0.065629  -1.833318   0.068272 extension                          SCL baseline      lab_scl_base 0.207363                 NaN                       NaN                             NaN                             NaN
+       103             95   1.111576    0.973246  1.002137 0.894981 -0.116856 -0.395906  0.162193 -0.824281 0.410782  -0.821486   0.412367 extension                        SCL reactivity     lab_scl_react 0.575094                 NaN                       NaN                             NaN                             NaN
+       103             95   5.299256    2.515421  5.297895 2.398521 -0.000553 -0.279363  0.278257 -0.003897 0.996895  -0.003889   0.996901 extension                         NS-SCR stress  lab_nsscr_stress 0.996895                 NaN                       NaN                             NaN                             NaN
+        97             92   1.432133    0.220491  1.374654 0.219285 -0.261382 -0.547848  0.025083 -1.796340 0.074058  -1.796078   0.074096 extension         Aperiodic exponent (EC, mean)     eeg_aper_mean 0.207363            0.185146                       NaN                             NaN                             NaN
+        97             92   3.220435    0.236295  3.209013 0.233578 -0.048609 -0.333889  0.236671 -0.334117 0.738666  -0.334015   0.738743 extension         Posterior alpha ln power (EC)    eeg_alpha_post 0.915578                 NaN                       NaN                             NaN                             NaN
+        97             92  10.136479    0.793957 10.119137 0.796409 -0.021809 -0.307056  0.263437 -0.149848 0.881047  -0.149860   0.881036 extension                              IAF (EC)           eeg_iaf 0.948819                 NaN                       NaN                             NaN                             NaN
+        97             92   0.017551    0.146144  0.011121 0.174907 -0.039992 -0.325259  0.245275 -0.273507 0.784782  -0.274803   0.783771 extension               Frontal alpha asymmetry           eeg_faa 0.915578                 NaN                       NaN                             NaN                             NaN
+        97             92   0.044063    0.078820  0.070672 0.076626  0.342198  0.054859  0.629537  2.353165 0.019654   2.351400   0.019744 extension Frontal theta change (stress-control)  eeg_theta_change 0.100757                 NaN                       NaN                             NaN                             NaN
+
+控制任务基线调整：
+   sample feature   n         b       se        p  adjusted_d      d_lo      d_hi                                                                      definition
+     core      hr 203 -1.117350 0.468405 0.017993   -0.335090 -0.612089 -0.058091 group coefficient divided by ANCOVA residual SD; adjust only control-task value
+     core lnrmssd 203  0.059570 0.015705 0.000197    0.538019  0.258319  0.817719 group coefficient divided by ANCOVA residual SD; adjust only control-task value
+extension      hr 198 -0.799496 0.529533 0.132710   -0.216020 -0.498197  0.066158 group coefficient divided by ANCOVA residual SD; adjust only control-task value
+extension lnrmssd 198  0.049474 0.015729 0.001918    0.450063  0.167875  0.732251 group coefficient divided by ANCOVA residual SD; adjust only control-task value
+
+组×阶段随机截距混合模型：
+ outcome  n_rows  n_subjects   lr_chi2  df            p  full_converged  reduced_converged     llf_full  llf_reduced warnings         random_effect           estimation
+  hr_bpm    1421         203 42.273545   6 1.623680e-07            True               True -3484.772091 -3505.908863       [] participant intercept ML, no random slopes
+ln_rmssd    1421         203 82.062240   6 1.338963e-15            True               True  1018.864878   977.833758       [] participant intercept ML, no random slopes
+  scl_us    1421         203 32.712100   6 1.191157e-05            True               True -1547.778639 -1564.134689       [] participant intercept ML, no random slopes
+
+ICC(3,1)：
+               scope          feature   n    icc31    ci_lo    ci_hi
+     core_analyzable lab_lnrmssd_base 202 0.661360 0.572177 0.736709
+     core_analyzable      lab_hr_base 202 0.748584 0.678145 0.805903
+     core_analyzable     lab_hr_react 202 0.464916 0.361460 0.559612
+     core_analyzable     lab_scl_base 202 0.609529 0.528567 0.676623
+     core_analyzable   eeg_alpha_post 196 0.588551 0.489360 0.675509
+     core_analyzable    eeg_aper_mean 196 0.723812 0.651146 0.784131
+all_core_with_retest lab_lnrmssd_base 217 0.653648 0.564591 0.727653
+all_core_with_retest      lab_hr_base 217 0.752751 0.688165 0.806626
+all_core_with_retest     lab_hr_react 217 0.441619 0.337716 0.540480
+all_core_with_retest     lab_scl_base 217 0.588869 0.502927 0.656948
+all_core_with_retest   eeg_alpha_post 211 0.579151 0.479436 0.664846
+all_core_with_retest    eeg_aper_mean 211 0.731664 0.663620 0.788202
+
+合并自主神经复合指标: {'n_control': 204, 'n_subclinical': 197, 'control_m': np.float64(-0.12652871924028258), 'control_sd': np.float64(0.6801444032876384), 'sub_m': np.float64(0.13102466357876896), 'sub_sd': np.float64(0.7305886491842277), 'd': np.float64(0.3651297435744671), 'd_lo': np.float64(0.1677122012444647), 'd_hi': np.float64(0.5625472859044695), 't_welch': np.float64(3.650735649934709), 'p_welch': np.float64(0.00029669459785009773), 't_student': np.float64(3.6553016512735574), 'p_student': np.float64(0.00029122956106150195), 'p_one_sided': np.float64(0.00014834729892504887)}
+严重程度变化与lnRMSSD变化: n=202, r=0.00412132604026698, p=0.9535799299999383
+
+UNVERIFIED: original adjacency, cluster-forming threshold, cluster statistic, sidedness handling, seed and analysis scripts absent; MNE unavailable. max-T is not cluster p replication.
+            metric  n_subclinical  n_control  n_permutations  n_significant_channels  min_maxT_p  observed_max_abs_t
+aperiodic_exponent            100         97            5000                      32    0.007399            3.197949
+         delta_abs            100         97            5000                       0    0.921616            1.786809
+         theta_abs            100         97            5000                       0    0.893421            1.840707
+         alpha_abs            100         97            5000                       0    0.467107            1.627683
+          beta_abs            100         97            5000                       0    0.483103            2.333784
+
+不能从这些输出确认原始采集真实性、预注册时间或原始信号预处理。ROI由低层特征与已给分析表精确对应推定，原始ROI脚本仍需补充。

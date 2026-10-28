@@ -1,0 +1,45 @@
+scenario,stratum,balanced_accuracy,lo,hi,n_person_days,ci_method
+exam,weekday,0.629,0.545,0.723,515,original pipeline
+exam,weekend,0.652,0.551,0.751,125,original pipeline
+exam,exam_week,0.638,0.578,0.699,582,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+exam,non_exam_week,0.604,0.469,0.741,58,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+exam,week1,0.569,0.444,0.68,60,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+exam,week2,0.608,0.525,0.692,166,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+exam,week3,0.671,0.586,0.758,175,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+exam,week4,0.641,0.556,0.724,239,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+academic_routine,weekday,0.64,0.505,0.755,433,original pipeline
+academic_routine,weekend,0.574,0.436,0.714,220,original pipeline
+academic_routine,exam_week,0.604,0.499,0.72,102,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+academic_routine,non_exam_week,0.616,0.539,0.692,551,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+academic_routine,week1,0.62,0.516,0.722,174,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+academic_routine,week2,0.627,0.538,0.717,155,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+academic_routine,week3,0.606,0.506,0.703,152,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+academic_routine,week4,0.62,0.529,0.708,172,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+career_entrance_exam,weekday,0.639,0.527,0.765,288,original pipeline
+career_entrance_exam,weekend,0.633,0.506,0.744,127,original pipeline
+career_entrance_exam,exam_week,0.623,0.477,0.752,56,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+career_entrance_exam,non_exam_week,0.642,0.539,0.74,359,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+career_entrance_exam,week1,0.57,0.443,0.703,98,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+career_entrance_exam,week2,0.639,0.518,0.752,111,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+career_entrance_exam,week3,0.648,0.527,0.764,102,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+career_entrance_exam,week4,0.69,0.571,0.811,104,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+interpersonal,weekday,0.556,0.432,0.691,373,original pipeline
+interpersonal,weekend,0.657,0.535,0.77,163,original pipeline
+interpersonal,exam_week,0.576,0.484,0.675,71,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+interpersonal,non_exam_week,0.591,0.518,0.668,465,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+interpersonal,week1,0.585,0.491,0.681,161,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+interpersonal,week2,0.581,0.481,0.682,137,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+interpersonal,week3,0.587,0.472,0.706,99,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+interpersonal,week4,0.604,0.511,0.699,139,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+no_stressor,weekday,0.629,0.511,0.758,1604,original pipeline
+no_stressor,weekend,0.637,0.507,0.75,653,original pipeline
+no_stressor,exam_week,0.662,0.591,0.727,399,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+no_stressor,non_exam_week,0.625,0.56,0.693,1858,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+no_stressor,week1,0.64,0.574,0.706,633,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+no_stressor,week2,0.623,0.552,0.693,509,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+no_stressor,week3,0.627,0.552,0.701,501,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+no_stressor,week4,0.63,0.562,0.698,614,"participant-level bootstrap (2000 resamples), recomputed 2026-10-27"
+all,morning,0.556,0.452,0.676,24552,original pipeline
+all,afternoon,0.555,0.445,0.668,24552,original pipeline
+all,evening,0.554,0.427,0.67,24552,original pipeline
+all,night,0.548,0.429,0.661,24552,original pipeline

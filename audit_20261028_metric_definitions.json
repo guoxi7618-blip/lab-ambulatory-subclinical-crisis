@@ -1,0 +1,11 @@
+{
+  "calibration_intercept_definition": "source Table4 uses offset calibration-in-the-large; run1 joint intercept is a different estimand, not a data error",
+  "implicit_prevalence": 0.18111587332510767,
+  "prevalence_note": "source predictive values imply 18.1116%, not exactly 18%; source population estimate unavailable",
+  "max_delong_lo_difference": 1.424683627404555e-06,
+  "max_delong_hi_difference": 1.424683627404555e-06,
+  "auc_ci_note": "Original Table4 AUC intervals match normal DeLong intervals. Manuscript says 2000 bootstrap: clarify method. New run1 bootstrap intervals are independently recomputed.",
+  "calendar_weekend_mismatch": 0,
+  "table5_mismatched_rows": 10,
+  "table5_note": "All ten weekday/weekend rows have differing participant-day counts; supplied weekend flags match actual EMA dates. Time-of-day four rows cannot be recalculated without window predictions."
+}

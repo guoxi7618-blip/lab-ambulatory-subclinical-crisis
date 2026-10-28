@@ -1,0 +1,66 @@
+H4 修正统计审定
+
+{
+  "n_person_days": 4947,
+  "n_persons": 198,
+  "other_days": 428,
+  "unclassified_days": 18,
+  "weekend_date_mismatches": 0,
+  "study_week_mismatches": 0,
+  "correct_label_mismatches": 0,
+  "date_validation": "Calendar date extracted from EMA prompt_id; all records for the same pid and study_day must agree.",
+  "exam_week_limitation": "Exam-week labels are supplied; no institutional examination calendar is provided for independent validation.",
+  "constant_correct_participants": 119
+}
+
+                         scope            contrast  n_person_days  n_persons  n_case_days  n_control_days  accuracy  accuracy_lo  accuracy_hi  balanced_accuracy     ba_lo    ba_hi  sensitivity  specificity  bootstrap_valid_ba
+                      all_rows       non_exam_week           3660        198       1767.0          1893.0  0.618579     0.553972     0.684075           0.620971  0.557666 0.684286     0.690436     0.551506                2000
+                      all_rows           exam_week           1287        161        609.0           678.0  0.621601     0.547706     0.690195           0.634255  0.573885 0.690523     0.870279     0.398230                2000
+                      all_rows exam_minus_non_exam           4947        198          NaN             NaN  0.003021    -0.062760     0.066289           0.013284 -0.042012 0.067639          NaN          NaN                2000
+           six_known_scenarios       non_exam_week           3651        198       1759.0          1892.0  0.618187     0.553437     0.683735           0.620697  0.557615 0.684249     0.689596     0.551797                2000
+           six_known_scenarios           exam_week           1278        161        605.0           673.0  0.622848     0.548844     0.692512           0.635305  0.574550 0.692497     0.869421     0.401189                2000
+           six_known_scenarios exam_minus_non_exam           4929        198          NaN             NaN  0.004661    -0.061201     0.069265           0.014608 -0.040965 0.068215          NaN          NaN                2000
+five_scenarios_excluding_other       non_exam_week           3291        198       1596.0          1695.0  0.618961     0.552961     0.684920           0.621049  0.556467 0.684547     0.690476     0.551622                2000
+five_scenarios_excluding_other           exam_week           1210        161        576.0           634.0  0.627273     0.552346     0.698180           0.638763  0.579782 0.694130     0.878472     0.399054                2000
+five_scenarios_excluding_other exam_minus_non_exam           4501        198          NaN             NaN  0.008312    -0.058289     0.073355           0.017714 -0.036901 0.072377          NaN          NaN                2000
+
+                                                     model  n_person_days  n_persons       OR    OR_lo    OR_hi            p
+                      GEE_all_rows_unadjusted_independence           4947        198 1.012908 0.769627 1.333090 9.270816e-01
+                      GEE_all_rows_unadjusted_exchangeable           4947        198 0.840164 0.699040 1.009778 6.341828e-02
+           GEE_six_known_scenarios_unadjusted_independence           4929        198 1.019993 0.774343 1.343573 8.880175e-01
+             GEE_six_known_scenarios_adjusted_independence           4929        198 0.999000 0.742618 1.343895 9.947238e-01
+           GEE_six_known_scenarios_unadjusted_exchangeable           4929        198 0.840985 0.700202 1.010075 6.392273e-02
+             GEE_six_known_scenarios_adjusted_exchangeable           4929        198 0.805444 0.666239 0.973735 2.542455e-02
+GEE_five_scenarios_excluding_other_unadjusted_independence           4501        198 1.036029 0.782749 1.371264 8.045525e-01
+  GEE_five_scenarios_excluding_other_adjusted_independence           4501        198 1.022201 0.752401 1.388746 8.883135e-01
+GEE_five_scenarios_excluding_other_unadjusted_exchangeable           4501        198 0.836743 0.692352 1.011247 6.514827e-02
+  GEE_five_scenarios_excluding_other_adjusted_exchangeable           4501        198 0.794930 0.651210 0.970367 2.409507e-02
+    GEE_all_rows_adjusted_missing_as_category_independence           4947        198 0.990903 0.738155 1.330193 9.514978e-01
+    GEE_all_rows_adjusted_missing_as_category_exchangeable           4947        198 0.804515 0.665073 0.973193 2.510622e-02
+                                    GEE_Mundlak_unadjusted           4929        198 0.836244 0.691169 1.011768 6.582509e-02
+                                      GEE_Mundlak_adjusted           4929        198 0.795297 0.649862 0.973280 2.622868e-02
+                           conditional_logit_FE_unadjusted           1961         78 0.496457 0.372416 0.661814 1.805468e-06
+                             conditional_logit_FE_adjusted           1961         78 0.396975 0.277351 0.568193 4.424065e-07
+
+Time-of-day rows are omitted because the supplied table contains daily predictions, not morning/afternoon/evening/night predictions. The four original rows with n=24552 are not supported by these 4947 daily records.
+The other category has 428 days and must be included in descriptive Table5. Its exclusion from any inferential scope must be named explicitly. The 18 unclassified days are displayed separately.
+Exchangeable GEE is population-averaged, not subject-specific. Differences from independence GEE may reflect cluster weighting, working-correlation assumptions and mean-model misspecification; a directional discrepancy must be reported rather than choosing the significant specification.
+Scenario-adjusted models compare a conditional regression association, whereas pooled accuracy and balanced accuracy are descriptive marginal averages. They need not move in the same direction.
+No equivalence margin was specified and no equivalence test was run. Non-significance is not evidence of stability/equivalence.
+The first-week-reference label must specify centering versus within-person z standardization; they produce materially different pooled AUCs.
+The stress median is defined using each participant's entire eligible monitoring period; this is a retrospective discrimination task and not prospective forecasting.
+
+METHODS
+Day-level correctness was analyzed using binomial generalized estimating equations clustered by participant. Prespecified sensitivity analyses crossed independence and exchangeable working correlations with unadjusted and scenario-, weekend-, and study-week-adjusted specifications. All six observed scenarios, including other, were retained; 18 days without a scenario label were excluded from scenario-adjusted analyses and retained in unadjusted summaries. A separate sensitivity model treated missing scenario labels as a category. Weekend status was verified against the calendar dates encoded in EMA prompt identifiers. Participant-cluster bootstrap confidence intervals used 2,000 resamples. Conditional logistic regression with participant fixed effects was used to assess within-participant associations among participants with variation in correctness.
+
+RESULTS
+Across 4,947 extension-sample person-days, unadjusted accuracy was 0.622 during examination weeks (1,287 days) and 0.619 otherwise (3,660 days); balanced accuracy was 0.634 and 0.621, respectively. The difference in balanced accuracy was 0.013 (participant-cluster bootstrap 95% CI [-0.042, 0.068]). The adjusted examination-week odds ratio for correctness was 0.805 (95% CI [0.666, 0.974], p=0.0254) with an exchangeable working correlation and 0.999 (95% CI [0.743, 1.344], p=0.9947) with independence. These population-averaged GEE coefficients are specification-dependent and do not establish a uniform decline in marginal performance during examinations. Participant fixed-effects analysis estimated a conditional odds ratio of 0.397 (95% CI [0.277, 0.568]) among 78 informative participants. Failure to reject a difference was not interpreted as evidence of equivalence.
+
+FIGURE6B
+Using the documented reconstruction, pooled AUCs for raw, laboratory-anchored, and first-week-z-standardized inputs were 0.519, 0.520, and 0.544, whereas the corresponding equally weighted mean within-participant AUCs were 0.560, 0.561, and 0.553. The pooled improvement with first-week standardization therefore did not reflect improved average within-participant discrimination. These are reconstructed analyses; the original values 0.552, 0.551, and 0.547 cannot be combined with the reconstructed pooled estimates. First-week centering alone is a separate sensitivity specification (pooled AUC 0.552; mean within-participant AUC 0.559).
+
+             method  n_person_days  n_persons  pooled_auc  mean_within_person_auc  within_auc_lo  within_auc_hi                                                                                                                                                             data_basis  original_mean_within_auc  difference_from_original_within  within_delta_vs_raw  within_delta_lo  within_delta_hi  pooled_auc_lo  pooled_auc_hi  pooled_delta_vs_raw  pooled_delta_lo  pooled_delta_hi  n_core_person_days                                        source_probability_sha256
+                raw           3691        198    0.518662                0.559533       0.542081       0.576830 Reconstructed daily EMA uses only physiology-valid prompts; Days8-30; target above participant median stress on valid days; ordinary core-trained logistic regression.                     0.552                         0.007533             0.000000         0.000000         0.000000       0.506425       0.531339             0.000000         0.000000         0.000000                3787 2267820d831701ee8ba65f4afab5b6f2b113de2fb69c2d538fc905cc0a1548f2
+       lab_anchored           3691        198    0.519527                0.560679       0.543571       0.578299 Reconstructed daily EMA uses only physiology-valid prompts; Days8-30; target above participant median stress on valid days; ordinary core-trained logistic regression.                     0.551                         0.009679             0.001146        -0.002497         0.004778       0.508206       0.531537             0.000866        -0.010033         0.012314                3787 2267820d831701ee8ba65f4afab5b6f2b113de2fb69c2d538fc905cc0a1548f2
+       first_week_z           3691        198    0.543975                0.552825       0.533664       0.570798 Reconstructed daily EMA uses only physiology-valid prompts; Days8-30; target above participant median stress on valid days; ordinary core-trained logistic regression.                     0.547                         0.005825            -0.006708        -0.014962         0.001515       0.525843       0.561748             0.025313         0.010124         0.040733                3787 2267820d831701ee8ba65f4afab5b6f2b113de2fb69c2d538fc905cc0a1548f2
+first_week_centered           3691        198    0.552201                0.558593       0.540714       0.575903 Reconstructed daily EMA uses only physiology-valid prompts; Days8-30; target above participant median stress on valid days; ordinary core-trained logistic regression.                       NaN                              NaN            -0.000940        -0.004377         0.002454       0.534466       0.569525             0.033539         0.018000         0.049624                3787 2267820d831701ee8ba65f4afab5b6f2b113de2fb69c2d538fc905cc0a1548f2

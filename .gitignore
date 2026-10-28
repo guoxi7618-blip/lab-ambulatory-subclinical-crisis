@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+Figures/v4/panels/
+Figures/v4/slides/
+Figures/v4/export/
+*_reproduce*

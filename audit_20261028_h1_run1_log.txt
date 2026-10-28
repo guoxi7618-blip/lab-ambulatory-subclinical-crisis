@@ -1,0 +1,16 @@
+H1 source-feature reconstruction started
+14 markers and five-marker extension replication complete
+Composite, ANCOVA and retest complete; beginning phase mixed models
+Fitting ML random-intercept phase model: hr_bpm
+hr_bpm: LR=42.273545, df=6, p=1.62368e-07
+Fitting ML random-intercept phase model: ln_rmssd
+ln_rmssd: LR=82.062240, df=6, p=1.33896e-15
+Fitting ML random-intercept phase model: scl_us
+scl_us: LR=32.712100, df=6, p=1.19116e-05
+EEG 5000-permutation max-|t| sensitivity analysis begins
+aperiodic_exponent: max-T min p=0.007399, significant channels=32
+delta_abs: max-T min p=0.921616, significant channels=0
+theta_abs: max-T min p=0.893421, significant channels=0
+alpha_abs: max-T min p=0.467107, significant channels=0
+beta_abs: max-T min p=0.483103, significant channels=0
+Completed all available H1 analyses; output saved.

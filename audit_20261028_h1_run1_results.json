@@ -1,0 +1,424 @@
+{
+  "scope": "Source CSV feature-level H1 rerun; no raw signal reprocessing and no verification of preregistration",
+  "software": {
+    "python": "3.11.0",
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "statsmodels": "0.14.5"
+  },
+  "feature_reconstruction": {
+    "lab_hr_base": {
+      "n": 401,
+      "max_abs_diff": 0.0,
+      "note": ""
+    },
+    "lab_lnrmssd_base": {
+      "n": 401,
+      "max_abs_diff": 0.0,
+      "note": ""
+    },
+    "lab_lnhf_base": {
+      "n": 401,
+      "max_abs_diff": 0.0,
+      "note": ""
+    },
+    "lab_hr_react": {
+      "n": 401,
+      "max_abs_diff": 1.7763568394002505e-15,
+      "note": ""
+    },
+    "lab_lnrmssd_react": {
+      "n": 401,
+      "max_abs_diff": 9.71445146547012e-17,
+      "note": ""
+    },
+    "lab_hr_recovery": {
+      "n": 401,
+      "max_abs_diff": 2.220446049250313e-16,
+      "note": ""
+    },
+    "lab_scl_base": {
+      "n": 401,
+      "max_abs_diff": 14.441756033194617,
+      "note": "raw SCL reconstructed; analysis-ready stores ln(SCL)"
+    },
+    "lab_scl_react": {
+      "n": 401,
+      "max_abs_diff": 8.881784197001252e-16,
+      "note": ""
+    },
+    "lab_nsscr_stress": {
+      "n": 401,
+      "max_abs_diff": 1.7763568394002505e-15,
+      "note": ""
+    },
+    "eeg_aper_mean": {
+      "n": 386,
+      "max_abs_diff": 2.220446049250313e-16,
+      "note": ""
+    },
+    "eeg_alpha_post": {
+      "n": 386,
+      "max_abs_diff": 1.3322676295501878e-15,
+      "note": ""
+    },
+    "eeg_iaf": {
+      "n": 386,
+      "max_abs_diff": 1.7763568394002505e-15,
+      "note": ""
+    },
+    "eeg_faa": {
+      "n": 386,
+      "max_abs_diff": 9.71445146547012e-17,
+      "note": ""
+    },
+    "eeg_theta_change": {
+      "n": 386,
+      "max_abs_diff": 6.106226635438361e-16,
+      "note": ""
+    }
+  },
+  "roi_definitions": {
+    "posterior": [
+      "P7",
+      "P3",
+      "Pz",
+      "P4",
+      "P8",
+      "PO3",
+      "PO4",
+      "O1",
+      "Oz",
+      "O2"
+    ],
+    "frontal": [
+      "Fp1",
+      "Fp2",
+      "AF3",
+      "AF4",
+      "F7",
+      "F3",
+      "Fz",
+      "F4",
+      "F8"
+    ],
+    "note": "ROI channel lists inferred by exact numeric reconstruction; original analysis script missing"
+  },
+  "adjusted_reactivity": [
+    {
+      "sample": "core",
+      "feature": "hr",
+      "n": 203,
+      "b": -1.117350134846837,
+      "se": 0.4684054167816002,
+      "p": 0.017992567744427906,
+      "adjusted_d": -0.33509021501973196,
+      "d_lo": -0.6120893574095329,
+      "d_hi": -0.05809107262993103,
+      "definition": "group coefficient divided by ANCOVA residual SD; adjust only control-task value"
+    },
+    {
+      "sample": "core",
+      "feature": "lnrmssd",
+      "n": 203,
+      "b": 0.05957016425187104,
+      "se": 0.015705053416744087,
+      "p": 0.00019706545122375588,
+      "adjusted_d": 0.5380193490730355,
+      "d_lo": 0.25831928214003347,
+      "d_hi": 0.8177194160060376,
+      "definition": "group coefficient divided by ANCOVA residual SD; adjust only control-task value"
+    },
+    {
+      "sample": "extension",
+      "feature": "hr",
+      "n": 198,
+      "b": -0.7994957442080519,
+      "se": 0.5295328086450315,
+      "p": 0.1327096869004738,
+      "adjusted_d": -0.21601983830018243,
+      "d_lo": -0.4981972204864857,
+      "d_hi": 0.06615754388612084,
+      "definition": "group coefficient divided by ANCOVA residual SD; adjust only control-task value"
+    },
+    {
+      "sample": "extension",
+      "feature": "lnrmssd",
+      "n": 198,
+      "b": 0.04947395222625041,
+      "se": 0.015728589642397935,
+      "p": 0.0019177913911901396,
+      "adjusted_d": 0.4500627867271375,
+      "d_lo": 0.167875055378398,
+      "d_hi": 0.732250518075877,
+      "definition": "group coefficient divided by ANCOVA residual SD; adjust only control-task value"
+    }
+  ],
+  "pooled_composite": {
+    "n_control": 204,
+    "n_subclinical": 197,
+    "control_m": -0.12652871924028258,
+    "control_sd": 0.6801444032876384,
+    "sub_m": 0.13102466357876896,
+    "sub_sd": 0.7305886491842277,
+    "d": 0.3651297435744671,
+    "d_lo": 0.1677122012444647,
+    "d_hi": 0.5625472859044695,
+    "t_welch": 3.650735649934709,
+    "p_welch": 0.00029669459785009773,
+    "t_student": 3.6553016512735574,
+    "p_student": 0.00029122956106150195,
+    "p_one_sided": 0.00014834729892504887
+  },
+  "test_retest": [
+    {
+      "scope": "core_analyzable",
+      "feature": "lab_lnrmssd_base",
+      "n": 202,
+      "icc31": 0.6613599098536167,
+      "ci_lo": 0.5721765782352815,
+      "ci_hi": 0.7367089414012824
+    },
+    {
+      "scope": "core_analyzable",
+      "feature": "lab_hr_base",
+      "n": 202,
+      "icc31": 0.7485840413985196,
+      "ci_lo": 0.678144521378755,
+      "ci_hi": 0.8059026683616456
+    },
+    {
+      "scope": "core_analyzable",
+      "feature": "lab_hr_react",
+      "n": 202,
+      "icc31": 0.46491590209623784,
+      "ci_lo": 0.36146012725690413,
+      "ci_hi": 0.5596121560490128
+    },
+    {
+      "scope": "core_analyzable",
+      "feature": "lab_scl_base",
+      "n": 202,
+      "icc31": 0.6095291278320498,
+      "ci_lo": 0.5285667277231186,
+      "ci_hi": 0.6766233409125919
+    },
+    {
+      "scope": "core_analyzable",
+      "feature": "eeg_alpha_post",
+      "n": 196,
+      "icc31": 0.5885506009732887,
+      "ci_lo": 0.4893602846347433,
+      "ci_hi": 0.6755086034769968
+    },
+    {
+      "scope": "core_analyzable",
+      "feature": "eeg_aper_mean",
+      "n": 196,
+      "icc31": 0.7238121539403813,
+      "ci_lo": 0.6511455605129706,
+      "ci_hi": 0.7841308712388511
+    },
+    {
+      "scope": "all_core_with_retest",
+      "feature": "lab_lnrmssd_base",
+      "n": 217,
+      "icc31": 0.6536482768058636,
+      "ci_lo": 0.5645909469302116,
+      "ci_hi": 0.727653129430812
+    },
+    {
+      "scope": "all_core_with_retest",
+      "feature": "lab_hr_base",
+      "n": 217,
+      "icc31": 0.7527512168770146,
+      "ci_lo": 0.6881654948380185,
+      "ci_hi": 0.8066256941245064
+    },
+    {
+      "scope": "all_core_with_retest",
+      "feature": "lab_hr_react",
+      "n": 217,
+      "icc31": 0.44161919310014713,
+      "ci_lo": 0.3377158828877699,
+      "ci_hi": 0.5404796416339401
+    },
+    {
+      "scope": "all_core_with_retest",
+      "feature": "lab_scl_base",
+      "n": 217,
+      "icc31": 0.5888693854054006,
+      "ci_lo": 0.5029268678792098,
+      "ci_hi": 0.656947949046165
+    },
+    {
+      "scope": "all_core_with_retest",
+      "feature": "eeg_alpha_post",
+      "n": 211,
+      "icc31": 0.5791511971731526,
+      "ci_lo": 0.47943565815484357,
+      "ci_hi": 0.6648459994136099
+    },
+    {
+      "scope": "all_core_with_retest",
+      "feature": "eeg_aper_mean",
+      "n": 211,
+      "icc31": 0.7316644348981396,
+      "ci_lo": 0.6636201706109836,
+      "ci_hi": 0.7882020213213268
+    }
+  ],
+  "severity_change": {
+    "n": 202,
+    "pearson_r": 0.00412132604026698,
+    "p": 0.9535799299999383
+  },
+  "manipulation_check": {
+    "n": 203,
+    "means": {
+      "T1": 26.19310344827586,
+      "T2": 58.51083743842365,
+      "T3": 32.258128078817734
+    },
+    "t_T2minusT1": 34.56006130610961,
+    "p_T2minusT1": 9.481128747635523e-87,
+    "mean_hr_stress_minus_control": 8.714614121510673
+  },
+  "phase_mixed_models": [
+    {
+      "outcome": "hr_bpm",
+      "n_rows": 1421,
+      "n_subjects": 203,
+      "lr_chi2": 42.273544578471046,
+      "df": 6,
+      "p": 1.6236797530435924e-07,
+      "full_converged": true,
+      "reduced_converged": true,
+      "llf_full": -3484.772090649918,
+      "llf_reduced": -3505.9088629391536,
+      "warnings": [],
+      "random_effect": "participant intercept",
+      "estimation": "ML, no random slopes"
+    },
+    {
+      "outcome": "ln_rmssd",
+      "n_rows": 1421,
+      "n_subjects": 203,
+      "lr_chi2": 82.0622400575703,
+      "df": 6,
+      "p": 1.3389633211966298e-15,
+      "full_converged": true,
+      "reduced_converged": true,
+      "llf_full": 1018.8648781159768,
+      "llf_reduced": 977.8337580871917,
+      "warnings": [],
+      "random_effect": "participant intercept",
+      "estimation": "ML, no random slopes"
+    },
+    {
+      "outcome": "scl_us",
+      "n_rows": 1421,
+      "n_subjects": 203,
+      "lr_chi2": 32.71209995739264,
+      "df": 6,
+      "p": 1.1911566359263256e-05,
+      "full_converged": true,
+      "reduced_converged": true,
+      "llf_full": -1547.778639052969,
+      "llf_reduced": -1564.1346890316654,
+      "warnings": [],
+      "random_effect": "participant intercept",
+      "estimation": "ML, no random slopes"
+    }
+  ],
+  "eeg_permutation_sensitivity": [
+    {
+      "metric": "aperiodic_exponent",
+      "n_subclinical": 100,
+      "n_control": 97,
+      "n_permutations": 5000,
+      "n_significant_channels": 32,
+      "min_maxT_p": 0.007398520295940812,
+      "observed_max_abs_t": 3.1979494267452733
+    },
+    {
+      "metric": "delta_abs",
+      "n_subclinical": 100,
+      "n_control": 97,
+      "n_permutations": 5000,
+      "n_significant_channels": 0,
+      "min_maxT_p": 0.9216156768646271,
+      "observed_max_abs_t": 1.7868086498626177
+    },
+    {
+      "metric": "theta_abs",
+      "n_subclinical": 100,
+      "n_control": 97,
+      "n_permutations": 5000,
+      "n_significant_channels": 0,
+      "min_maxT_p": 0.8934213157368527,
+      "observed_max_abs_t": 1.8407065839805241
+    },
+    {
+      "metric": "alpha_abs",
+      "n_subclinical": 100,
+      "n_control": 97,
+      "n_permutations": 5000,
+      "n_significant_channels": 0,
+      "min_maxT_p": 0.46710657868426314,
+      "observed_max_abs_t": 1.6276825130198957
+    },
+    {
+      "metric": "beta_abs",
+      "n_subclinical": 100,
+      "n_control": 97,
+      "n_permutations": 5000,
+      "n_significant_channels": 0,
+      "min_maxT_p": 0.48310337932413516,
+      "observed_max_abs_t": 2.3337837837884114
+    }
+  ],
+  "cluster_reproduction_status": "UNVERIFIED: original adjacency, cluster-forming threshold, cluster statistic, sidedness handling, seed and analysis scripts absent; MNE unavailable. max-T is not cluster p replication.",
+  "source_hashes": {
+    "data\\01_participants\\participant_characteristics.csv": "a0b1723bc442f91b70692a2d27cd50b90a51037acbbba9abb409831ba6f0fbf1",
+    "data\\01_participants\\participant_flow.csv": "545ed74eab665d9c75e4c1eb7bf50b1582c50a72ff7c228c51a37240acee6621",
+    "data\\02_reference_standard\\double_rating.csv": "2d272652427816e0196a9a9a94213f6354db5c43187a995118d923d5873f1fb4",
+    "data\\02_reference_standard\\reevaluation_day31.csv": "7a7409e6d84127e44e73ae2a68025c06379e0e4b9642906fffceb223ab91666d",
+    "data\\02_reference_standard\\reference_standard.csv": "62f72e0af8f6ca417f25b8d00fc46ac139cff3f604859efffea63a5334864095",
+    "data\\03_questionnaires\\covariates.csv": "2bdf1bfd59342ab4df3751e6c9b71a8586a220ee70b8bb9c1030ac6301c8ee55",
+    "data\\03_questionnaires\\sds_sas_items.csv": "1ffb215b3e9658210132fd33dcdd49854540863ad4117a5650a841d8569af433",
+    "data\\04_laboratory\\lab_eeg_features.csv": "8b51074d9b1d4ef41105d19d1c92c38c415a7ae80a696276f845bbd6b64d5d46",
+    "data\\04_laboratory\\lab_eeg_quality.csv": "b5b0819f5848148c9d889aa7b690b5dd5ec3a40d3f3410baf8138a10ffab66e4",
+    "data\\04_laboratory\\lab_mist_trials.csv": "1e02bbf32ff0b04ecdd9839d11085b56b36b028a41889be104a1bcca956003cd",
+    "data\\04_laboratory\\lab_phase_features_ecg_eda.csv": "be4683b8990f016b9d2ecf4246cc1033c4a747882e5f337af2ab1d0c4dc2a9eb",
+    "data\\04_laboratory\\lab_subjective_ratings.csv": "1b0e7f2282e62a71715281b94e107b00134c33d6e11430bc3f044dbdc659ebba",
+    "data\\04_laboratory\\lab_wrist_concurrent_features.csv": "a8014c8cd739ac070546cbda8311758d413a77c723bfc38b9d10147b6d5c8f54",
+    "data\\05_ambulatory\\ema_prompts.csv": "e4854e4464370820e15a4886ba7e7d89092da51c57601f92d65d2d25affb6878",
+    "data\\05_ambulatory\\wrist_daily_features.csv": "181404bdbbe7676432339484dc0223d88cd768cbb124efbd8d3cf66b1b1f95d1",
+    "data\\06_analysis_ready\\day_level_extension.csv": "eb7a7de271ef0d854c17f23207b8e2d1cfe6f0c10b49b860a375f73b2094db9a",
+    "data\\06_analysis_ready\\person_level_features.csv": "e6ad1d7452c081e46ffde4dd1f4ec00e61c59517c02bcec1469f93b5b1be1a34",
+    "data\\06_analysis_ready\\prompt_level_h2.csv": "f63901c5681ec8391051b205ab8ebc7613d1839d7afa49265cc6a688ceee2d50",
+    "data\\07_model\\decision_thresholds.csv": "497d5d3f2525c109050e31121581f35370c8109a9581f294062bccb9f25f1b8e",
+    "data\\07_model\\extension_predicted_probabilities.csv": "0b05b23d6bf6f51c9159a4d498d92bed4e87658569f31069ef712321030c6d14",
+    "data\\07_model\\model_freeze_record.csv": "9eabba1574aae25fb5231ed14dc575fec53334a3bc371fb88192e54e69c01638",
+    "data\\08_source_data_tables\\Figure6B_within_person_calibration.csv": "3cebc0ebe2f53ce33e688bc233a9be3cd4b02f88c132a51cbecea98f63a86867",
+    "data\\08_source_data_tables\\Table1_sample.csv": "e2928a9d2dfcff6c01b852fc99d93b696b45debdf502ae22f9909977515ad11b",
+    "data\\08_source_data_tables\\Table2_data_quality.csv": "66ca7eaf74695e47756727cee1e7759e262f76a5d60fcc670ff99624bc6a37f3",
+    "data\\08_source_data_tables\\Table3_lab_markers.csv": "1c056576411df3855c4e4ce399fbd19a4bb5088cc243b252c25a67860eb2589c",
+    "data\\08_source_data_tables\\Table4_identification.csv": "af5c08598c1cc24fbbf9f8a9179ac5ad1600520019d39284a74fbf92c1b1b42b",
+    "data\\08_source_data_tables\\Table5_stability.csv": "9b07e503741dcd387d8d31ff3c232775033b88477386e712704c8cd0d86d447d",
+    "data\\08_source_data_tables\\TableS6b_eeg_channel_attributions.csv": "81da9b57cb15062088a1d5081a0c7a75264a26ac475f82510d8aa77b0bde74d4",
+    "data\\08_source_data_tables\\TableS6_feature_contributions.csv": "0a9e7ffaa9b7d13baab1247cd4425738aada46cef121504ca9a98719405bb7cb",
+    "data\\08_source_data_tables\\TableS8_marker_replication.csv": "5953cd3e90b47ecc9c23a539fed2a5b63aad76c26f8ad0cfbe2f1b6a9c450808",
+    "data\\08_source_data_tables\\TableS9_simple_model_checks.csv": "def0f1867ba71daaa614ed758cd25f5c6f1823a5a1125ae5065ced334428adf0",
+    "data\\09_source_data_figures\\Figure3ABC_phase_means.csv": "1f8cfc7407bcfa42660b08c634e6cce90ea1f2e7e5d1768227dc7bd142778ae2",
+    "data\\09_source_data_figures\\Figure3D_eeg_topography.csv": "952fbb9501b41a3bbf62b423a788ab82df9c34781f5accdec07baad6b6784059",
+    "data\\09_source_data_figures\\Figure3E_aperiodic_exponent.csv": "4a7bfb9b5b858365f3de7786775794cd1ac95fa9058b103a1d59cb8b29593dff",
+    "data\\09_source_data_figures\\Figure4A_lab_vs_ambulatory.csv": "f8c5961f7b2e090683b329cc49e16d2ce3ffaa07eef91d46387b7125b62e5fe3",
+    "data\\09_source_data_figures\\Figure4B_scenario_means.csv": "1d4eda4b77628e45ddbeadfe6586f21820abaa5e144e50f44690ff54c689af64",
+    "data\\09_source_data_figures\\Figure5_predictions.csv": "4bdd2ea72f0f5554dca78695a945d9ab2cf9a0fc789d8ea1e135572476dd4da4",
+    "data\\09_source_data_figures\\Figure6A_stability.csv": "9b07e503741dcd387d8d31ff3c232775033b88477386e712704c8cd0d86d447d",
+    "data\\10_codebook\\codebook.csv": "85cf9ecdc32d100432a214d4ad6fe4bf30d08cbbcda36efd53ba43722c18b22b"
+  }
+}

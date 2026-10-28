@@ -1,0 +1,43 @@
+Data integrity audit — 2026-10-28
+All source files read only. Original files preserved.
+CSV files checked: 39
+Checks: 102
+
+REQUIRES_EXPLANATION | D31 questionnaire coverage differs from laboratory follow-up
+Questionnaire D31 records exist for 230 people, versus 217 laboratory retests and 217 counselor re-evaluations. This may be remote follow-up but is undocumented.
+["C008", "C009", "C091", "C097", "C100", "C147", "C151", "C161", "C186", "C194", "C196", "C206", "C218"]
+
+REQUIRES_EXPLANATION | Withdrawn participants retained when thresholds met
+4 analyzable participants have withdrew_during_tracking status. This can be defensible if retained-data consent permits and inclusion is based on available data, but needs explicit reporting.
+[{"pid": "C218", "sample": "core", "status": "withdrew_during_tracking", "withdrawal_study_day": 27.0}, {"pid": "E048", "sample": "extension", "status": "withdrew_during_tracking", "withdrawal_study_day": 29.0}, {"pid": "E115", "sample": "extension", "status": "withdrew_during_tracking", "withdrawal_study_day": 27.0}, {"pid": "E219", "sample": "extension", "status": "withdrew_during_tracking", "withdrawal_study_day": 21.0}]
+
+REQUIRES_EXPLANATION | EDA calibration extreme ratios
+cal_scl_palm_equiv_rel range -1809.254527 to 405.160400; 10/401 have absolute value >100. These are transformed/calibrated units, not physical SCL; inspect small-denominator guards and report sensitivity.
+[{"pid": "C058", "cal_scl_palm_equiv_rel": -104.240548667623, "lab_scl_react": 0.1526666666666676, "cal_scr_rel": 0.2488388969521045}, {"pid": "C084", "cal_scl_palm_equiv_rel": 128.6473417868816, "lab_scl_react": -0.238, "cal_scr_rel": 0.0867729930887825}, {"pid": "C090", "cal_scl_palm_equiv_rel": 126.25077635537576, "lab_scl_react": -0.2200000000000006, "cal_scr_rel": 1.11}, {"pid": "C093", "cal_scl_palm_equiv_rel": -136.62463364598003, "lab_scl_react": -0.3000000000000007, "cal_scr_rel": 2.6805172413793104}, {"pid": "C107", "cal_scl_palm_equiv_rel": -1809.2545274729223, "lab_scl_react": -0.1749999999999998, "cal_scr_rel": 1.7059259259259258}, {"pid": "C171", "cal_scl_palm_equiv_rel": 119.1744373494425, "lab_scl_react": -0.2136666666666666, "cal_scr_rel": 0.2321027868259139}, {"pid": "C182", "cal_scl_palm_equiv_rel": 405.1604003066851, "lab_scl_react": -0.0246666666666648, "cal_scr_rel": 0.2494585987261146}, {"pid": "E022", "cal_scl_palm_equiv_rel": 231.1843492665156, "lab_scl_react": -0.0850000000000008, "cal_scr_rel": 0.1995455867384033}, {"pid": "E033", "cal_scl_palm_equiv_rel": -194.34832006086225, "lab_scl_react": -0.2146666666666661, "cal_scr_rel": 1.9725}, {"pid": "E049", "cal_scl_palm_equiv_rel": 197.95995065487065, "lab_scl_react": -0.1159999999999996, "cal_scr_rel": 2.15325}]
+
+PROVENANCE_LIMIT | Repeated stage respiration values
+All 675/675 sessions have identical respiration rate across three stress blocks; this needs a documented aggregation rule, not an assumption of fabricated data.
+[]
+
+Numerical consistency checks with deviations (including documented rounding/definition uncertainty):
+{"check": "EEG aperiodic mean with stated QC", "n": 401, "both_nonmissing": 386, "mismatches": 386, "missingness_disagreements": 0, "max_absolute_difference": 0.11735625000000005, "tolerance": 1e-07, "examples": [{"key": "C001", "stored": 1.352875, "recomputed": 1.252371875}, {"key": "C003", "stored": 1.494125, "recomputed": 1.417546875}, {"key": "C004", "stored": 0.961771875, "recomputed": 0.87534375}, {"key": "C005", "stored": 1.576675, "recomputed": 1.496340625}, {"key": "C006", "stored": 1.206375, "recomputed": 1.122634375}]}
+
+Selected summary checks:
+{"check": "D31 follow-up coverage", "questionnaires_n": 230, "lab_n": 217, "counselor_n": 217, "questionnaire_without_lab": ["C008", "C009", "C091", "C097", "C100", "C147", "C151", "C161", "C186", "C194", "C196", "C206", "C218"], "lab_without_questionnaire": []}
+{"check": "EMA completion all monitored", "people": 455, "scheduled": 52260, "completed": 40053, "pooled_rate": 0.7664179104477612, "person_mean": 0.76645460125524, "person_sd": 0.10556871489661218}
+{"check": "EMA completion analyzable", "people": 401, "scheduled": 48056, "completed": 37077, "pooled_rate": 0.7715373730647578, "person_mean": 0.7715868261293491, "person_sd": 0.09082044420758406}
+{"check": "Valid days", "n_people": 455, "median": 25.0, "q25": 23.0, "q75": 27.0, "less_than20": 49, "valid_but_wear_under16": 0, "wear_ge16_but_invalid": 857}
+{"check": "Reconstructed inclusion flag", "n": 460, "both_nonmissing": 460, "mismatches": 0, "missingness_disagreements": 0, "max_absolute_difference": 0.0, "tolerance": 1e-08, "examples": []}
+{"check": "Inferred D0 dates", "nonconstant_person_start": 0, "extension_min": "2026-03-15 00:00:00", "extension_max": "2026-04-16 00:00:00", "extension_before_freeze_date": 0, "note": "Inferred from prompt_id date minus study_day; not an original laboratory timestamp."}
+{"check": "EMA submission latency", "completed_n": 51292, "completed_after30min": 2922, "negative_latency": 0, "completed_without_submit": 0, "max_minutes": 121.13333333333334}
+{"check": "EEG quality", "session_counts": {"D0": 458, "D31": 217}, "excluded_counts": {"D0": 15, "D31": 6}, "exclusion_flag_mismatch": 0, "packet_loss_median": 0.404, "packet_loss_range": [0.016, 4.396], "alpha_ratio_gt1_fraction": 0.9866666666666667, "lsl_median": 4.1, "lsl_max": 19.0}
+{"check": "H2 population", "people": 401, "sample_counts": {"core": 203, "extension": 198}}
+{"check": "Very high daily steps", "gt50000": 11, "maximum": 67466, "examples": [{"pid": "C047", "study_day": 16, "steps": 50423}, {"pid": "C047", "study_day": 23, "steps": 59121}, {"pid": "C047", "study_day": 30, "steps": 51374}, {"pid": "C169", "study_day": 14, "steps": 51629}, {"pid": "C189", "study_day": 3, "steps": 58610}, {"pid": "C189", "study_day": 10, "steps": 67466}, {"pid": "C189", "study_day": 24, "steps": 53327}, {"pid": "C217", "study_day": 7, "steps": 50511}]}
+
+Limitations:
+No raw ECG/EDA/EEG/PPG/accelerometry or five-minute window tensor supplied, so signal processing and quality flags cannot be independently re-executed.
+No actual OSF URL, preregistration, weights or original scripts; timestamp row is a self-reported record, not independent verification.
+Some named wrist features require unavailable window-level data, so consistency of person-level tabulations is not equivalent to authenticating measurements.
+Validity-day definition includes sleep worn; no separate sleep-worn flag is supplied. Wear>=16h with valid_day=0 is not by itself an error.
+Physiological ranges used here are broad audit screens, not clinical or device-specific reference intervals.
+Quantitative errors and unusual patterns cannot establish whether a dataset is simulated or fabricated.

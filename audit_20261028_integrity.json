@@ -1,0 +1,2065 @@
+{
+  "scope": "All supplied CSV files; no raw signals or provenance authentication available",
+  "inventory": [
+    {
+      "file": "01_participants/participant_characteristics.csv",
+      "shape": [
+        460,
+        19
+      ],
+      "sha256": "a0b1723bc442f91b70692a2d27cd50b90a51037acbbba9abb409831ba6f0fbf1",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "withdrawal_study_day": 422
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "01_participants/participant_flow.csv",
+      "shape": [
+        24,
+        3
+      ],
+      "sha256": "545ed74eab665d9c75e4c1eb7bf50b1582c50a72ff7c228c51a37240acee6621",
+      "duplicate_rows": 0,
+      "key": [
+        "batch",
+        "stage"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "02_reference_standard/double_rating.csv",
+      "shape": [
+        92,
+        11
+      ],
+      "sha256": "2d272652427816e0196a9a9a94213f6354db5c43187a995118d923d5873f1fb4",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "adjudicated_by": 84
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "02_reference_standard/reevaluation_day31.csv",
+      "shape": [
+        217,
+        6
+      ],
+      "sha256": "7a7409e6d84127e44e73ae2a68025c06379e0e4b9642906fffceb223ab91666d",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "02_reference_standard/reference_standard.csv",
+      "shape": [
+        460,
+        19
+      ],
+      "sha256": "62f72e0af8f6ca417f25b8d00fc46ac139cff3f604859efffea63a5334864095",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "03_questionnaires/covariates.csv",
+      "shape": [
+        460,
+        15
+      ],
+      "sha256": "2bdf1bfd59342ab4df3751e6c9b71a8586a220ee70b8bb9c1030ac6301c8ee55",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "cycle_length_days": 186,
+        "cycle_day_at_lab": 187
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "03_questionnaires/sds_sas_items.csv",
+      "shape": [
+        690,
+        46
+      ],
+      "sha256": "1ffb215b3e9658210132fd33dcdd49854540863ad4117a5650a841d8569af433",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "session"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "04_laboratory/lab_eeg_features.csv",
+      "shape": [
+        129600,
+        15
+      ],
+      "sha256": "8b51074d9b1d4ef41105d19d1c92c38c415a7ae80a696276f845bbd6b64d5d46",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "session",
+        "condition",
+        "channel"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "iaf_hz": 86400
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "04_laboratory/lab_eeg_quality.csv",
+      "shape": [
+        675,
+        12
+      ],
+      "sha256": "b5b0819f5848148c9d889aa7b690b5dd5ec3a40d3f3410baf8138a10ffab66e4",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "session"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "bad_channels": 168
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "04_laboratory/lab_mist_trials.csv",
+      "shape": [
+        103845,
+        10
+      ],
+      "sha256": "1e02bbf32ff0b04ecdd9839d11085b56b36b028a41889be104a1bcca956003cd",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "session",
+        "block",
+        "trial"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "time_limit_ms": 25095
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "04_laboratory/lab_phase_features_ecg_eda.csv",
+      "shape": [
+        4725,
+        13
+      ],
+      "sha256": "be4683b8990f016b9d2ecf4246cc1033c4a747882e5f337af2ab1d0c4dc2a9eb",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "session",
+        "phase"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "04_laboratory/lab_subjective_ratings.csv",
+      "shape": [
+        2025,
+        20
+      ],
+      "sha256": "1b0e7f2282e62a71715281b94e107b00134c33d6e11430bc3f044dbdc659ebba",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "session",
+        "timepoint"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "panas_pa1": 675,
+        "panas_pa2": 675,
+        "panas_pa3": 675,
+        "panas_pa4": 675,
+        "panas_pa5": 675,
+        "panas_na1": 675,
+        "panas_na2": 675,
+        "panas_na3": 675,
+        "panas_na4": 675,
+        "panas_na5": 675
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "04_laboratory/lab_wrist_concurrent_features.csv",
+      "shape": [
+        4725,
+        7
+      ],
+      "sha256": "a8014c8cd739ac070546cbda8311758d413a77c723bfc38b9d10147b6d5c8f54",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "session",
+        "phase"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "05_ambulatory/ema_prompts.csv",
+      "shape": [
+        65325,
+        29
+      ],
+      "sha256": "e4854e4464370820e15a4886ba7e7d89092da51c57601f92d65d2d25affb6878",
+      "duplicate_rows": 0,
+      "key": [
+        "prompt_id"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "reminder_time": 46633,
+        "open_time": 12963,
+        "submit_time": 14033,
+        "stress": 25272,
+        "pa_happy": 25272,
+        "pa_relaxed": 25272,
+        "pa_energetic": 25272,
+        "na_down": 25272,
+        "na_tense": 25272,
+        "na_irritated": 25272,
+        "stressor_since_last": 25272,
+        "activity": 25272,
+        "location": 25272,
+        "sleep_quality_last_night": 52335,
+        "most_stressful_type": 54086,
+        "coping": 54086,
+        "rumination1": 54086,
+        "rumination2": 54086,
+        "passive_si": 54086,
+        "stressor_type": 55746,
+        "stressor_severity": 55746
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "05_ambulatory/wrist_daily_features.csv",
+      "shape": [
+        13065,
+        13
+      ],
+      "sha256": "181404bdbbe7676432339484dc0223d88cd768cbb124efbd8d3cf66b1b1f95d1",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "study_day"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "sleep_duration_h": 1623,
+        "sleep_midpoint_min": 1623,
+        "nocturnal_rmssd_ms": 1623,
+        "resting_hr_bpm": 22,
+        "scr_rate_rest_per_5min": 15,
+        "mean_skin_temp_c": 12
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "06_analysis_ready/day_level_extension.csv",
+      "shape": [
+        4947,
+        34
+      ],
+      "sha256": "eb7a7de271ef0d854c17f23207b8e2d1cfe6f0c10b49b860a375f73b2094db9a",
+      "duplicate_rows": 0,
+      "key": [
+        "pid",
+        "study_day"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "d_stress": 33,
+        "d_pa": 33,
+        "d_na": 33,
+        "d_any": 33,
+        "scenario": 18,
+        "eeg_aper_mean": 210
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "06_analysis_ready/person_level_features.csv",
+      "shape": [
+        401,
+        56
+      ],
+      "sha256": "e6ad1d7452c081e46ffde4dd1f4ec00e61c59517c02bcec1469f93b5b1be1a34",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "eeg_aper_mean": 15,
+        "eeg_aper_post": 15,
+        "eeg_aper_front": 15,
+        "eeg_alpha_post": 15,
+        "eeg_iaf": 15,
+        "eeg_faa": 15,
+        "eeg_theta_change": 15,
+        "eeg_alpha_react": 15
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "06_analysis_ready/prompt_level_h2.csv",
+      "shape": [
+        32891,
+        38
+      ],
+      "sha256": "f63901c5681ec8391051b205ab8ebc7613d1839d7afa49265cc6a688ceee2d50",
+      "duplicate_rows": 0,
+      "key": [
+        "prompt_id"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "reminder_time": 28690,
+        "sleep_quality_last_night": 21848,
+        "most_stressful_type": 32891,
+        "coping": 32891,
+        "rumination1": 32891,
+        "rumination2": 32891,
+        "passive_si": 32891,
+        "stressor_type": 25087,
+        "stressor_severity": 25087
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "07_model/decision_thresholds.csv",
+      "shape": [
+        19,
+        2
+      ],
+      "sha256": "497d5d3f2525c109050e31121581f35370c8109a9581f294062bccb9f25f1b8e",
+      "duplicate_rows": 0,
+      "key": [
+        "model"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "07_model/extension_predicted_probabilities.csv",
+      "shape": [
+        198,
+        21
+      ],
+      "sha256": "0b05b23d6bf6f51c9159a4d498d92bed4e87658569f31069ef712321030c6d14",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "07_model/model_freeze_record.csv",
+      "shape": [
+        1,
+        5
+      ],
+      "sha256": "9eabba1574aae25fb5231ed14dc575fec53334a3bc371fb88192e54e69c01638",
+      "duplicate_rows": 0,
+      "key": [
+        "record"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/Figure6B_within_person_calibration.csv",
+      "shape": [
+        3,
+        5
+      ],
+      "sha256": "3cebc0ebe2f53ce33e688bc233a9be3cd4b02f88c132a51cbecea98f63a86867",
+      "duplicate_rows": 0,
+      "key": [
+        "reference"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/Table1_sample.csv",
+      "shape": [
+        4,
+        13
+      ],
+      "sha256": "e2928a9d2dfcff6c01b852fc99d93b696b45debdf502ae22f9909977515ad11b",
+      "duplicate_rows": 0,
+      "key": [
+        "group"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/Table2_data_quality.csv",
+      "shape": [
+        19,
+        2
+      ],
+      "sha256": "66ca7eaf74695e47756727cee1e7759e262f76a5d60fcc670ff99624bc6a37f3",
+      "duplicate_rows": 0,
+      "key": [
+        "index"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/Table3_lab_markers.csv",
+      "shape": [
+        14,
+        11
+      ],
+      "sha256": "1c056576411df3855c4e4ce399fbd19a4bb5088cc243b252c25a67860eb2589c",
+      "duplicate_rows": 0,
+      "key": [
+        "measure"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/Table4_identification.csv",
+      "shape": [
+        38,
+        24
+      ],
+      "sha256": "af5c08598c1cc24fbbf9f8a9179ac5ad1600520019d39284a74fbf92c1b1b42b",
+      "duplicate_rows": 0,
+      "key": [
+        "model",
+        "sample"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "ppv_at_prev": 19,
+        "npv_at_prev": 19,
+        "delong_z_vs_full": 20,
+        "delong_p_vs_full": 20,
+        "delta_auc_full_minus_model": 20,
+        "delta_lo": 20,
+        "delta_hi": 20
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/Table5_stability.csv",
+      "shape": [
+        44,
+        7
+      ],
+      "sha256": "9b07e503741dcd387d8d31ff3c232775033b88477386e712704c8cd0d86d447d",
+      "duplicate_rows": 0,
+      "key": [
+        "scenario",
+        "stratum"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/TableS6_feature_contributions.csv",
+      "shape": [
+        42,
+        3
+      ],
+      "sha256": "0a9e7ffaa9b7d13baab1247cd4425738aada46cef121504ca9a98719405bb7cb",
+      "duplicate_rows": 0,
+      "key": [
+        "modality",
+        "feature"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/TableS6b_eeg_channel_attributions.csv",
+      "shape": [
+        32,
+        2
+      ],
+      "sha256": "81da9b57cb15062088a1d5081a0c7a75264a26ac475f82510d8aa77b0bde74d4",
+      "duplicate_rows": 0,
+      "key": [
+        "channel"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/TableS8_marker_replication.csv",
+      "shape": [
+        5,
+        15
+      ],
+      "sha256": "5953cd3e90b47ecc9c23a539fed2a5b63aad76c26f8ad0cfbe2f1b6a9c450808",
+      "duplicate_rows": 0,
+      "key": [
+        "measure"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "core_adj_d": 3,
+        "core_adj_lo": 3,
+        "core_adj_hi": 3,
+        "ext_adj_d": 3,
+        "ext_adj_lo": 3,
+        "ext_adj_hi": 3
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "08_source_data_tables/TableS9_simple_model_checks.csv",
+      "shape": [
+        6,
+        5
+      ],
+      "sha256": "def0f1867ba71daaa614ed758cd25f5c6f1823a5a1125ae5065ced334428adf0",
+      "duplicate_rows": 0,
+      "key": [
+        "model"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "09_source_data_figures/Figure3ABC_phase_means.csv",
+      "shape": [
+        14,
+        11
+      ],
+      "sha256": "1f8cfc7407bcfa42660b08c634e6cce90ea1f2e7e5d1768227dc7bd142778ae2",
+      "duplicate_rows": 0,
+      "key": [
+        "group",
+        "phase"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "09_source_data_figures/Figure3D_eeg_topography.csv",
+      "shape": [
+        128,
+        4
+      ],
+      "sha256": "952fbb9501b41a3bbf62b423a788ab82df9c34781f5accdec07baad6b6784059",
+      "duplicate_rows": 0,
+      "key": [
+        "measure",
+        "channel"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "09_source_data_figures/Figure3E_aperiodic_exponent.csv",
+      "shape": [
+        203,
+        3
+      ],
+      "sha256": "4a7bfb9b5b858365f3de7786775794cd1ac95fa9058b103a1d59cb8b29593dff",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "eeg_aper_mean": 6
+      },
+      "unknown_pids": []
+    },
+    {
+      "file": "09_source_data_figures/Figure4A_lab_vs_ambulatory.csv",
+      "shape": [
+        401,
+        3
+      ],
+      "sha256": "f8c5961f7b2e090683b329cc49e16d2ce3ffaa07eef91d46387b7125b62e5fe3",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "09_source_data_figures/Figure4B_scenario_means.csv",
+      "shape": [
+        12,
+        5
+      ],
+      "sha256": "1d4eda4b77628e45ddbeadfe6586f21820abaa5e144e50f44690ff54c689af64",
+      "duplicate_rows": 0,
+      "key": [
+        "y",
+        "scenario"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "09_source_data_figures/Figure5_predictions.csv",
+      "shape": [
+        198,
+        8
+      ],
+      "sha256": "4bdd2ea72f0f5554dca78695a945d9ab2cf9a0fc789d8ea1e135572476dd4da4",
+      "duplicate_rows": 0,
+      "key": [
+        "pid"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "09_source_data_figures/Figure6A_stability.csv",
+      "shape": [
+        44,
+        7
+      ],
+      "sha256": "9b07e503741dcd387d8d31ff3c232775033b88477386e712704c8cd0d86d447d",
+      "duplicate_rows": 0,
+      "key": [
+        "scenario",
+        "stratum"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {},
+      "unknown_pids": []
+    },
+    {
+      "file": "10_codebook/codebook.csv",
+      "shape": [
+        522,
+        5
+      ],
+      "sha256": "85cf9ecdc32d100432a214d4ad6fe4bf30d08cbbcda36efd53ba43722c18b22b",
+      "duplicate_rows": 0,
+      "key": [
+        "file",
+        "variable"
+      ],
+      "duplicate_keys": 0,
+      "missing_by_column": {
+        "description": 4,
+        "example": 27
+      },
+      "unknown_pids": []
+    }
+  ],
+  "checks": [
+    {
+      "check": "Cohort counts",
+      "counts": [
+        {
+          "sample": "core",
+          "group": "control",
+          "analyzable": 0,
+          "n": 14
+        },
+        {
+          "sample": "core",
+          "group": "control",
+          "analyzable": 1,
+          "n": 101
+        },
+        {
+          "sample": "core",
+          "group": "subclinical",
+          "analyzable": 0,
+          "n": 13
+        },
+        {
+          "sample": "core",
+          "group": "subclinical",
+          "analyzable": 1,
+          "n": 102
+        },
+        {
+          "sample": "extension",
+          "group": "control",
+          "analyzable": 0,
+          "n": 12
+        },
+        {
+          "sample": "extension",
+          "group": "control",
+          "analyzable": 1,
+          "n": 103
+        },
+        {
+          "sample": "extension",
+          "group": "subclinical",
+          "analyzable": 0,
+          "n": 20
+        },
+        {
+          "sample": "extension",
+          "group": "subclinical",
+          "analyzable": 1,
+          "n": 95
+        }
+      ],
+      "status": [
+        {
+          "sample": "core",
+          "status": "completed",
+          "analyzable": 0,
+          "n": 15
+        },
+        {
+          "sample": "core",
+          "status": "completed",
+          "analyzable": 1,
+          "n": 202
+        },
+        {
+          "sample": "core",
+          "status": "withdrew_during_tracking",
+          "analyzable": 0,
+          "n": 12
+        },
+        {
+          "sample": "core",
+          "status": "withdrew_during_tracking",
+          "analyzable": 1,
+          "n": 1
+        },
+        {
+          "sample": "extension",
+          "status": "completed",
+          "analyzable": 0,
+          "n": 10
+        },
+        {
+          "sample": "extension",
+          "status": "completed",
+          "analyzable": 1,
+          "n": 195
+        },
+        {
+          "sample": "extension",
+          "status": "withdrew_before_lab",
+          "analyzable": 0,
+          "n": 2
+        },
+        {
+          "sample": "extension",
+          "status": "withdrew_during_tracking",
+          "analyzable": 0,
+          "n": 20
+        },
+        {
+          "sample": "extension",
+          "status": "withdrew_during_tracking",
+          "analyzable": 1,
+          "n": 3
+        }
+      ]
+    },
+    {
+      "check": "Person-level analysis cohort membership",
+      "missing": [],
+      "unexpected": []
+    },
+    {
+      "check": "Person labels versus enrolled group",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Person sds_standard",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Person sas_standard",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Reference category matches group",
+      "mismatches": 0
+    },
+    {
+      "check": "Reference severity",
+      "n": 460,
+      "both_nonmissing": 460,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Participant flow balance A",
+      "attended": 680,
+      "disposition_sum": 680,
+      "balanced": true
+    },
+    {
+      "check": "Participant flow balance B",
+      "attended": 690,
+      "disposition_sum": 690,
+      "balanced": true
+    },
+    {
+      "check": "sds scoring",
+      "n": 690,
+      "item_range": [
+        1.0,
+        4.0
+      ],
+      "outside_1_4": 0,
+      "unreversed_sum_matches": 26,
+      "reverse_coded_sum_matches": 690,
+      "floor_standard_score_matches": 690,
+      "reverse_items": [
+        2,
+        5,
+        6,
+        11,
+        12,
+        14,
+        16,
+        17,
+        18,
+        20
+      ]
+    },
+    {
+      "check": "sds D0 versus demographics",
+      "n": 460,
+      "both_nonmissing": 460,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "sas scoring",
+      "n": 690,
+      "item_range": [
+        1.0,
+        4.0
+      ],
+      "outside_1_4": 0,
+      "unreversed_sum_matches": 0,
+      "reverse_coded_sum_matches": 690,
+      "floor_standard_score_matches": 690,
+      "reverse_items": [
+        5,
+        9,
+        13,
+        17,
+        19
+      ]
+    },
+    {
+      "check": "sas D0 versus demographics",
+      "n": 460,
+      "both_nonmissing": 460,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "D31 follow-up coverage",
+      "questionnaires_n": 230,
+      "lab_n": 217,
+      "counselor_n": 217,
+      "questionnaire_without_lab": [
+        "C008",
+        "C009",
+        "C091",
+        "C097",
+        "C100",
+        "C147",
+        "C151",
+        "C161",
+        "C186",
+        "C194",
+        "C196",
+        "C206",
+        "C218"
+      ],
+      "lab_without_questionnaire": []
+    },
+    {
+      "check": "EMA completion all monitored",
+      "people": 455,
+      "scheduled": 52260,
+      "completed": 40053,
+      "pooled_rate": 0.7664179104477612,
+      "person_mean": 0.76645460125524,
+      "person_sd": 0.10556871489661218
+    },
+    {
+      "check": "EMA completion analyzable",
+      "people": 401,
+      "scheduled": 48056,
+      "completed": 37077,
+      "pooled_rate": 0.7715373730647578,
+      "person_mean": 0.7715868261293491,
+      "person_sd": 0.09082044420758406
+    },
+    {
+      "check": "Person compliance",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Duplicate EMA compliance",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Valid days",
+      "n_people": 455,
+      "median": 25.0,
+      "q25": 23.0,
+      "q75": 27.0,
+      "less_than20": 49,
+      "valid_but_wear_under16": 0,
+      "wear_ge16_but_invalid": 857
+    },
+    {
+      "check": "Reconstructed inclusion flag",
+      "n": 460,
+      "both_nonmissing": 460,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "wrist records after withdrawal",
+      "n_rows": 0,
+      "examples": []
+    },
+    {
+      "check": "EMA records after withdrawal",
+      "n_rows": 0,
+      "examples": []
+    },
+    {
+      "check": "EMA group subclinical",
+      "person_mean": 0.7437292100654276,
+      "n": 226,
+      "analyzable_mean": 0.7473912648864512
+    },
+    {
+      "check": "EMA group control",
+      "person_mean": 0.7888822798967143,
+      "n": 229,
+      "analyzable_mean": 0.794952147525677
+    },
+    {
+      "check": "Monitoring dates",
+      "invalid_dates": 0,
+      "by_sample": [
+        {
+          "sample": "core",
+          "min": "2025-11-17",
+          "max": "2026-01-17"
+        },
+        {
+          "sample": "extension",
+          "min": "2026-03-16",
+          "max": "2026-05-16"
+        }
+      ]
+    },
+    {
+      "check": "Inferred D0 dates",
+      "nonconstant_person_start": 0,
+      "extension_min": "2026-03-15 00:00:00",
+      "extension_max": "2026-04-16 00:00:00",
+      "extension_before_freeze_date": 0,
+      "note": "Inferred from prompt_id date minus study_day; not an original laboratory timestamp."
+    },
+    {
+      "check": "EMA submission latency",
+      "completed_n": 51292,
+      "completed_after30min": 2922,
+      "negative_latency": 0,
+      "completed_without_submit": 0,
+      "max_minutes": 121.13333333333334
+    },
+    {
+      "check": "Range participant_characteristics.age",
+      "plausibility_bounds": [
+        18,
+        25
+      ],
+      "min": 18.0,
+      "max": 25.0,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range participant_characteristics.phq9_total",
+      "plausibility_bounds": [
+        0,
+        27
+      ],
+      "min": 0.0,
+      "max": 24.0,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range participant_characteristics.gad7_total",
+      "plausibility_bounds": [
+        0,
+        21
+      ],
+      "min": 0.0,
+      "max": 20.0,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range participant_characteristics.severity",
+      "plausibility_bounds": [
+        0,
+        6
+      ],
+      "min": 0.0,
+      "max": 7.0,
+      "outside": 2,
+      "examples": [
+        {
+          "pid": "E028",
+          "severity": 7
+        },
+        {
+          "pid": "E112",
+          "severity": 7
+        }
+      ]
+    },
+    {
+      "check": "Range lab_phase_features_ecg_eda.hr_bpm",
+      "plausibility_bounds": [
+        25,
+        220
+      ],
+      "min": 50.21,
+      "max": 115.82,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range lab_phase_features_ecg_eda.rmssd_ms",
+      "plausibility_bounds": [
+        0,
+        400
+      ],
+      "min": 5.91,
+      "max": 129.78,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range lab_phase_features_ecg_eda.resp_rate_bpm",
+      "plausibility_bounds": [
+        3,
+        50
+      ],
+      "min": 7.75,
+      "max": 23.32,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range lab_phase_features_ecg_eda.scl_us",
+      "plausibility_bounds": [
+        0,
+        100
+      ],
+      "min": 0.448,
+      "max": 24.224,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range lab_phase_features_ecg_eda.scr_amp_us",
+      "plausibility_bounds": [
+        0,
+        100
+      ],
+      "min": 0.0,
+      "max": 0.357,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range lab_phase_features_ecg_eda.pct_corrected_beats",
+      "plausibility_bounds": [
+        0,
+        100
+      ],
+      "min": 0.0,
+      "max": 6.89,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range wrist_daily_features.wear_hours",
+      "plausibility_bounds": [
+        0,
+        24
+      ],
+      "min": 0.0,
+      "max": 24.0,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range wrist_daily_features.sleep_duration_h",
+      "plausibility_bounds": [
+        0,
+        24
+      ],
+      "min": 4.0,
+      "max": 12.25,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range wrist_daily_features.nocturnal_rmssd_ms",
+      "plausibility_bounds": [
+        0,
+        500
+      ],
+      "min": 6.3,
+      "max": 211.93,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range wrist_daily_features.resting_hr_bpm",
+      "plausibility_bounds": [
+        25,
+        220
+      ],
+      "min": 37.86,
+      "max": 93.54,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range wrist_daily_features.steps",
+      "plausibility_bounds": [
+        0,
+        100000
+      ],
+      "min": 0.0,
+      "max": 67466.0,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range wrist_daily_features.mean_skin_temp_c",
+      "plausibility_bounds": [
+        10,
+        45
+      ],
+      "min": 31.45,
+      "max": 34.03,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range ema_prompts.stress",
+      "plausibility_bounds": [
+        0,
+        100
+      ],
+      "min": 0.0,
+      "max": 100.0,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "Range ema_prompts.stressor_severity",
+      "plausibility_bounds": [
+        1,
+        7
+      ],
+      "min": 1.0,
+      "max": 7.0,
+      "outside": 0,
+      "examples": []
+    },
+    {
+      "check": "ln RMSSD log consistency",
+      "n": 4725,
+      "both_nonmissing": 4725,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0010179272527715,
+      "tolerance": 0.0015,
+      "examples": []
+    },
+    {
+      "check": "BMI from height and weight",
+      "n": 460,
+      "both_nonmissing": 460,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.049959699919401857,
+      "tolerance": 0.11,
+      "examples": []
+    },
+    {
+      "check": "Double rating agreement",
+      "n": 92,
+      "category_kappa": 0.8260047281323877,
+      "disagreement_flag_mismatch": 0
+    },
+    {
+      "check": "EEG quality",
+      "session_counts": {
+        "D0": 458,
+        "D31": 217
+      },
+      "excluded_counts": {
+        "D0": 15,
+        "D31": 6
+      },
+      "exclusion_flag_mismatch": 0,
+      "packet_loss_median": 0.404,
+      "packet_loss_range": [
+        0.016,
+        4.396
+      ],
+      "alpha_ratio_gt1_fraction": 0.9866666666666667,
+      "lsl_median": 4.1,
+      "lsl_max": 19.0
+    },
+    {
+      "check": "Reconstruct lab_hr_base",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct lab_lnrmssd_base",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct lab_lnhf_base",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct lab_hr_react",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 3.019806626980426e-14,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct lab_lnrmssd_react",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 9.71445146547012e-16,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct lab_scl_base",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 8.881784197001252e-16,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct lab_scl_react",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 3.552713678800501e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct lab_nsscr_stress",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 3.552713678800501e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct lab_hr_recovery",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 1.887379141862766e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_noct_lnrmssd_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 1.3322676295501878e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_resthr_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 7.105427357601002e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_steps_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 3.637978807091713e-12,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_sleep_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 8.881784197001252e-16,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_scr_rest_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_temp_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 7.105427357601002e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_noct_lnrmssd_sd",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 9.71445146547012e-17,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_resthr_sd",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 6.661338147750939e-16,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_sleep_sd",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_midpoint_sd",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 1.4210854715202004e-14,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct w_steps_max",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct ema_stress_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 7.105427357601002e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct ema_pa_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 1.3322676295501878e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct ema_na_mean",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 8.881784197001252e-16,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct ema_any_stressor",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 8.326672684688674e-17,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct ema_interpersonal",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 9.71445146547012e-17,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct ema_stress_sd",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 1.7763568394002505e-15,
+      "tolerance": 1e-07,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct ema_rumination",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 8.881784197001252e-16,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct passive SI any",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct calibration noct",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 1.353951672999898e-15,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct calibration HR",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 8.881784197001252e-15,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Reconstruct clamped event response ratio",
+      "n": 401,
+      "both_nonmissing": 401,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table source wear_hours",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table source valid_day",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table source sleep_duration_h",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table source nocturnal_rmssd_ms",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table source resting_hr_bpm",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table source steps",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table source scr_rate_rest_per_5min",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table source mean_skin_temp_c",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table cal_noct",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 4.440892098500626e-16,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "Day table cal_hr",
+      "n": 4947,
+      "both_nonmissing": 4947,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 7.105427357601002e-15,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "H2 source stress",
+      "n": 32891,
+      "both_nonmissing": 32891,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "H2 source study_day",
+      "n": 32891,
+      "both_nonmissing": 32891,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "H2 source stressor_since_last",
+      "n": 32891,
+      "both_nonmissing": 32891,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "H2 lab_react",
+      "n": 32891,
+      "both_nonmissing": 32891,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "H2 hr_c",
+      "n": 32891,
+      "both_nonmissing": 32891,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 1.7763568394002505e-14,
+      "tolerance": 1e-08,
+      "examples": []
+    },
+    {
+      "check": "H2 population",
+      "people": 401,
+      "sample_counts": {
+        "core": 203,
+        "extension": 198
+      }
+    },
+    {
+      "check": "EEG relative band power sum",
+      "n": 129600,
+      "both_nonmissing": 129600,
+      "mismatches": 0,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.00010000000000021103,
+      "tolerance": 0.00021,
+      "examples": []
+    },
+    {
+      "check": "EEG aperiodic mean with stated QC",
+      "n": 401,
+      "both_nonmissing": 386,
+      "mismatches": 386,
+      "missingness_disagreements": 0,
+      "max_absolute_difference": 0.11735625000000005,
+      "tolerance": 1e-07,
+      "examples": [
+        {
+          "key": "C001",
+          "stored": 1.352875,
+          "recomputed": 1.252371875
+        },
+        {
+          "key": "C003",
+          "stored": 1.494125,
+          "recomputed": 1.417546875
+        },
+        {
+          "key": "C004",
+          "stored": 0.961771875,
+          "recomputed": 0.87534375
+        },
+        {
+          "key": "C005",
+          "stored": 1.576675,
+          "recomputed": 1.496340625
+        },
+        {
+          "key": "C006",
+          "stored": 1.206375,
+          "recomputed": 1.122634375
+        }
+      ]
+    },
+    {
+      "check": "EEG excluded participants",
+      "n": 15,
+      "retained_nonmissing_aperiodic": 0,
+      "ids": [
+        "C098",
+        "C105",
+        "C157",
+        "C221",
+        "C225",
+        "C230",
+        "E003",
+        "E049",
+        "E070",
+        "E103",
+        "E166",
+        "E169",
+        "E223",
+        "E224",
+        "E227"
+      ]
+    },
+    {
+      "check": "Very high daily steps",
+      "gt50000": 11,
+      "maximum": 67466,
+      "examples": [
+        {
+          "pid": "C047",
+          "study_day": 16,
+          "steps": 50423
+        },
+        {
+          "pid": "C047",
+          "study_day": 23,
+          "steps": 59121
+        },
+        {
+          "pid": "C047",
+          "study_day": 30,
+          "steps": 51374
+        },
+        {
+          "pid": "C169",
+          "study_day": 14,
+          "steps": 51629
+        },
+        {
+          "pid": "C189",
+          "study_day": 3,
+          "steps": 58610
+        },
+        {
+          "pid": "C189",
+          "study_day": 10,
+          "steps": 67466
+        },
+        {
+          "pid": "C189",
+          "study_day": 24,
+          "steps": 53327
+        },
+        {
+          "pid": "C217",
+          "study_day": 7,
+          "steps": 50511
+        }
+      ]
+    },
+    {
+      "check": "MIST logic",
+      "timeout_but_correct": 0,
+      "negative_rt": 0,
+      "rt_over_limit_without_timeout": 0
+    },
+    {
+      "check": "Respiration repeated-value pattern",
+      "sessions": 675,
+      "all_three_stress_blocks_identical": 675,
+      "note": "Exact repetition may reflect a shared stage aggregate; raw ECG-derived respiration and algorithm are needed to assess."
+    }
+  ],
+  "findings": [
+    {
+      "level": "REQUIRES_EXPLANATION",
+      "title": "D31 questionnaire coverage differs from laboratory follow-up",
+      "detail": "Questionnaire D31 records exist for 230 people, versus 217 laboratory retests and 217 counselor re-evaluations. This may be remote follow-up but is undocumented.",
+      "examples": [
+        "C008",
+        "C009",
+        "C091",
+        "C097",
+        "C100",
+        "C147",
+        "C151",
+        "C161",
+        "C186",
+        "C194",
+        "C196",
+        "C206",
+        "C218"
+      ]
+    },
+    {
+      "level": "REQUIRES_EXPLANATION",
+      "title": "Withdrawn participants retained when thresholds met",
+      "detail": "4 analyzable participants have withdrew_during_tracking status. This can be defensible if retained-data consent permits and inclusion is based on available data, but needs explicit reporting.",
+      "examples": [
+        {
+          "pid": "C218",
+          "sample": "core",
+          "status": "withdrew_during_tracking",
+          "withdrawal_study_day": 27.0
+        },
+        {
+          "pid": "E048",
+          "sample": "extension",
+          "status": "withdrew_during_tracking",
+          "withdrawal_study_day": 29.0
+        },
+        {
+          "pid": "E115",
+          "sample": "extension",
+          "status": "withdrew_during_tracking",
+          "withdrawal_study_day": 27.0
+        },
+        {
+          "pid": "E219",
+          "sample": "extension",
+          "status": "withdrew_during_tracking",
+          "withdrawal_study_day": 21.0
+        }
+      ]
+    },
+    {
+      "level": "REQUIRES_EXPLANATION",
+      "title": "EDA calibration extreme ratios",
+      "detail": "cal_scl_palm_equiv_rel range -1809.254527 to 405.160400; 10/401 have absolute value >100. These are transformed/calibrated units, not physical SCL; inspect small-denominator guards and report sensitivity.",
+      "examples": [
+        {
+          "pid": "C058",
+          "cal_scl_palm_equiv_rel": -104.240548667623,
+          "lab_scl_react": 0.1526666666666676,
+          "cal_scr_rel": 0.2488388969521045
+        },
+        {
+          "pid": "C084",
+          "cal_scl_palm_equiv_rel": 128.6473417868816,
+          "lab_scl_react": -0.238,
+          "cal_scr_rel": 0.0867729930887825
+        },
+        {
+          "pid": "C090",
+          "cal_scl_palm_equiv_rel": 126.25077635537576,
+          "lab_scl_react": -0.2200000000000006,
+          "cal_scr_rel": 1.11
+        },
+        {
+          "pid": "C093",
+          "cal_scl_palm_equiv_rel": -136.62463364598003,
+          "lab_scl_react": -0.3000000000000007,
+          "cal_scr_rel": 2.6805172413793104
+        },
+        {
+          "pid": "C107",
+          "cal_scl_palm_equiv_rel": -1809.2545274729223,
+          "lab_scl_react": -0.1749999999999998,
+          "cal_scr_rel": 1.7059259259259258
+        },
+        {
+          "pid": "C171",
+          "cal_scl_palm_equiv_rel": 119.1744373494425,
+          "lab_scl_react": -0.2136666666666666,
+          "cal_scr_rel": 0.2321027868259139
+        },
+        {
+          "pid": "C182",
+          "cal_scl_palm_equiv_rel": 405.1604003066851,
+          "lab_scl_react": -0.0246666666666648,
+          "cal_scr_rel": 0.2494585987261146
+        },
+        {
+          "pid": "E022",
+          "cal_scl_palm_equiv_rel": 231.1843492665156,
+          "lab_scl_react": -0.0850000000000008,
+          "cal_scr_rel": 0.1995455867384033
+        },
+        {
+          "pid": "E033",
+          "cal_scl_palm_equiv_rel": -194.34832006086225,
+          "lab_scl_react": -0.2146666666666661,
+          "cal_scr_rel": 1.9725
+        },
+        {
+          "pid": "E049",
+          "cal_scl_palm_equiv_rel": 197.95995065487065,
+          "lab_scl_react": -0.1159999999999996,
+          "cal_scr_rel": 2.15325
+        }
+      ]
+    },
+    {
+      "level": "PROVENANCE_LIMIT",
+      "title": "Repeated stage respiration values",
+      "detail": "All 675/675 sessions have identical respiration rate across three stress blocks; this needs a documented aggregation rule, not an assumption of fabricated data.",
+      "examples": []
+    }
+  ],
+  "limitations": [
+    "No raw ECG/EDA/EEG/PPG/accelerometry or five-minute window tensor supplied, so signal processing and quality flags cannot be independently re-executed.",
+    "No actual OSF URL, preregistration, weights or original scripts; timestamp row is a self-reported record, not independent verification.",
+    "Some named wrist features require unavailable window-level data, so consistency of person-level tabulations is not equivalent to authenticating measurements.",
+    "Validity-day definition includes sleep worn; no separate sleep-worn flag is supplied. Wear>=16h with valid_day=0 is not by itself an error.",
+    "Physiological ranges used here are broad audit screens, not clinical or device-specific reference intervals.",
+    "Quantitative errors and unusual patterns cannot establish whether a dataset is simulated or fabricated."
+  ]
+}

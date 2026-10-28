@@ -1,0 +1,49 @@
+H1复算最终结论
+
+IAF Table3 values do not match present source/analysis-ready CSV. Core control mean 10.029926 vs Table3 10.028; SD .707761 vs .715; Student p .402135 vs .409857. Non-significance unchanged.
+Manuscript VAS means 27.6/59.0/33.7 refer to all 458 enrolled D0 sessions, not the 401 analyzable or 203 core sample. Report denominator explicitly.
+Reported adjusted effects .51/.44 are consistent with outcome-SD standardized ANCOVA coefficients; calling them Cohen d needs a precise definition.
+Global EEG max-T FWER across 32 channels was run with 5000 permutations per measure. Correction across the five EEG feature families is not applied; this is exploratory sensitivity analysis.
+
+   sample           feature         d  p_student  p_student_fdr14  p_student_fdr5_replication  student_p_minus_Table3
+     core       lab_hr_base  0.118963   0.397741         0.469158                         NaN            0.000000e+00
+     core      lab_hr_react -0.337870   0.016992         0.047577                         NaN            0.000000e+00
+     core   lab_hr_recovery -0.188271   0.181366         0.282126                         NaN            0.000000e+00
+     core  lab_lnrmssd_base -0.348374   0.013894         0.047577                         NaN            0.000000e+00
+     core lab_lnrmssd_react  0.587683   0.000042         0.000593                         NaN            0.000000e+00
+     core     lab_lnhf_base -0.340848   0.016057         0.047577                         NaN            0.000000e+00
+     core      lab_scl_base -0.081379   0.562746         0.562746                         NaN            0.000000e+00
+     core     lab_scl_react -0.299261   0.034231         0.073346                         NaN            0.000000e+00
+     core  lab_nsscr_stress -0.295266   0.036673         0.073346                         NaN            0.000000e+00
+     core     eeg_aper_mean -0.419498   0.003638         0.025465                         NaN            0.000000e+00
+     core    eeg_alpha_post  0.098962   0.488246         0.525803                         NaN            0.000000e+00
+     core           eeg_iaf -0.119659   0.402135         0.469158                         NaN           -7.722163e-03
+     core           eeg_faa -0.245254   0.086845         0.151979                         NaN            0.000000e+00
+     core  eeg_theta_change  0.173207   0.225684         0.315958                         NaN            6.938894e-16
+extension       lab_hr_base  0.207262   0.146710         0.293419                         NaN                     NaN
+extension      lab_hr_react -0.193691   0.174880         0.306040                    0.218600                     NaN
+extension   lab_hr_recovery -0.329928   0.021406         0.099896                         NaN                     NaN
+extension  lab_lnrmssd_base -0.167713   0.239827         0.373064                    0.239827                     NaN
+extension lab_lnrmssd_react  0.473756   0.001036         0.014505                    0.005180                     NaN
+extension     lab_lnhf_base -0.216234   0.130097         0.293419                    0.216829                     NaN
+extension      lab_scl_base -0.260789   0.068272         0.207470                         NaN                     NaN
+extension     lab_scl_react -0.116856   0.412367         0.577314                         NaN                     NaN
+extension  lab_nsscr_stress -0.000553   0.996901         0.996901                         NaN                     NaN
+extension     eeg_aper_mean -0.261382   0.074096         0.207470                    0.185241                     NaN
+extension    eeg_alpha_post -0.048609   0.738743         0.914400                         NaN                     NaN
+extension           eeg_iaf -0.021809   0.881036         0.948809                         NaN                     NaN
+extension           eeg_faa -0.039992   0.783771         0.914400                         NaN                     NaN
+extension  eeg_theta_change  0.342198   0.019744         0.099896                         NaN                     NaN
+
+ANCOVA标准化口径
+   sample feature  standardized_b        lo        hi        p                                                                                                     definition
+     core      hr       -0.331884 -0.606232 -0.057535 0.017993 outcome SD includes both groups: standardized ANCOVA coefficient, not conventional pooled-within-group Cohen d
+     core lnrmssd        0.507178  0.243511  0.770844 0.000197 outcome SD includes both groups: standardized ANCOVA coefficient, not conventional pooled-within-group Cohen d
+extension      hr       -0.214995 -0.495834  0.065844 0.132710 outcome SD includes both groups: standardized ANCOVA coefficient, not conventional pooled-within-group Cohen d
+extension lnrmssd        0.436934  0.162978  0.710889 0.001918 outcome SD includes both groups: standardized ANCOVA coefficient, not conventional pooled-within-group Cohen d
+
+alpha重测口径
+alpha_summary   n    icc31
+     mean_log 196 0.588551
+     log_mean 196 0.584802
+   mean_power 196 0.565390
